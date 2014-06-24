@@ -54,3 +54,718 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=user
 ---
+2014/06/24 11:18:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
+2014/06/24 11:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/user&view=CreateUser
+---
+2014/06/24 11:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:19:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:20:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:21:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CreateUser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('CreateUser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('CreateUser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/CreateUser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/CreateUser
+---
+2014/06/24 11:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createuser".' in E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('createuser')
+#1 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('createuser')
+#2 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/createuser')
+#3 E:\Andri\Iseng\yii-1.1.14.f0fee9\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=site/createuser
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=site/contact
+---
