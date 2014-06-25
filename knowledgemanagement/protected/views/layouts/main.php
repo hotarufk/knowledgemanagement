@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	   <?php Yii::app()->bootstrap->registerAllCss(); ?>
 </head>
 
 <body>
@@ -48,7 +49,22 @@
 	<?php endif?>
 
 	<?php echo $content; ?>
-
+	
+	
+	<div id="sidebar">
+		<?php
+			//echo CHtml::button('Test', array('onclick' => 'js:document.location.href="UserController/Index"'));
+			echo CHtml::button('Data', array('submit' => array('Data/Create')));
+			echo CHtml::button('User', array('submit' => array('User/Create')));
+		 $this->widget('bootstrap.widgets.TbButton', array(
+			'label'=>'Data',
+			'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+			'size'=>'large', // null, 'large', 'small' or 'mini'
+			'htmlOptions'=>array('submit' => array('Data/Create')),
+		)); ?>
+	</div>
+	
+	
 	<div class="clear"></div>
 
 	<div id="footer">
