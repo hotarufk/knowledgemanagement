@@ -24,24 +24,44 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+	<!-- 
+	<div id="logo"><?php //echo CHtml::encode(Yii::app()->name); ?></div>
+	-->
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
+		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+		'type'=>'null', // null or 'inverse'
+		'brand'=>'Knowledge Management',
+		'brandUrl'=>'#',
+		'fixed'=>'top',
+		'collapse'=>true, // requires bootstrap-responsive.css
+		'items'=>array(
+			array(
+				'class'=>'bootstrap.widgets.TbMenu',
+				'items'=>array(
+					array('label'=>'Home','url'=>array('/site/index')),
+					array('label'=>'Search','url'=>array('/site/createuser')),
+					array('label'=>'Laporan'),
+					array('label'=>'Profile'),
+					array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+					array('label'=>'Contact', 'url'=>array('/site/contact')),
 
-				array('label'=>'', 'url'=>array('/site/index')),
-				array('label'=>'Search','url'=>array('/site/createuser')),
-				array('label'=>'Laporan'),
-				array('label'=>'Profile'),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				),
 			),
-		)); ?>
+			'<form class="navbar-search pull-center" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+			array(
+				'class'=>'bootstrap.widgets.TbMenu',
+				'htmlOptions'=>array('class'=>'pull-right'),
+				'items'=>array(
+					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				),
+			),
+		),
+	)); ?>
 	</div><!-- mainmenu -->
+	
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
@@ -49,8 +69,6 @@
 	<?php endif?>
 
 	<?php echo $content; ?>
-	
-	
 	<div id="sidebar">
 		<?php
 			//echo CHtml::button('Test', array('onclick' => 'js:document.location.href="UserController/Index"'));
