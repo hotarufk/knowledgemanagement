@@ -28,32 +28,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'BA'); ?>
-		<?php echo $form->textField($model,'BA'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'TS'); ?>
-		<?php echo $form->textField($model,'TS'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'SRS'); ?>
-		<?php echo $form->textField($model,'SRS'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'BRS'); ?>
-		<?php echo $form->textField($model,'BRS'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'MOM'); ?>
-		<?php echo $form->textField($model,'MOM'); ?>
+		<?php echo $form->textField($model,'status'); ?>
 	</div>
 
 	<div class="row">
@@ -67,13 +42,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'IT_dev_PIC'); ?>
-		<?php echo $form->textField($model,'IT_dev_PIC'); ?>
+		<?php echo $form->label($model,'user_id'); ?>
+		<?php echo $form->textField($model,'user_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'departement_PIC'); ?>
-		<?php echo $form->textField($model,'departement_PIC'); ?>
+		<?php echo $form->textArea($model,'departement_PIC',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">
@@ -98,12 +73,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'key_achievement'); ?>
-		<?php echo $form->textArea($model,'key_achievement',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'key_achievement'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'n_status'); ?>
-		<?php echo $form->textField($model,'n_status'); ?>
+		<?php echo $form->label($model,'month_of_register'); ?>
+		<?php echo $form->textField($model,'month_of_register'); ?>
 	</div>
 
 	<div class="row buttons">

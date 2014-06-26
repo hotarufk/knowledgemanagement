@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'tbl_user':
  * @property integer $user_id
- * @property string $id
+ * @property string $login_id
  * @property string $password
  * @property string $nama
  */
@@ -27,12 +27,11 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, password, nama', 'required'),
-			array('id, password', 'length', 'max'=>100),
-			array('nama', 'length', 'max'=>10),
+			array('login_id, password, nama', 'required'),
+			array('login_id, password, nama', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('user_id, id, password, nama', 'safe', 'on'=>'search'),
+			array('user_id, login_id, password, nama', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +53,7 @@ class User extends CActiveRecord
 	{
 		return array(
 			'user_id' => 'User',
-			'id' => 'ID',
+			'login_id' => 'Login',
 			'password' => 'Password',
 			'nama' => 'Nama',
 		);
@@ -79,7 +78,7 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('id',$this->id,true);
+		$criteria->compare('login_id',$this->login_id,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('nama',$this->nama,true);
 

@@ -20,9 +20,9 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'id'); ?>
+		<?php echo $form->labelEx($model,'login_id'); ?>
+		<?php echo $form->textField($model,'login_id',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'login_id'); ?>
 	</div>
 
 	<div class="row">
@@ -33,7 +33,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama'); ?>
-		<?php echo $form->textField($model,'nama',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'nama',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'nama'); ?>
 	</div>
 

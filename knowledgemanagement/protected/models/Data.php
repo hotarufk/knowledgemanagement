@@ -7,22 +7,17 @@
  * @property integer $no
  * @property string $no_br
  * @property string $cr_number
- * @property string $status
- * @property integer $BA
- * @property integer $TS
- * @property integer $SRS
- * @property integer $BRS
- * @property integer $MOM
+ * @property integer $status
  * @property string $reflex
  * @property string $application_name
- * @property integer $IT_dev_PIC
- * @property integer $departement_PIC
+ * @property integer $user_id
+ * @property string $departement_PIC
  * @property integer $IT_testing_PIC
  * @property string $request_date
  * @property string $start_date
  * @property string $end_date
- * @property string $key_achievement
- * @property integer $n_status
+ * @property integer $key_achievement
+ * @property string $month_of_register
  */
 class Data extends CActiveRecord
 {
@@ -42,14 +37,14 @@ class Data extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_br, cr_number, BA, TS, SRS, BRS, MOM, application_name, IT_dev_PIC, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, n_status', 'required'),
-			array('BA, TS, SRS, BRS, MOM, IT_dev_PIC, departement_PIC, IT_testing_PIC, n_status', 'numerical', 'integerOnly'=>true),
+			array('no_br, cr_number, status, application_name, user_id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'required'),
+			array('status, user_id, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
 			array('no_br, cr_number', 'length', 'max'=>50),
-			array('status, application_name', 'length', 'max'=>100),
+			array('application_name', 'length', 'max'=>100),
 			array('reflex', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('no, no_br, cr_number, status, BA, TS, SRS, BRS, MOM, reflex, application_name, IT_dev_PIC, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, n_status', 'safe', 'on'=>'search'),
+			array('no, no_br, cr_number, status, reflex, application_name, user_id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,21 +69,16 @@ class Data extends CActiveRecord
 			'no_br' => 'No Br',
 			'cr_number' => 'Cr Number',
 			'status' => 'Status',
-			'BA' => 'Ba',
-			'TS' => 'Ts',
-			'SRS' => 'Srs',
-			'BRS' => 'Brs',
-			'MOM' => 'Mom',
 			'reflex' => 'Reflex',
 			'application_name' => 'Application Name',
-			'IT_dev_PIC' => 'It Dev Pic',
+			'user_id' => 'User',
 			'departement_PIC' => 'Departement Pic',
 			'IT_testing_PIC' => 'It Testing Pic',
 			'request_date' => 'Request Date',
 			'start_date' => 'Start Date',
 			'end_date' => 'End Date',
 			'key_achievement' => 'Key Achievement',
-			'n_status' => 'N Status',
+			'month_of_register' => 'Month Of Register',
 		);
 	}
 
@@ -113,22 +103,17 @@ class Data extends CActiveRecord
 		$criteria->compare('no',$this->no);
 		$criteria->compare('no_br',$this->no_br,true);
 		$criteria->compare('cr_number',$this->cr_number,true);
-		$criteria->compare('status',$this->status,true);
-		$criteria->compare('BA',$this->BA);
-		$criteria->compare('TS',$this->TS);
-		$criteria->compare('SRS',$this->SRS);
-		$criteria->compare('BRS',$this->BRS);
-		$criteria->compare('MOM',$this->MOM);
+		$criteria->compare('status',$this->status);
 		$criteria->compare('reflex',$this->reflex,true);
 		$criteria->compare('application_name',$this->application_name,true);
-		$criteria->compare('IT_dev_PIC',$this->IT_dev_PIC);
-		$criteria->compare('departement_PIC',$this->departement_PIC);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('departement_PIC',$this->departement_PIC,true);
 		$criteria->compare('IT_testing_PIC',$this->IT_testing_PIC);
 		$criteria->compare('request_date',$this->request_date,true);
 		$criteria->compare('start_date',$this->start_date,true);
 		$criteria->compare('end_date',$this->end_date,true);
-		$criteria->compare('key_achievement',$this->key_achievement,true);
-		$criteria->compare('n_status',$this->n_status);
+		$criteria->compare('key_achievement',$this->key_achievement);
+		$criteria->compare('month_of_register',$this->month_of_register,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

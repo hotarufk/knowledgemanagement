@@ -6,10 +6,13 @@
 
 <div class="form">
 
-<?php /** @var BootActiveForm $form */
-$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'id'=>'verticalForm',
-    'htmlOptions'=>array('class'=>'well'),
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'data-form',
+	// Please note: When you enable ajax validation, make sure the corresponding
+	// controller action is handling ajax validation correctly.
+	// There is a call to performAjaxValidation() commented in generated controller code.
+	// See class documentation of CActiveForm for details on this.
+	'enableAjaxValidation'=>false,
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -30,38 +33,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->textField($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'BA'); ?>
-		<?php echo $form->textField($model,'BA'); ?>
-		<?php echo $form->error($model,'BA'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'TS'); ?>
-		<?php echo $form->textField($model,'TS'); ?>
-		<?php echo $form->error($model,'TS'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'SRS'); ?>
-		<?php echo $form->textField($model,'SRS'); ?>
-		<?php echo $form->error($model,'SRS'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'BRS'); ?>
-		<?php echo $form->textField($model,'BRS'); ?>
-		<?php echo $form->error($model,'BRS'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'MOM'); ?>
-		<?php echo $form->textField($model,'MOM'); ?>
-		<?php echo $form->error($model,'MOM'); ?>
 	</div>
 
 	<div class="row">
@@ -77,14 +50,14 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'IT_dev_PIC'); ?>
-		<?php echo $form->textField($model,'IT_dev_PIC'); ?>
-		<?php echo $form->error($model,'IT_dev_PIC'); ?>
+		<?php echo $form->labelEx($model,'user_id'); ?>
+		<?php echo $form->textField($model,'user_id'); ?>
+		<?php echo $form->error($model,'user_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'departement_PIC'); ?>
-		<?php echo $form->textField($model,'departement_PIC'); ?>
+		<?php echo $form->textArea($model,'departement_PIC',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'departement_PIC'); ?>
 	</div>
 
@@ -114,18 +87,18 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'key_achievement'); ?>
-		<?php echo $form->textArea($model,'key_achievement',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'key_achievement'); ?>
 		<?php echo $form->error($model,'key_achievement'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'n_status'); ?>
-		<?php echo $form->textField($model,'n_status'); ?>
-		<?php echo $form->error($model,'n_status'); ?>
+		<?php echo $form->labelEx($model,'month_of_register'); ?>
+		<?php echo $form->textField($model,'month_of_register'); ?>
+		<?php echo $form->error($model,'month_of_register'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Submit')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

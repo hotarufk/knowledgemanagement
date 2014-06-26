@@ -49,22 +49,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'no_br',
 		'cr_number',
 		'status',
-		'BA',
-		'TS',
-		/*
-		'SRS',
-		'BRS',
-		'MOM',
 		'reflex',
 		'application_name',
-		'IT_dev_PIC',
+		/*
+		'user_id',
 		'departement_PIC',
 		'IT_testing_PIC',
 		'request_date',
 		'start_date',
 		'end_date',
 		'key_achievement',
-		'n_status',
+		'month_of_register',
 		*/
 		array(
 			'class'=>'CButtonColumn',

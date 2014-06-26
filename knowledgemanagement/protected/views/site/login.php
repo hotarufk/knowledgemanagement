@@ -47,13 +47,13 @@ $this->breadcrumbs=array(
 
 	<div class="row buttons">
 		<?php //echo CHtml::submitButton('Login'); 
-			echo CHtml::submitButton('Login'); 
+			//echo CHtml::submitButton('Login'); 
 			$this->widget('bootstrap.widgets.TbButton', array(
 			'label'=>'Login',
 			'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
 			'size'=>'large', // null, 'large', 'small' or 'mini'
 			'buttonType'=>'submit',
-		?>
+		))?>
 	</div>
 
 <?php $this->endWidget(); ?>
