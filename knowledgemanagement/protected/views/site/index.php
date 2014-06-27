@@ -4,17 +4,51 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<?php 
+$count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM tbl_user')->queryScalar();
+$sql='SELECT * FROM tbl_user';
+$dataProvider=new CSqlDataProvider($sql, array(
+    'totalItemCount'=>$count,
+    'sort'=>array(
+        'attributes'=>array(
+             'user_id', 'id', 'password', 'nama',
+        ),
+    ),
+    'pagination'=>array(
+        'pageSize'=>10,
+    ),
+));
+?>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$dataProvider,
+	'filter'=>null,
+    'template'=>"{items}",
+    'columns'=>array(
+        array('name'=>'user_id', 'header'=>'#'),
+        array('name'=>'id', 'header'=>'Username'),
+        array('name'=>'password', 'header'=>'Email'),
+        array('name'=>'nama', 'header'=>'Nama'),
+        array(
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+			'template'=>'{create}',
+			'buttons'=>array
+            (
+                'create' => array(
+                    'label'=>'Criar Evento',
+                    'icon'=>'plus',
+                    
+                ),
+            ),
+        ),
+    ),
+)); ?>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
+<?php
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+if (!is_object($data))
+  die('There seems to be a problem with the data');
+  
+ ?>

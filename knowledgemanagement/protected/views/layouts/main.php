@@ -24,44 +24,36 @@
 <div class="container" id="page">
 
 	<div id="header">
-	<!-- 
-	<div id="logo"><?php //echo CHtml::encode(Yii::app()->name); ?></div>
-	-->
+		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-		'type'=>'null', // null or 'inverse'
-		'brand'=>'Knowledge Management',
-		'brandUrl'=>'#',
-		'fixed'=>'top',
-		'collapse'=>true, // requires bootstrap-responsive.css
-		'items'=>array(
-			array(
-				'class'=>'bootstrap.widgets.TbMenu',
-				'items'=>array(
-					array('label'=>'Home','url'=>array('/site/index')),
-					array('label'=>'Search','url'=>array('/site/createuser')),
-					array('label'=>'Laporan'),
-					array('label'=>'Profile'),
-					array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-					array('label'=>'Contact', 'url'=>array('/site/contact')),
-
-				),
-			),
-			'<form class="navbar-search pull-center" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
-			array(
-				'class'=>'bootstrap.widgets.TbMenu',
-				'htmlOptions'=>array('class'=>'pull-right'),
-				'items'=>array(
-					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-				),
-			),
-		),
-	)); ?>
+    'type'=>'inverse', // null or 'inverse'
+    'brand'=>'Project name',
+    'brandUrl'=>'#',
+    'collapse'=>true, // requires bootstrap-responsive.css
+    'items'=>array(
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+            'items'=>array(
+                array('label'=>'Home', 'url'=>'index.php', 'active'=>true),
+                array('label'=>'Search', 'url'=>'/site/createuser'),
+                array('label'=>'Data', 'url'=>array('data/index'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Profile', 'url'=>'#'),
+				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				
+                )),
+            
+        '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+        
+            )
+			)
+			); ?>
 	</div><!-- mainmenu -->
-	
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
@@ -69,6 +61,8 @@
 	<?php endif?>
 
 	<?php echo $content; ?>
+	
+	
 	<div id="sidebar">
 		<?php
 			//echo CHtml::button('Test', array('onclick' => 'js:document.location.href="UserController/Index"'));
