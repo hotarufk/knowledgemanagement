@@ -33,8 +33,8 @@ $dataProvider=new CSqlDataProvider($sql, array(
         array(
             'class'=>'bootstrap.widgets.TbButtonColumn',
             'htmlOptions'=>array('style'=>'width: 50px'),
-			'viewButtonUrl'=>'Yii::app()->createUrl("/user/view", array("id"=>$data["user_id"]))',
-			'updateButtonUrl'=>'Yii::app()->createUrl("/user/update", array("id"=>$data["user_id"]))',
+			'viewButtonUrl'=>'Yii::app()->createUrl("/user/view", array("id"=>$data["id"]))',
+			'updateButtonUrl'=>'Yii::app()->createUrl("/user/update", array("id"=>$data["id"]))',
 			'deleteButtonUrl'=>null,
         ),
     ),
