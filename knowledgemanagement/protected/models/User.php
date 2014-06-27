@@ -4,15 +4,12 @@
  * This is the model class for table "tbl_user".
  *
  * The followings are the available columns in table 'tbl_user':
- * @property integer $user_id
+ * @property integer $id
  * @property string $username
  * @property string $password
  * @property string $nama
  */
-
- 
 class User extends CActiveRecord
-
 {
 	/**
 	 * @return string the associated database table name
@@ -34,7 +31,7 @@ class User extends CActiveRecord
 			array('username, password, nama', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('user_id, username, password, nama', 'safe', 'on'=>'search'),
+			array('id, username, password, nama', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,7 +52,7 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'user_id' => 'User',
+			'id' => 'ID',
 			'username' => 'Username',
 			'password' => 'Password',
 			'nama' => 'Nama',
@@ -80,7 +77,7 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('nama',$this->nama,true);

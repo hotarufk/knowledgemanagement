@@ -11,7 +11,7 @@ $dataProvider=new CSqlDataProvider($sql, array(
     'totalItemCount'=>$count,
     'sort'=>array(
         'attributes'=>array(
-             'user_id', 'id', 'password', 'nama',
+             'id', 'username', 'password', 'nama',
         ),
     ),
     'pagination'=>array(
@@ -26,15 +26,15 @@ $dataProvider=new CSqlDataProvider($sql, array(
 	'filter'=>null,
     'template'=>"{items}",
     'columns'=>array(
-        array('name'=>'user_id', 'header'=>'#'),
-        array('name'=>'id', 'header'=>'Username'),
-        array('name'=>'password', 'header'=>'Email'),
+        array('name'=>'id', 'header'=>'#'),
+        array('name'=>'username', 'header'=>'Username'),
+        array('name'=>'password', 'header'=>'Password'),
         array('name'=>'nama', 'header'=>'Nama'),
         array(
             'class'=>'bootstrap.widgets.TbButtonColumn',
             'htmlOptions'=>array('style'=>'width: 50px'),
-			'viewButtonUrl'=>'Yii::app()->createUrl("/user/view", array("id"=>$data["user_id"]))',
-			'updateButtonUrl'=>'Yii::app()->createUrl("/user/update", array("id"=>$data["user_id"]))',
+			'viewButtonUrl'=>'Yii::app()->createUrl("/user/view", array("id"=>$data["id"]))',
+			'updateButtonUrl'=>'Yii::app()->createUrl("/user/update", array("id"=>$data["id"]))',
 			'deleteButtonUrl'=>null,
         ),
     ),
