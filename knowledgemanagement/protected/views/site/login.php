@@ -1,28 +1,23 @@
 <?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
-
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
+/* @var $this UserController */
+/* @var $model User */
+/* @var $form CActiveForm */
 ?>
 
-<h1>Login</h1>
-
-<p>Please fill out the following form with your login credentials:</p>
-
 <div class="form">
+
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
+	'id'=>'user-login-form',
+	// Please note: When you enable ajax validation, make sure the corresponding
+	// controller action is handling ajax validation correctly.
+	// See class documentation of CActiveForm for details on this,
+	// you need to use the performAjaxValidation()-method described there.
+	'enableAjaxValidation'=>false,
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
@@ -32,29 +27,15 @@ $this->breadcrumbs=array(
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
+		<?php echo $form->textField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
 	</div>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
 
 	<div class="row buttons">
-		<?php //echo CHtml::submitButton('Login'); 
-			//echo CHtml::submitButton('Login'); 
-			$this->widget('bootstrap.widgets.TbButton', array(
-			'label'=>'Login',
-			'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-			'size'=>'large', // null, 'large', 'small' or 'mini'
-			'buttonType'=>'submit',
-		))?>
+		<?php echo CHtml::submitButton('Submit'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
+
 </div><!-- form -->

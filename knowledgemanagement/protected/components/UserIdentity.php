@@ -15,19 +15,33 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
-	public function authenticate()
-	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
-	}
+	private $_id;
+    public function authenticate()
+    {
+        $record=User::model()->findByAttributes(array('username'=>$this->username));
+		// This is in the PHP file and sends a Javascript alert to the client
+		//$message = $this->password;
+		//echo "<script type='text/javascript'>alert('$message');</script>";
+        if($record===null)
+            $this->errorCode=self::ERROR_USERNAME_INVALID;
+        else if($record->password!==$this->password)
+            $this->errorCode=self::ERROR_PASSWORD_INVALID;
+        else
+        {
+            $this->_id=$record->user_id;
+            $this->setState('title', 'guest');
+            $this->errorCode=self::ERROR_NONE;
+        }
+		$message=$record->password;
+		$category="emon.debug.authenticate";
+		Yii::trace($message, $category);
+		//echo "<script type='text/javascript'>alert('$message');</script>";
+        return !$this->errorCode;
+    }
+ 
+    public function getId()
+    {
+        return $this->_id;
+    }
+	
 }
