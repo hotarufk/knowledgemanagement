@@ -33,22 +33,10 @@ $dataProvider=new CSqlDataProvider($sql, array(
         array(
             'class'=>'bootstrap.widgets.TbButtonColumn',
             'htmlOptions'=>array('style'=>'width: 50px'),
-			'template'=>'{create}',
-			'buttons'=>array
-            (
-                'create' => array(
-                    'label'=>'Criar Evento',
-                    'icon'=>'plus',
-                    
-                ),
-            ),
+			'viewButtonUrl'=>'Yii::app()->createUrl("/user/view", array("id"=>$data["user_id"]))',
+			'updateButtonUrl'=>'Yii::app()->createUrl("/user/update", array("id"=>$data["user_id"]))',
+			'deleteButtonUrl'=>null,
         ),
     ),
 )); ?>
 
-<?php
-
-if (!is_object($data))
-  die('There seems to be a problem with the data');
-  
- ?>
