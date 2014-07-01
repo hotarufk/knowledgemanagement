@@ -50,9 +50,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'user_id'); ?>
-		<?php echo $form->textField($model,'user_id'); ?>
-		<?php echo $form->error($model,'user_id'); ?>
+		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->textField($model,'user');?>
+		<?php echo $form->error($model,'user'); ?>
 	</div>
 
 	<div class="row">
@@ -75,7 +75,28 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'start_date'); ?>
-		<?php echo $form->textField($model,'start_date'); ?>
+		<?php
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'start_date',
+			'options' => array(
+
+				'dateFormat' => 'yy-mm-dd',     // format of "2012-12-25"
+				'showOtherMonths' => true,      // show dates in other months
+				'selectOtherMonths' => true,    // can seelect dates in other months
+				'changeYear' => true,           // can change year
+				'changeMonth' => true,          // can change month
+				'yearRange' => '2000:2099',     // range of year
+				'minDate' => '2000-01-01',      // minimum date
+				'maxDate' => '2099-12-31',      // maximum date
+
+			),
+			'htmlOptions' => array(
+				'size' => '10',         // textField size
+				'maxlength' => '10',    // textField maxlength
+			),
+		));
+		?>
 		<?php echo $form->error($model,'start_date'); ?>
 	</div>
 

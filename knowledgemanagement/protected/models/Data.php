@@ -10,7 +10,7 @@
  * @property integer $status
  * @property string $reflex
  * @property string $application_name
- * @property integer $user_id
+ * @property integer $id
  * @property string $departement_PIC
  * @property integer $IT_testing_PIC
  * @property string $request_date
@@ -37,14 +37,14 @@ class Data extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_br, cr_number, status, application_name, user_id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'required'),
-			array('status, user_id, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
+			array('no_br, cr_number, status, application_name, id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'required'),
+			array('status, id, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
 			array('no_br, cr_number', 'length', 'max'=>50),
 			array('application_name', 'length', 'max'=>100),
 			array('reflex', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('no, no_br, cr_number, status, reflex, application_name, user_id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
+			array('no, no_br, cr_number, status, reflex, application_name, id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +56,7 @@ class Data extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user_id'=>array(self::BELONGS_TO, 'User', 'id'),
 		);
 	}
 
@@ -71,7 +72,7 @@ class Data extends CActiveRecord
 			'status' => 'Status',
 			'reflex' => 'Reflex',
 			'application_name' => 'Application Name',
-			'user_id' => 'User',
+			'id' => 'ID',
 			'departement_PIC' => 'Departement Pic',
 			'IT_testing_PIC' => 'It Testing Pic',
 			'request_date' => 'Request Date',
@@ -106,7 +107,7 @@ class Data extends CActiveRecord
 		$criteria->compare('status',$this->status);
 		$criteria->compare('reflex',$this->reflex,true);
 		$criteria->compare('application_name',$this->application_name,true);
-		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('departement_PIC',$this->departement_PIC,true);
 		$criteria->compare('IT_testing_PIC',$this->IT_testing_PIC);
 		$criteria->compare('request_date',$this->request_date,true);

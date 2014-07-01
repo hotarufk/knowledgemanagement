@@ -29,8 +29,8 @@
 	<?php echo CHtml::encode($data->application_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->user_id); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<?php echo CHtml::encode($data->user); ?>
 	<br />
 
 	<?php /*

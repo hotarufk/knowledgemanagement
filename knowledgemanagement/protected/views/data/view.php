@@ -27,7 +27,7 @@ $this->menu=array(
 		'status',
 		'reflex',
 		'application_name',
-		'user_id',
+		'id',
 		'departement_PIC',
 		'IT_testing_PIC',
 		'request_date',

@@ -52,7 +52,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'reflex',
 		'application_name',
 		/*
-		'user_id',
+		'id',
 		'departement_PIC',
 		'IT_testing_PIC',
 		'request_date',
