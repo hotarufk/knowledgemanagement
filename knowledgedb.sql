@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2014 at 04:40 AM
+-- Generation Time: Jul 01, 2014 at 04:08 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `tbl_data` (
   `status` int(100) NOT NULL,
   `reflex` text,
   `application_name` varchar(100) NOT NULL,
-  `user_id` int(100) NOT NULL,
+  `user` int(100) NOT NULL,
   `departement_PIC` text NOT NULL,
   `IT_testing_PIC` int(100) NOT NULL,
   `request_date` date NOT NULL,
@@ -42,14 +42,17 @@ CREATE TABLE IF NOT EXISTS `tbl_data` (
   `key_achievement` int(11) NOT NULL,
   `month_of_register` date NOT NULL,
   PRIMARY KEY (`no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `tbl_data`
 --
 
-INSERT INTO `tbl_data` (`no`, `no_br`, `cr_number`, `status`, `reflex`, `application_name`, `user_id`, `departement_PIC`, `IT_testing_PIC`, `request_date`, `start_date`, `end_date`, `key_achievement`, `month_of_register`) VALUES
-(2, 'eaddad', 'yadgayd', 1, 'test', 'adaeda', 1, 'adedead', 1, '2014-06-08', '2014-06-02', '2014-06-03', 1, '2014-06-16');
+INSERT INTO `tbl_data` (`no`, `no_br`, `cr_number`, `status`, `reflex`, `application_name`, `user`, `departement_PIC`, `IT_testing_PIC`, `request_date`, `start_date`, `end_date`, `key_achievement`, `month_of_register`) VALUES
+(2, 'eaddad', 'yadgayd', 1, 'test', 'adaeda', 1, 'adedead', 1, '2014-06-08', '2014-06-02', '2014-06-03', 1, '2014-06-16'),
+(3, '223', 'sdadw', 2, 'test', 'apa', 1, 'dwdw', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '0000-00-00'),
+(4, 'de', 'ded', 3, 'eded', 'eded', 50, 'wsw', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '0000-00-00'),
+(5, '12', '232', 1, 'wwdwd', 'dwdwdw', 56, 'sdsds', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -58,22 +61,21 @@ INSERT INTO `tbl_data` (`no`, `no_br`, `cr_number`, `status`, `reflex`, `applica
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `user_id` int(100) NOT NULL AUTO_INCREMENT,
-  `login_id` varchar(100) NOT NULL,
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `nama` varchar(100) NOT NULL,
-  PRIMARY KEY (`user_id`),
-  UNIQUE KEY `id` (`login_id`),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`username`),
   UNIQUE KEY `nama` (`nama`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `login_id`, `password`, `nama`) VALUES
-(1, 'emon', 'emon', 'andri'),
-(2, 'emon1', 'emon', 'andri1');
+INSERT INTO `tbl_user` (`id`, `username`, `password`, `nama`) VALUES
+(1, 'emon', 'ganteng', 'andri');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
