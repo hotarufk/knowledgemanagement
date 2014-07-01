@@ -45,14 +45,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'no',
+		'id',
 		'no_br',
 		'cr_number',
 		'status',
 		'reflex',
 		'application_name',
 		/*
-		'id',
+		'user',
 		'departement_PIC',
 		'IT_testing_PIC',
 		'request_date',

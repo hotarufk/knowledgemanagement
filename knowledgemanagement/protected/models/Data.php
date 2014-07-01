@@ -4,13 +4,13 @@
  * This is the model class for table "tbl_data".
  *
  * The followings are the available columns in table 'tbl_data':
- * @property integer $no
+ * @property integer $id
  * @property string $no_br
  * @property string $cr_number
  * @property integer $status
  * @property string $reflex
  * @property string $application_name
- * @property integer $id
+ * @property integer $user
  * @property string $departement_PIC
  * @property integer $IT_testing_PIC
  * @property string $request_date
@@ -37,14 +37,14 @@ class Data extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_br, cr_number, status, application_name, id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'required'),
-			array('status, id, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
+			array('no_br, cr_number, status, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'required'),
+			array('status, user, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
 			array('no_br, cr_number', 'length', 'max'=>50),
 			array('application_name', 'length', 'max'=>100),
 			array('reflex', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('no, no_br, cr_number, status, reflex, application_name, id, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
+			array('id, no_br, cr_number, status, reflex, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,7 +56,6 @@ class Data extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user_id'=>array(self::BELONGS_TO, 'User', 'id'),
 		);
 	}
 
@@ -66,13 +65,13 @@ class Data extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'no' => 'No',
+			'id' => 'ID',
 			'no_br' => 'No Br',
 			'cr_number' => 'Cr Number',
 			'status' => 'Status',
 			'reflex' => 'Reflex',
 			'application_name' => 'Application Name',
-			'id' => 'ID',
+			'user' => 'User',
 			'departement_PIC' => 'Departement Pic',
 			'IT_testing_PIC' => 'It Testing Pic',
 			'request_date' => 'Request Date',
@@ -101,13 +100,13 @@ class Data extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('no',$this->no);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('no_br',$this->no_br,true);
 		$criteria->compare('cr_number',$this->cr_number,true);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('reflex',$this->reflex,true);
 		$criteria->compare('application_name',$this->application_name,true);
-		$criteria->compare('id',$this->id);
+		$criteria->compare('user',$this->user);
 		$criteria->compare('departement_PIC',$this->departement_PIC,true);
 		$criteria->compare('IT_testing_PIC',$this->IT_testing_PIC);
 		$criteria->compare('request_date',$this->request_date,true);

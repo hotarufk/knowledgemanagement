@@ -33,7 +33,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->dropDownList($model,'status',array('1'=>'Pre-Register','2'=>'In Progress','3'=>'Closed-Cancelled','4'=>'Closed-Pending','5'=>'Closed-Finished'), array('options' => array('1'=>array('selected'=>true)))); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
@@ -50,8 +50,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'user');?>
+		<?php echo $form->labelEx($model,'user'); ?>
+		<?php echo $form->dropDownList($model,'user', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('empty'=>'select Type')); ?>
 		<?php echo $form->error($model,'user'); ?>
 	</div>
 
@@ -63,58 +63,114 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'IT_testing_PIC'); ?>
-		<?php echo $form->textField($model,'IT_testing_PIC'); ?>
+		<?php echo $form->dropDownList($model,'IT_testing_PIC',array('1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y chaerang','4'=>'Tulus Hamdani'), array('options' => array('1'=>array('selected'=>true)))); ?>
 		<?php echo $form->error($model,'IT_testing_PIC'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'request_date'); ?>
-		<?php echo $form->textField($model,'request_date'); ?>
-		<?php echo $form->error($model,'request_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'start_date'); ?>
-		<?php
+		<?php 
 		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
-			'attribute' => 'start_date',
+			'attribute' => 'request_date',
 			'options' => array(
-
+				'showOn' => 'both',             // also opens with a button
 				'dateFormat' => 'yy-mm-dd',     // format of "2012-12-25"
 				'showOtherMonths' => true,      // show dates in other months
-				'selectOtherMonths' => true,    // can seelect dates in other months
 				'changeYear' => true,           // can change year
 				'changeMonth' => true,          // can change month
 				'yearRange' => '2000:2099',     // range of year
 				'minDate' => '2000-01-01',      // minimum date
 				'maxDate' => '2099-12-31',      // maximum date
-
+				'showButtonPanel' => true,      // show button panel
 			),
 			'htmlOptions' => array(
-				'size' => '10',         // textField size
-				'maxlength' => '10',    // textField maxlength
+				'size' => '10',
+				'maxlength' => '10',
 			),
-		));
+		)); 
+		?>
+		<?php echo $form->error($model,'request_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'start_date'); ?>
+		<?php 
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'start_date',
+			'options' => array(
+				'dateFormat' => 'yy-mm-dd',     // format of "2012-12-25"
+				'showOtherMonths' => true,      // show dates in other months
+				'changeYear' => true,           // can change year
+				'changeMonth' => true,          // can change month
+				'yearRange' => '2000:2099',     // range of year
+				'minDate' => '2000-01-01',      // minimum date
+				'maxDate' => '2099-12-31',      // maximum date
+			),
+			'htmlOptions' => array(
+				'size' => '10',
+				'maxlength' => '10',
+			),
+		)); 
 		?>
 		<?php echo $form->error($model,'start_date'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'end_date'); ?>
-		<?php echo $form->textField($model,'end_date'); ?>
+		<?php 
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'end_date',
+			'options' => array(
+				'dateFormat' => 'yy-mm-dd',     // format of "2012-12-25"
+				'showOtherMonths' => true,      // show dates in other months
+				'changeYear' => true,           // can change year
+				'changeMonth' => true,          // can change month
+				'yearRange' => '2000:2099',     // range of year
+				'minDate' => '2000-01-01',      // minimum date
+				'maxDate' => '2099-12-31',      // maximum date
+			),
+			'htmlOptions' => array(
+				'size' => '10',
+				'maxlength' => '10',
+			),
+		)); 
+		?>
 		<?php echo $form->error($model,'end_date'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'key_achievement'); ?>
-		<?php echo $form->textField($model,'key_achievement'); ?>
+		<?php echo $form->dropDownList($model,'key_achievement',array('0'=>'not Achieved','1'=>'Achieved'), array('options' => array('0'=>array('selected'=>true)))); ?>
 		<?php echo $form->error($model,'key_achievement'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'month_of_register'); ?>
-		<?php echo $form->textField($model,'month_of_register'); ?>
+		<?php 
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'month_of_register',
+			'themeUrl' => Yii::app()->baseUrl . '/css/jui',
+			'theme' => 'softark',
+			'cssFile' => 'jquery-ui-1.9.2.custom.css',
+			'options' => array(
+				'dateFormat' => 'yy-mm-dd',     // format of "2012-12-25"
+				'showOtherMonths' => true,      // show dates in other months
+				'changeYear' => true,           // can change year
+				'changeMonth' => true,          // can change month
+				'yearRange' => '2000:2099',     // range of year
+				'minDate' => '2000-01-01',      // minimum date
+				'maxDate' => '2099-12-31',      // maximum date
+			),
+			'htmlOptions' => array(
+				'size' => '10',
+				'maxlength' => '10',
+			),
+		)); 
+		?>
 		<?php echo $form->error($model,'month_of_register'); ?>
 	</div>
 

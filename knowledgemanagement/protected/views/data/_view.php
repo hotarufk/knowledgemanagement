@@ -5,8 +5,8 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('no')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->no), array('view', 'id'=>$data->no)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('no_br')); ?>:</b>
@@ -29,7 +29,7 @@
 	<?php echo CHtml::encode($data->application_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('user')); ?>:</b>
 	<?php echo CHtml::encode($data->user); ?>
 	<br />
 
