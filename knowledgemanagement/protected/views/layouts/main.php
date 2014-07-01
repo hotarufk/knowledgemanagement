@@ -24,7 +24,7 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<div id="logo"><br><br><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
 
 	<div id="mainmenu">
@@ -66,8 +66,8 @@
 	<div id="sidebar">
 		<?php
 			//echo CHtml::button('Test', array('onclick' => 'js:document.location.href="UserController/Index"'));
-			//echo CHtml::button('Data', array('submit' => array('Data/Create')));
-			//echo CHtml::button('User', array('submit' => array('User/Create')));
+			echo CHtml::button('Data', array('submit' => array('Data/Create')));
+			echo CHtml::button('User', array('submit' => array('User/Create')));
 		 $this->widget('bootstrap.widgets.TbButton', array(
 			'label'=>'Data',
 			'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
