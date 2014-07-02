@@ -90,9 +90,10 @@ class SiteController extends Controller
 
 		if(isset($_POST['User']))
 		{
+			$model->scenario = 'login'; 
 			$model->attributes=$_POST['User'];
-			//if($model->validate())
-		   // {
+			if($model->validate())
+		    {
 				// form inputs are valid, do something here
 				// Login a user with the provided username and password.
 				$identity=new UserIdentity($model->username,$model->password);
@@ -109,7 +110,7 @@ class SiteController extends Controller
 					Yii::trace($message, $category);
 					echo $identity->errorMessage;
 					}
-			//}
+			}
 		}
 		$this->render('login',array('model'=>$model));
 	}

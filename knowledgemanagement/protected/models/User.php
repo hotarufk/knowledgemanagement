@@ -11,6 +11,11 @@
  */
 class User extends CActiveRecord
 {
+
+
+	const WEAK = 0;
+	const STRONG = 1;
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -27,14 +32,33 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, nama', 'required'),
+			array('nama', 'required','on'=>'create,update'),
+			array('username, password', 'required'),
+			array(
+            'username,password',
+            'match', 'not' => true, 'pattern' => '/[^a-zA-Z0-9_-]/',
+			'on'=>'create,update',
+            'message' => 'Invalid characters in username/password. Only use a-z , A-Z , 0-9 , _ , or -',
+			),
+			//array('password', 'passwordStrength','on'=>'create,update', 'strength'=>self::STRONG),
 			array('username, password, nama', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, password, nama', 'safe', 'on'=>'search'),
 		);
 	}
-
+	
+	//Custom Validation
+	public function passwordStrength($attribute,$params)
+	{
+		if ($params['strength'] === self::WEAK)
+			$pattern = '/^(?=.*[a-zA-Z0-9]).{5,}$/';  
+		elseif ($params['strength'] === self::STRONG)
+			$pattern = '/^(?=.*\d(?=.*\d))(?=.*[a-zA-Z](?=.*[a-zA-Z])).{5,}$/';  
+	 
+		if(!preg_match($pattern, $this->$attribute))
+		  $this->addError($attribute, 'your password is not strong enough!');
+	}
 	/**
 	 * @return array relational rules.
 	 */
