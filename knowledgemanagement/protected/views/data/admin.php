@@ -45,22 +45,41 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		//'id',
 		'no_br',
 		'cr_number',
-		'status',
+		array(
+			'header' => 'Status',
+            'name'=>'status',
+            'value'=>'$data->StatusText($data->status)',
+        ),
 		'reflex',
 		'application_name',
-		/*
-		'user',
+		array(
+		//'filter'=>User::model()->forList(),
+		'header' => 'IT Dev PIC',
+        'name' => 'user',
+        'value' => '$data->user0->nama',   //where name is Client model attribute 
+		),
 		'departement_PIC',
-		'IT_testing_PIC',
+		array(
+			'header' =>'IT Testing PIC',
+            'name'=>'IT_testing_PIC',
+            'value'=>'$data->TestingPICText($data->IT_testing_PIC)',
+        ),		
 		'request_date',
 		'start_date',
 		'end_date',
-		'key_achievement',
-		'month_of_register',
-		*/
+		array(
+			'header' =>'Key Achievement',
+            'name'=>'key_achievement',
+            'value'=>'$data->KAchievementText($data->key_achievement)',
+        ),
+		array(
+			'header' => 'Month of Register',
+            'name'=>'month_of_register',
+            'value'=>'$data-> MORText($data->month_of_register)',
+        ),
 		array(
 			'class'=>'CButtonColumn',
 		),

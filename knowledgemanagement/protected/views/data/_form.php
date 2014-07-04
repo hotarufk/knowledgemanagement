@@ -63,7 +63,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'IT_testing_PIC'); ?>
-		<?php echo $form->dropDownList($model,'IT_testing_PIC',array('1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y chaerang','4'=>'Tulus Hamdani'), array('options' => array('1'=>array('selected'=>true)))); ?>
+		<?php echo $form->dropDownList($model,'IT_testing_PIC',array('1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y Chaerang','4'=>'Tulus Hamdani'), array('options' => array('1'=>array('selected'=>true)))); ?>
 		<?php echo $form->error($model,'IT_testing_PIC'); ?>
 	</div>
 
@@ -157,13 +157,8 @@
 			'theme' => 'softark',
 			'cssFile' => 'jquery-ui-1.9.2.custom.css',
 			'options' => array(
-				'dateFormat' => 'yy-mm-dd',     // format of "2012-12-25"
-				'showOtherMonths' => true,      // show dates in other months
-				'changeYear' => true,           // can change year
-				'changeMonth' => true,          // can change month
-				'yearRange' => '2000:2099',     // range of year
-				'minDate' => '2000-01-01',      // minimum date
-				'maxDate' => '2099-12-31',      // maximum date
+				'dateFormat' => 'mm.yy',  
+				'minDate'=>0,
 			),
 			'htmlOptions' => array(
 				'size' => '10',

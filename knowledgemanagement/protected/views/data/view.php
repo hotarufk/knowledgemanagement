@@ -24,16 +24,40 @@ $this->menu=array(
 		'id',
 		'no_br',
 		'cr_number',
-		'status',
+		array(
+			'header' => 'Status',
+            'name'=>'status',
+			'value'=>$model-> MORText($model->status),
+        ), 
 		'reflex',
 		'application_name',
-		'user',
+         array(
+			'header' => 'IT Dev PIC',
+            'name'=>'user',
+            'value'=>$model->user0->nama ,
+        ), 
 		'departement_PIC',
-		'IT_testing_PIC',
+        array(
+			'header' =>'IT Testing PIC',
+            'name'=>'IT_testing_PIC',
+            'value'=>$model->TestingPICText($model->IT_testing_PIC),
+        ),		
 		'request_date',
 		'start_date',
 		'end_date',
-		'key_achievement',
-		'month_of_register',
+        array(
+			'header' =>'Key Achievement',
+            'name'=>'key_achievement',
+            'value'=>$model->KAchievementText($model->key_achievement),
+        ),
+        array(
+			'header' =>'Month of Register',
+            'name'=>'month_of_register',
+            'value'=>$model->MORText($model->month_of_register),
+        ),			
 	),
 )); ?>
+
+
+
+

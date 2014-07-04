@@ -18,7 +18,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
-	<?php echo CHtml::encode($data->status); ?>
+	<?php echo CHtml::encode($data->StatusText($data->status)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('reflex')); ?>:</b>
@@ -30,7 +30,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('user')); ?>:</b>
-	<?php echo CHtml::encode($data->user); ?>
+	<?php echo CHtml::encode($data->user0->nama); ?>
 	<br />
 
 	<?php /*

@@ -18,6 +18,9 @@
  * @property string $end_date
  * @property integer $key_achievement
  * @property string $month_of_register
+ *
+ * The followings are the available model relations:
+ * @property TblUser $user0
  */
 class Data extends CActiveRecord
 {
@@ -37,11 +40,11 @@ class Data extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_br, cr_number, status, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'required'),
+			array('no_br, cr_number, status, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, key_achievement, month_of_register', 'required'),
 			array('status, user, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
 			array('no_br, cr_number', 'length', 'max'=>50),
-			array('application_name', 'length', 'max'=>100),
-			array('reflex', 'safe'),
+			array('application_name, month_of_register', 'length', 'max'=>100),
+			array('reflex, end_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, no_br, cr_number, status, reflex, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
@@ -56,6 +59,7 @@ class Data extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user0' => array(self::BELONGS_TO, 'User', 'user'),
 		);
 	}
 
@@ -130,4 +134,106 @@ class Data extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	//fungsi untuk memrubah kode angka menjadi  textdomain
+	
+	function KAchievementText($val){
+		return $val == 1 ? 'Achieved' : 'not Achieved';
+	}
+
+	function StatusText($val){
+		$text=' ';
+		switch ($val) {
+		  case 1 :
+			$text='Pre-Register';
+			break;
+		  case 2 :
+			$text='In Progress';
+			break;
+		  case 3 :
+			$text='Closed-Cancelled';
+			break;
+		  case 4 :
+			$text='Closed-Pending';
+			break;
+		  case 5 :
+			$text='Closed-Finished';
+			break;
+		  default:
+			$text='error data invalid !';
+		}
+		return $text;
+	}
+		//1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y chaerang','4'=>'Tulus Hamdani'
+		function TestingPICText($val){
+		$text=' ';
+		switch ($val) {
+		  case 1 :
+			$text='I GP Witraguna';
+			break;
+		  case 2 :
+			$text='Setiawan';
+			break;
+		  case 3 :
+			$text='Sofie Y Chaerang';
+			break;
+		  case 4 :
+			$text='Tulus Hamdani';
+			break;
+		  default:
+			$text='error data invalid !';
+		}
+		return $text;
+	}
+	
+		function MORText($val){
+		
+		$text = explode(".",$val);
+		$message = "$val $text[0]";
+		switch ($text[0]) {
+		case '01' :
+			$text='Januari';
+			break;
+		case '02' :
+			$text='Februari';
+			break;
+		case '03' :
+			$text='Maret';
+			break;
+		case '04' :
+			$text='April';
+			break;
+		case '05' :
+			$text='Mei';
+			break;
+		case '06' :
+			$text='Juni';
+			break;
+		case '07' :
+			$text='Juli';
+			break;
+		case '08' :
+			$text='Agustus';
+			break;
+		case '09' :
+			$text='September';
+			break;
+		case '10' :
+			$text='Oktober';
+			break;
+		case '11' :
+			$text='November';
+			break;
+		case '12' :
+			$text='Desember';
+			break;
+		default:
+			$text='error data invalid !';
+		}
+		
+		$category="Debugging MOR Text";
+		Yii::trace($message, $category);
+		return $text;
+	}
+	
 }
