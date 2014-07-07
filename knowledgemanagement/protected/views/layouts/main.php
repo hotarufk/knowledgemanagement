@@ -38,7 +38,7 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'Home', 'url'=>'index.php', 'active'=>true),
-                array('label'=>'Search', 'url'=>'/site/createuser'),
+                array('label'=>'Report', 'url'=>array('/site/report'),'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Data', 'url'=>array('data/index'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Profile', 'url'=>'#'),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),

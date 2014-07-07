@@ -123,7 +123,14 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 	
+	public function actionReport(){
 	
+	
+	 $model=new User;
+        //some form code was here...
+        $this->render('report',array('model'=>$model));
+	//$this->render('report');
+	}
 
 	
 	

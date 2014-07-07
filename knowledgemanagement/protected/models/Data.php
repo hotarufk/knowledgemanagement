@@ -140,7 +140,7 @@ class Data extends CActiveRecord
 	function KAchievementText($val){
 		return $val == 1 ? 'Achieved' : 'not Achieved';
 	}
-
+	
 	function StatusText($val){
 		$text=' ';
 		switch ($val) {
@@ -165,7 +165,7 @@ class Data extends CActiveRecord
 		return $text;
 	}
 		//1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y chaerang','4'=>'Tulus Hamdani'
-		function TestingPICText($val){
+	function TestingPICText($val){
 		$text=' ';
 		switch ($val) {
 		  case 1 :
@@ -186,49 +186,48 @@ class Data extends CActiveRecord
 		return $text;
 	}
 	
-		function MORText($val){
-		
+	function MORText($val){
 		$text = explode(".",$val);
 		$message = "$val $text[0]";
 		switch ($text[0]) {
-		case '01' :
-			$text='Januari';
-			break;
-		case '02' :
-			$text='Februari';
-			break;
-		case '03' :
-			$text='Maret';
-			break;
-		case '04' :
-			$text='April';
-			break;
-		case '05' :
-			$text='Mei';
-			break;
-		case '06' :
-			$text='Juni';
-			break;
-		case '07' :
-			$text='Juli';
-			break;
-		case '08' :
-			$text='Agustus';
-			break;
-		case '09' :
-			$text='September';
-			break;
-		case '10' :
-			$text='Oktober';
-			break;
-		case '11' :
-			$text='November';
-			break;
-		case '12' :
-			$text='Desember';
-			break;
-		default:
-			$text='error data invalid !';
+			case '01' :
+				$text='Januari';
+				break;
+			case '02' :
+				$text='Februari';
+				break;
+			case '03' :
+				$text='Maret';
+				break;
+			case '04' :
+				$text='April';
+				break;
+			case '05' :
+				$text='Mei';
+				break;
+			case '06' :
+				$text='Juni';
+				break;
+			case '07' :
+				$text='Juli';
+				break;
+			case '08' :
+				$text='Agustus';
+				break;
+			case '09' :
+				$text='September';
+				break;
+			case '10' :
+				$text='Oktober';
+				break;
+			case '11' :
+				$text='November';
+				break;
+			case '12' :
+				$text='Desember';
+				break;
+			default:
+				$text='error data invalid !';
 		}
 		
 		$category="Debugging MOR Text";
