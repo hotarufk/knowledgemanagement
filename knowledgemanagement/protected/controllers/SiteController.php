@@ -103,6 +103,7 @@ class SiteController extends Controller
 					$category="emon.debug.login";
 					Yii::trace($message, $category);
 					Yii::app()->user->login($identity);
+					$this->redirect(Yii::app()->user->returnUrl);
 				}
 				else{
 					$message="login gagal";
