@@ -1,0 +1,7 @@
+Yang diubah :
+config/main.php
+tambah component RequireLogin.php
+css/main.css
+views/data/admin.php
+views/data/index.php
+views/layouts/main.php
