@@ -103,6 +103,9 @@ class Data extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$criteria->with=array('User');
+		//$criteria->toghether= true;
+
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('no_br',$this->no_br,true);
@@ -118,7 +121,11 @@ class Data extends CActiveRecord
 		$criteria->compare('end_date',$this->end_date,true);
 		$criteria->compare('key_achievement',$this->key_achievement);
 		$criteria->compare('month_of_register',$this->month_of_register,true);
-
+		
+		$criteria->with = array(
+			'user0'=>array('select'=>'user.nama'),
+		);
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

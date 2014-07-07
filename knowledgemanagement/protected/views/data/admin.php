@@ -56,10 +56,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'reflex',
 		'application_name',
 		array(
-		//'filter'=>User::model()->forList(),
 		'header' => 'IT Dev PIC',
         'name' => 'user',
         'value' => '$data->user0->nama',   //where name is Client model attribute 
+		'filter'=>CHtml::listData(User::model()->findAll(), 'id', 'nama'),
+
 		),
 		'departement_PIC',
 		array(
