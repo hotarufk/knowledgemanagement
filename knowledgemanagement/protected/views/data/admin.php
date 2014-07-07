@@ -33,6 +33,43 @@ You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&g
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
 
+<?php $form=$this->beginWidget('CActiveForm', array(
+    'id'=>'page-form',
+    'enableAjaxValidation'=>true,
+)); ?>
+ 
+<b>From :</b>
+<?php
+$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+    'name'=>'from_date',  // name of post parameter
+   // 'value'=>Yii::app()->request->cookies['from_date']->value,  // value comes from cookie after submittion
+     'options'=>array(
+        'showAnim'=>'fold',
+        'dateFormat'=>'yy-mm-dd',
+    ),
+    'htmlOptions'=>array(
+        'style'=>'height:20px;'
+    ),
+));
+?>
+<b>To :</b>
+<?php
+$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+    'name'=>'to_date',
+   // 'value'=>Yii::app()->request->cookies['to_date']->value,
+     'options'=>array(
+        'showAnim'=>'fold',
+        'dateFormat'=>'yy-mm-dd',
+ 
+    ),
+    'htmlOptions'=>array(
+        'style'=>'height:20px;'
+    ),
+));
+?>
+<?php echo CHtml::submitButton('Go'); ?> // submit button
+<?php $this->endWidget(); ?>
+
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(

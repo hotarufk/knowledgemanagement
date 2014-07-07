@@ -24,6 +24,14 @@
  */
 class Data extends CActiveRecord
 {
+
+
+	//kamus
+	public $from_date;
+	public $to_date;
+	
+	//function
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -125,6 +133,16 @@ class Data extends CActiveRecord
 		$criteria->with = array(
 			'user0'=>array('select'=>'user.nama'),
 		);
+		if(!empty($this->from_date) && empty($this->to_date))
+        {
+            $criteria->condition = "start_date >= '$this->from_date'";  // date is database date column field
+        }elseif(!empty($this->to_date) && empty($this->from_date))
+        {
+            $criteria->condition = "start_date <= '$this->to_date'";
+        }elseif(!empty($this->to_date) && !empty($this->from_date))
+        {
+            $criteria->condition = "start_date  >= '$this->from_date' and start_date <= '$this->to_date'";
+        }
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
