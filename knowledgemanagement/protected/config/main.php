@@ -12,7 +12,7 @@ return array(
     'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-
+	'defaultController' => 'data/index', 
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -100,4 +100,9 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+	'behaviors' => array(
+    'onBeginRequest' => array(
+        'class' => 'application.components.RequireLogin'
+    )
+),
 );
