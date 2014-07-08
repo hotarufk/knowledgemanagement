@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2014 at 09:45 AM
--- Server version: 5.6.16
--- PHP Version: 5.5.9
+-- Generation Time: Jul 08, 2014 at 06:46 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `knowledgedb`
 --
+CREATE DATABASE IF NOT EXISTS `knowledgedb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `knowledgedb`;
 
 -- --------------------------------------------------------
 
@@ -43,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `tbl_data` (
   `month_of_register` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `tbl_data`
@@ -57,7 +59,10 @@ INSERT INTO `tbl_data` (`id`, `no_br`, `cr_number`, `status`, `reflex`, `applica
 (6, 'wda', 'wdw', 1, 'dwad', 'wdwd', 1, 'sdsdadas', 1, '2014-07-14', '2014-07-17', '2014-07-04', 1, '07.2014'),
 (7, '3434', 'rfrf', 1, 'frfrfrf', 'test', 2, 'rfrfr', 1, '2014-07-04', '2014-07-04', '2014-07-01', 1, '10.2014'),
 (8, '213', 'wwe2', 1, 'test', 'swsw', 3, 'wswwd', 1, '2014-07-16', '2014-07-17', '2014-07-18', 1, '12.2014'),
-(9, 'brq', 'r555', 1, 'test', 'tesst2', 1, 'tst', 1, '2014-07-04', '2014-07-01', '0000-00-00', 0, '07.2014');
+(9, 'brq', 'r555', 1, 'test', 'tesst2', 1, 'tst', 1, '2014-07-04', '2014-07-01', '0000-00-00', 0, '07.2014'),
+(10, 'BR-001', 'CR-001', 5, 'Prototype', 'Prototype', 2, 'Bobo', 1, '2014-06-01', '2014-06-06', '2014-06-16', 1, '07.2014'),
+(11, 'BR-002', 'CR-002', 5, 'GN', 'GN Drive', 2, 'Bobo', 3, '2014-07-01', '2014-07-02', '2014-07-08', 1, '07.2014'),
+(12, 'BR-003', 'CR-003', 4, 'IWSP', 'Strike Pack', 2, 'Aile', 2, '2014-06-09', '2014-06-16', '2014-06-30', 0, '07.2014');
 
 -- --------------------------------------------------------
 
@@ -70,6 +75,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `nama` varchar(100) NOT NULL,
+  `role` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`username`),
   UNIQUE KEY `nama` (`nama`)
@@ -79,10 +85,10 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `username`, `password`, `nama`) VALUES
-(1, 'emon', 'ganteng', 'andri'),
-(2, 'bobo', 'bobo', 'bobo'),
-(3, 'test1', 'test1', 'test1');
+INSERT INTO `tbl_user` (`id`, `username`, `password`, `nama`, `role`) VALUES
+(1, 'emon', 'ganteng', 'andri', 1),
+(2, 'bobo', 'bobo', 'bobo', 1),
+(3, 'test1', 'test1', 'test1', 1);
 
 --
 -- Constraints for dumped tables
