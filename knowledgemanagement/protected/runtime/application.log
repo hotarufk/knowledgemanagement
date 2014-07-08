@@ -5589,3 +5589,378 @@ Stack trace:
 REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=data/admin
 HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=data/admin
 ---
+2014/07/08 04:00:08 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(60): CBaseController->widget('application.ext...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:00:36 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/user/list".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\widgets\CTabView.php(217): CController->renderPartial('/user/list', Array)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CTabView.php(149): CTabView->renderBody()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CTabView->run()
+#3 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(95): CBaseController->widget('CTabView', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:00:38 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/user/list".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\widgets\CTabView.php(217): CController->renderPartial('/user/list', Array)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CTabView.php(149): CTabView->renderBody()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CTabView->run()
+#3 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(95): CBaseController->widget('CTabView', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:01:42 [error] [php] Object of class SiteController could not be converted to string (C:\xampp\htdocs\yii\framework\web\widgets\CTabView.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(95): SiteController->widget()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (95)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:05:09 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "_renderpage".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(16): CController->renderPartial('_renderpage', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:10:05 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "C:\xampp\htdocs\knowledge-github\protected\views\site\index.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\yii\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:10:50 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "C:\xampp\htdocs\knowledge-github\protected\views\site\index.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\yii\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:10:52 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "C:\xampp\htdocs\knowledge-github\protected\views\site\index.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\yii\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:11:13 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "C:\xampp\htdocs\knowledge-github\protected\views\site\index.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\yii\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:11:46 [error] [exception.CException] exception 'CException' with message 'SiteController has an extra endWidget() call in its view.' in C:\xampp\htdocs\yii\framework\web\CBaseController.php:210
+Stack trace:
+#0 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(37): CBaseController->endWidget()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): CController->render('index')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/knowledge-github/
+---
+2014/07/08 04:28:28 [error] [php] Undefined variable: model (C:\xampp\htdocs\knowledge-github\protected\views\site\index.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (23)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:29:16 [error] [php] Undefined variable: model (C:\xampp\htdocs\knowledge-github\protected\views\site\index.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (23)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:29:19 [error] [php] Undefined variable: model (C:\xampp\htdocs\knowledge-github\protected\views\site\index.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (23)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:33:43 [error] [php] Object of class SiteController could not be converted to string (C:\xampp\htdocs\knowledge-github\protected\views\site\index.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (11)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:35:41 [error] [php] Undefined variable: label (C:\xampp\htdocs\knowledge-github\protected\views\site\index.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (16)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:36:34 [error] [php] Object of class HighchartsWidget could not be converted to string (C:\xampp\htdocs\yii\framework\zii\widgets\jui\CJuiTabs.php:118)
+Stack trace:
+#0 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(74): SiteController->widget()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (74)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:36:37 [error] [php] Object of class HighchartsWidget could not be converted to string (C:\xampp\htdocs\yii\framework\zii\widgets\jui\CJuiTabs.php:118)
+Stack trace:
+#0 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(74): SiteController->widget()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (74)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 04:38:22 [error] [php] Object of class HighchartsWidget could not be converted to string (C:\xampp\htdocs\yii\framework\zii\widgets\jui\CJuiTabs.php:118)
+Stack trace:
+#0 C:\xampp\htdocs\knowledge-github\protected\views\site\index.php(74): SiteController->widget()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(32): SiteController->render()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/
+in C:\xampp\htdocs\knowledge-github\protected\views\site\index.php (74)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 05:08:20 [error] [php] Undefined index: no (C:\xampp\htdocs\yii\framework\web\CSqlDataProvider.php:125)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(136): TbGridView->renderKeys()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): TbGridView->run()
+#2 C:\xampp\htdocs\knowledge-github\protected\views\site\report.php(60): SiteController->widget()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#7 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(132): SiteController->render()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionReport()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\knowledge-github\index.php(13): CWebApplication->run()
+REQUEST_URI=/knowledge-github/index.php?r=site/report
+in C:\xampp\htdocs\knowledge-github\protected\views\site\report.php (60)
+in C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php (132)
+in C:\xampp\htdocs\knowledge-github\index.php (13)
+2014/07/08 05:09:33 [error] [exception.CException] exception 'CException' with message 'SiteController has an extra endWidget() call in its view.' in C:\xampp\htdocs\yii\framework\web\CBaseController.php:210
+Stack trace:
+#0 C:\xampp\htdocs\knowledge-github\protected\views\site\report.php(65): CBaseController->endWidget()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('report', Array, true)
+#5 C:\xampp\htdocs\knowledge-github\protected\controllers\SiteController.php(132): CController->render('report', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionReport()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('report')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/report')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\knowledge-github\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/knowledge-github/index.php?r=site/report
+HTTP_REFERER=http://localhost/knowledge-github/index.php?r=data/index
+---
