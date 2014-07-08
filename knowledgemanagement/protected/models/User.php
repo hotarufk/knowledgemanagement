@@ -8,6 +8,7 @@
  * @property string $username
  * @property string $password
  * @property string $nama
+ * @property integer $role
  *
  * The followings are the available model relations:
  * @property TblData[] $tblDatas
@@ -30,12 +31,19 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password','required'),
-			array('nama','required','on'=>'create,update'),
+            array('nama,role', 'required','on'=>'create,update'),
+            array('username, password', 'required'),
+            array(
+            'username,password',
+            'match', 'not' => true, 'pattern' => '/[^a-zA-Z0-9_-]/',
+            'on'=>'create,update,login',
+            'message' => 'Invalid characters in username/password. Only use a-z , A-Z , 0-9 , _ , or -',
+            ),
+			array('role', 'numerical', 'integerOnly'=>true),
 			array('username, password, nama', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, nama', 'safe', 'on'=>'search'),
+			array('id, username, password, nama, role', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,7 +55,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'Datas' => array(self::HAS_MANY, 'Data', 'user'),
+			'tblDatas' => array(self::HAS_MANY, 'TblData', 'user'),
 		);
 	}
 
@@ -61,6 +69,7 @@ class User extends CActiveRecord
 			'username' => 'Username',
 			'password' => 'Password',
 			'nama' => 'Nama',
+			'role' => 'Role',
 		);
 	}
 
@@ -86,6 +95,7 @@ class User extends CActiveRecord
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('role',$this->role);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -102,4 +112,19 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	////////
+	    
+    //Custom Validation
+    public function passwordStrength($attribute,$params)
+    {
+        if ($params['strength'] === self::WEAK)
+            $pattern = '/^(?=.*[a-zA-Z0-9]).{5,}$/';  
+        elseif ($params['strength'] === self::STRONG)
+            $pattern = '/^(?=.*\d(?=.*\d))(?=.*[a-zA-Z](?=.*[a-zA-Z])).{5,}$/';  
+     
+        if(!preg_match($pattern, $this->$attribute))
+          $this->addError($attribute, 'your password is not strong enough!');
+    }
+
 }

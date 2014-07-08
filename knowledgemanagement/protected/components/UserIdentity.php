@@ -26,15 +26,18 @@ class UserIdentity extends CUserIdentity
             $this->errorCode=self::ERROR_USERNAME_INVALID;
         else if($record->password!==$this->password)
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
-        else
+		else
         {
             $this->_id=$record->id;
-            $this->setState('title', 'guest');
+			if($record->role == 1)
+				$this->setState('role','guest');
+			else if ($record->role == 0)
+				$this->setState('role','admin');
             $this->errorCode=self::ERROR_NONE;
         }
-		$message=$record->password;
-		$category="emon.debug.authenticate";
-		Yii::trace($message, $category);
+		//$message=$record->password;
+		//$category="emon.debug.authenticate";
+		//Yii::trace($message, $category);
 		//echo "<script type='text/javascript'>alert('$message');</script>";
         return !$this->errorCode;
     }

@@ -106,9 +106,11 @@ class SiteController extends Controller
 					$this->redirect(Yii::app()->user->returnUrl);
 				}
 				else{
-					$message="login gagal";
-					$category="emon.debug.login";
-					Yii::trace($message, $category);
+					//$message="login gagal";
+					//$category="emon.debug.login";
+					//Yii::trace($message, $category);
+					$model->addError('username','Incorrect username or password.');
+					
 					echo $identity->errorMessage;
 					}
 			}

@@ -53,6 +53,7 @@ class Data extends CActiveRecord
 			array('no_br, cr_number', 'length', 'max'=>50),
 			array('application_name, month_of_register', 'length', 'max'=>100),
 			array('reflex, end_date', 'safe'),
+			array('start_date,end_date','concurency','on'=>'create,update'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, no_br, cr_number, status, reflex, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
@@ -260,4 +261,15 @@ class Data extends CActiveRecord
 		return $text;
 	}
 	
+	//////////
+	    public function concurency($attribute,$params)
+    {
+        if ($params['strength'] === self::WEAK)
+            $pattern = '/^(?=.*[a-zA-Z0-9]).{5,}$/';  
+        elseif ($params['strength'] === self::STRONG)
+            $pattern = '/^(?=.*\d(?=.*\d))(?=.*[a-zA-Z](?=.*[a-zA-Z])).{5,}$/';  
+     
+        if(!preg_match($pattern, $this->$attribute))
+          $this->addError($attribute, 'your password is not strong enough!');
+    }
 }
