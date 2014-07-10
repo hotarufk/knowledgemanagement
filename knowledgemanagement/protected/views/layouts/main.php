@@ -37,7 +37,7 @@
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
-                array('label'=>'Report', 'url'=>array('/site/report'),'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Report', 'url'=>array('/data/report'),'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Data', 'url'=>array('data/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
@@ -59,7 +59,7 @@
 	<?php echo $content; ?>
 	
 	
-	<div id="sidebar">
+	<!-- <div id="sidebar">
 		<?php
 			//echo CHtml::button('Test', array('onclick' => 'js:document.location.href="UserController/Index"'));
 			echo CHtml::button('Data', array('submit' => array('Data/Create')));
@@ -70,7 +70,7 @@
 			'size'=>'large', // null, 'large', 'small' or 'mini'
 			'htmlOptions'=>array('submit' => array('Data/Create')),
 		)); ?>
-	</div>
+	</div> -->
 	
 	
 	<div class="clear"></div>

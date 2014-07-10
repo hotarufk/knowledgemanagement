@@ -46,7 +46,8 @@ $('.search-form form').submit(function(){
 	$this->endWidget(); 
 ?>
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
 	'id'=>'data-grid',
 	'dataProvider'=>$model->search(),
 	'columns'=>array(

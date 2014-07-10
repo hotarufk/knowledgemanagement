@@ -32,11 +32,11 @@ class DataController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','report'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','report'),
 				'users'=>array('@'),//isi admin agar hanya admin yang bisa membukanya
 			),
 			array('deny',  // deny all users
@@ -188,6 +188,33 @@ class DataController extends Controller
 		));
 	}
 
+	public function actionReport()
+	{
+		//$model=new Data('search');
+	//	$model->unsetAttributes();  // clear any default values
+		
+		//////////////////////
+	unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
+	unset(Yii::app()->request->cookies['to_date']);
+	 
+	$model=new Data('search');  // your model
+	$model->unsetAttributes();  // clear any default values
+	 
+	  if(!empty($_POST))
+	  {
+		Yii::app()->request->cookies['from_date'] = new CHttpCookie('from_date', $_POST['from_date']);  // define cookie for from_date
+		Yii::app()->request->cookies['to_date'] = new CHttpCookie('to_date', $_POST['to_date']);
+		$model->from_date = $_POST['from_date'];
+		$model->to_date = $_POST['to_date'];
+	}	
+		/////////////////////
+		if(isset($_GET['Data']))
+			$model->attributes=$_GET['Data'];
+
+		$this->render('report',array(
+			'model'=>$model,
+		));
+	}
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
