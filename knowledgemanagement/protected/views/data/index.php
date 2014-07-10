@@ -1,60 +1,97 @@
 <?php
 /* @var $this DataController */
-/* @var $dataProvider CActiveDataProvider */
+/* @var $model Data */
 
-
+$this->breadcrumbs=array(
+	'Datas'=>array('index'),
+	'Manage',
+);
 
 $this->menu=array(
-	array('label'=>'Create Data', 'url'=>array('create')),
 	array('label'=>'Manage Data', 'url'=>array('admin')),
+	array('label'=>'Create Data', 'url'=>array('create')),
 );
+
+Yii::app()->clientScript->registerScript('search', "
+$('.search-button').click(function(){
+	$('.search-form').toggle();
+	return false;
+});
+$('.search-form form').submit(function(){
+	$('#data-grid').yiiGridView('update', {
+		data: $(this).serialize()
+	});
+	return false;
+});
+");
 ?>
 
-<h1>Datas</h1>
+<h1>Manage Datas</h1>
 
-<?php 
-$count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM tbl_data')->queryScalar();
-$sql='SELECT * FROM tbl_data';
-$dataProvider=new CSqlDataProvider($sql, array(
-    'totalItemCount'=>$count,
-	'keyField'=>'id',
-    'sort'=>array(
-        'attributes'=>array(
-             'id', 'no_br', 'cr_number', 'status', 'BA', 'TS', 'SRS', 'BRS', 'MOM', 'reflex', 'application_name', 'IT_dev_PIC', 'departement_PIC', 'IT_testing_PIC', 'request_date', 'start_date', 'end_date', 'key_achievemnent', 'n_status',
+<?php $form=$this->beginWidget('CActiveForm', array(
+    'id'=>'page-form',
+    'enableAjaxValidation'=>true,
+)); 
+
+
+	$select=0;
+	$year=2012;
+	echo CHtml::beginForm(CHtml::normalizeUrl(array('message/index')), 'get', array('id'=>'filter-form'))
+	. CHtml::dropDownList('Bulan', $select, 
+              array('1' => 'Januari', '2' => 'Februari','3' => 'Maret', '4' => 'April','5' => 'Mei', '6' => 'Juni','7' => 'Juli', '8' => 'Agustus','9' => 'September', '10' => 'Oktober','11' => 'November', '12' => 'Desember'))
+    . CHtml::numberField($year,$value='2011',$htmlOptions= array ('min'=>'2008', 'max'=>'2099' ))
+    . CHtml::submitButton('Search', array('name'=>''))
+    . CHtml::endForm();
+//	echo CHtml::submitButton('Go'); 
+	$this->endWidget(); 
+?>
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'data-grid',
+	'dataProvider'=>$model->search(),
+	'columns'=>array(
+		//'id',
+		'no_br',
+		'cr_number', 
+		array(
+			'header' => 'Status',
+            'name'=>'status',
+            'value'=>'$data->StatusText($data->status)',
+			'filter'=>array("1" =>"Pre-Register", "2" => "In Progress", "3" =>"Closed-Cancelled","4" => "Closed-Pending", "5" => "Closed-Finished"),
         ),
-    ),
-    'pagination'=>array(
-        'pageSize'=>10,
-    ),
-));
-?>
+		'reflex',
+		'application_name',
+		array(
+		'header' => 'IT Dev PIC',
+        'name' => 'user',
+        'value' => '$data->user0->nama',   //where name is Client model attribute 
+		'filter'=>CHtml::listData(User::model()->findAll(), 'id', 'nama'),
 
-<?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'type'=>'striped bordered condensed',
-    'dataProvider'=>$dataProvider,
-	'filter'=>null,
-    'template'=>"{items}",
-    'columns'=>array(
-        array('name'=>'id', 'header'=>'#'),
-        array('name'=>'no_br', 'header'=>'No BR'),
-        array('name'=>'cr_number', 'header'=>'CR Number'),
-        array('name'=>'status', 'header'=>'Status'),
-		array('name'=>'BA', 'header'=>'BA'),
-		array('name'=>'TS', 'header'=>'TS'),
-		array('name'=>'SRS', 'header'=>'SRS'),
-		array('name'=>'BRS', 'header'=>'BRS'),
-		array('name'=>'MOM', 'header'=>'MOM'),
-		array('name'=>'reflex', 'header'=>'Reflex'),
-		array('name'=>'application_name', 'header'=>'Application Name'),
-		array('name'=>'IT_dev_PIC', 'header'=>'IT Dev PIC'),
-		array('name'=>'departement_PIC', 'header'=>'Departement  PIC'),
-		array('name'=>'IT_testing_PIC', 'header'=>'IT Testing PIC'),
-		array('name'=>'request_date', 'header'=>'Request Date'),
-		array('name'=>'start_date', 'header'=>'Start Date'),
-		array('name'=>'end_date', 'header'=>'End Date'),
-		array('name'=>'key_achievemnent', 'header'=>'Key Achievement'),
-		array('name'=>'n_status', 'header'=>'N Status'),
-        
-    ),
-	'htmlOptions'=>array('style'=>'width: 100%; overflow:scroll;'),
+		),
+		'departement_PIC',
+		array(
+			'header' =>'IT Testing PIC',
+            'name'=>'IT_testing_PIC',
+            'value'=>'$data->TestingPICText($data->IT_testing_PIC)',
+			'filter'=>array("1" =>"I GP Witraguna", "2" => "Setiawan", "3" =>"Sofie Y Chaerang","4" => "Tulus Hamdani"),
+        ),		
+		'request_date',
+		'start_date',
+		'end_date',
+		array(
+			'header' =>'Key Achievement',
+            'name'=>'key_achievement',
+            'value'=>'$data->KAchievementText($data->key_achievement)',
+			'filter'=>array("0" =>"not Achieved", "1" => "Achieved"),
+        ),
+		array(
+			'header' => 'Month of Register',
+            'name'=>'month_of_register',
+            'value'=>'$data-> MORText($data->month_of_register)',
+        ),
+		array(
+			'class'=>'CButtonColumn',
+			'template' => '{view}',
+		),
+	),
 )); ?>

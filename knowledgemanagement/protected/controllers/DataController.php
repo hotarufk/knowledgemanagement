@@ -122,9 +122,33 @@ class DataController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Data');
+		// $dataProvider=new CActiveDataProvider('Data');
+		// $this->render('index',array(
+			// 'dataProvider'=>$dataProvider,
+		// ));
+		//$model=new Data('search');
+	//	$model->unsetAttributes();  // clear any default values
+		
+		//////////////////////
+	unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
+	unset(Yii::app()->request->cookies['to_date']);
+	 
+	$model=new Data('search');  // your model
+	$model->unsetAttributes();  // clear any default values
+	 
+	  if(!empty($_POST))
+	  {
+		//Yii::app()->request->cookies['from_date'] = new CHttpCookie('from_date', $_POST['from_date']);  // define cookie for from_date
+		//Yii::app()->request->cookies['to_date'] = new CHttpCookie('to_date', $_POST['to_date']);
+		$model->from_date = $_POST['from_date'];
+		$model->to_date = $_POST['to_date'];
+	}	
+		/////////////////////
+		if(isset($_GET['Data']))
+			$model->attributes=$_GET['Data'];
+
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
@@ -188,8 +212,12 @@ class DataController extends Controller
 	}
 	
 	/////////////////////////////////
-
-		
+	public function dataReport($month,$year){
+	
+	
+	
+	
+	}	
 	
 	
 	//////////////////////////////////
