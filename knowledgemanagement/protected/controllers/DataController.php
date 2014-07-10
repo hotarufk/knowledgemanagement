@@ -138,12 +138,17 @@ class DataController extends Controller
 	 
 	  if(!empty($_POST))
 	  {
-		//Yii::app()->request->cookies['from_date'] = new CHttpCookie('from_date', $_POST['from_date']);  // define cookie for from_date
-		//Yii::app()->request->cookies['to_date'] = new CHttpCookie('to_date', $_POST['to_date']);
-		$model->from_date = $_POST['from_date'];
-		$model->to_date = $_POST['to_date'];
+		Yii::app()->request->cookies['Bulan'] = new CHttpCookie('Bulan', $_POST['Bulan']);  // define cookie for from_date
+		Yii::app()->request->cookies['year'] = new CHttpCookie('year', $_POST['year']);
+		$from=mktime(0, 0, 0, $_POST['Bulan'],1,$_POST['year']);
+		$to=mktime(0, 0, 0,$_POST['Bulan']+1,1,$_POST['year']);
+		$model->from_date = date("Y-m-d", $from);
+		$model->to_date = date("Y-m-d", $to);
+		$message = 'from date : '.$model->from_date.'  to_date :  '.$model->to_date;
+		$category = 'tarik data bulanan report';
+		Yii::trace($message, $category);
 	}	
-		/////////////////////
+	/////////////////////
 		if(isset($_GET['Data']))
 			$model->attributes=$_GET['Data'];
 

@@ -38,8 +38,8 @@ $('.search-form form').submit(function(){
 	$year=2012;
 	echo CHtml::beginForm(CHtml::normalizeUrl(array('message/index')), 'get', array('id'=>'filter-form'))
 	. CHtml::dropDownList('Bulan', $select, 
-              array('1' => 'Januari', '2' => 'Februari','3' => 'Maret', '4' => 'April','5' => 'Mei', '6' => 'Juni','7' => 'Juli', '8' => 'Agustus','9' => 'September', '10' => 'Oktober','11' => 'November', '12' => 'Desember'))
-    . CHtml::numberField($year,$value='2011',$htmlOptions= array ('min'=>'2008', 'max'=>'2099' ))
+              array('01' => 'Januari', '02' => 'Februari','03' => 'Maret', '04' => 'April','05' => 'Mei', '06' => 'Juni','07' => 'Juli', '08' => 'Agustus','09' => 'September', '10' => 'Oktober','11' => 'November', '12' => 'Desember'))
+    . CHtml::numberField('year', $value='2011',$htmlOptions= array ('min'=>'2008', 'max'=>'2099' ))
     . CHtml::submitButton('Search', array('name'=>''))
     . CHtml::endForm();
 //	echo CHtml::submitButton('Go'); 
