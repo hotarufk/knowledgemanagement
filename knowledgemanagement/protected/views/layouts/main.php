@@ -30,8 +30,8 @@
 	<div id="mainmenu">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
     'type'=>'inverse', // null or 'inverse'
-    'brand'=>'Project name',
-    'brandUrl'=>'#',
+    'brand'=>'Knowledge Management',
+    'brandUrl'=>'index.php',
     'collapse'=>true, // requires bootstrap-responsive.css
     'items'=>array(
         array(
