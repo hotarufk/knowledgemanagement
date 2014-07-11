@@ -10,6 +10,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Manage Data', 'url'=>array('admin')),
 	array('label'=>'Create Data', 'url'=>array('create')),
+	array('label'=>'Report Data', 'url'=>array('test')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

@@ -32,7 +32,7 @@ class DataController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','report'),
+				'actions'=>array('create','update','report','test'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -250,6 +250,26 @@ class DataController extends Controller
 	
 	
 	}	
+	
+	 public function behaviors()
+    {
+        return array(
+            'eexcelview'=>array(
+                'class'=>'ext.eexcelview.EExcelBehavior',
+            ),
+        );
+    }
+	
+		public function actionTest()
+	{
+		// Load data
+		$model = Data::model()->findAll();
+	 
+		// Export it
+		$this->toExcel(
+			$model
+		);
+	}
 	
 	
 	//////////////////////////////////
