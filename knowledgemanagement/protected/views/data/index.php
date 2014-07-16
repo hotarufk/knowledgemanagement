@@ -35,12 +35,12 @@ $('.search-form form').submit(function(){
 )); 
 
 
-	$select=0;
-	$year=2012;
+	$select=isset(Yii::app()->request->cookies['Bulan'])?Yii::app()->request->cookies['Bulan']->value:0;
+	$year=isset(Yii::app()->request->cookies['year'])?Yii::app()->request->cookies['year']->value:2012;
 	echo CHtml::beginForm(CHtml::normalizeUrl(array('message/index')), 'get', array('id'=>'filter-form'))
 	. CHtml::dropDownList('Bulan', $select, 
               array('01' => 'Januari', '02' => 'Februari','03' => 'Maret', '04' => 'April','05' => 'Mei', '06' => 'Juni','07' => 'Juli', '08' => 'Agustus','09' => 'September', '10' => 'Oktober','11' => 'November', '12' => 'Desember'))
-    . CHtml::numberField('year', $value='2011',$htmlOptions= array ('min'=>'2008', 'max'=>'2099' ))
+    . CHtml::numberField('year', $year,$htmlOptions= array ('min'=>'2008', 'max'=>'2099' ))
     . CHtml::submitButton('Search', array('name'=>''))
     . CHtml::endForm();
 //	echo CHtml::submitButton('Go'); 
