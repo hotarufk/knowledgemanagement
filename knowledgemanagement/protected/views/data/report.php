@@ -11,6 +11,22 @@ $this->pageTitle=Yii::app()->name;
 
 ?>
 
+<?php $form=$this->beginWidget('CActiveForm', array(
+    'id'=>'page-form',
+    'enableAjaxValidation'=>true,
+)); 
+
+
+	$select=isset(Yii::app()->request->cookies['Bulan'])?Yii::app()->request->cookies['Bulan']->value:0;
+	$year=isset(Yii::app()->request->cookies['year'])?Yii::app()->request->cookies['year']->value:2012;
+	echo CHtml::beginForm(CHtml::normalizeUrl(array('message/index')), 'get', array('id'=>'filter-form'))
+	. CHtml::dropDownList('Bulan', $select, 
+              array('01' => 'Januari', '02' => 'Februari','03' => 'Maret', '04' => 'April','05' => 'Mei', '06' => 'Juni','07' => 'Juli', '08' => 'Agustus','09' => 'September', '10' => 'Oktober','11' => 'November', '12' => 'Desember'))
+    . CHtml::numberField('year', $year,$htmlOptions= array ('min'=>'2008', 'max'=>'2099' ))
+    . CHtml::submitButton('Search', array('name'=>''))
+    . CHtml::endForm();
+	$this->endWidget(); 
+?>
 
 <?php
 ob_start();
@@ -71,8 +87,13 @@ ob_end_clean();
 </center>
 
 
+
 <?php //Status
-	$sql='SELECT count(status),status  FROM tbl_data GROUP BY status';
+$datesql='';
+if (!empty($model->to_date) && !empty($model->from_date))
+	$datesql=" WHERE start_date  < '$model->to_date' and end_date >= '$model->from_date'";
+	
+	$sql='SELECT count(status),status FROM tbl_data '.$datesql.' GROUP BY status';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -134,7 +155,7 @@ ob_end_clean();
 
 
 <?php //No BR
-	$sql='SELECT count(no_br),no_br  FROM tbl_data GROUP BY no_br';
+	$sql='SELECT count(no_br),no_br  FROM tbl_data'.$datesql.' GROUP BY no_br';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -197,7 +218,7 @@ ob_end_clean();
 <?php $this->endWidget(); ?>
 
 <?php //CR Number
-	$sql='SELECT count(cr_number),cr_number  FROM tbl_data GROUP BY cr_number';
+	$sql='SELECT count(cr_number),cr_number  FROM tbl_data'.$datesql.' GROUP BY cr_number';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -259,7 +280,7 @@ ob_end_clean();
 <?php $this->endWidget(); ?>
 
 <?php //Reflex
-	$sql='SELECT count(reflex),reflex  FROM tbl_data GROUP BY reflex';
+	$sql='SELECT count(reflex),reflex  FROM tbl_data'.$datesql.' GROUP BY reflex';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -321,7 +342,7 @@ ob_end_clean();
 </center>
 
 <?php //App Name
-	$sql='SELECT count(application_name),application_name  FROM tbl_data GROUP BY application_name';
+	$sql='SELECT count(application_name),application_name  FROM tbl_data'.$datesql.' GROUP BY application_name';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -382,7 +403,7 @@ ob_end_clean();
 </center>
 
 <?php //IT Dev PIC
-	$sql='SELECT count(user)  FROM tbl_data GROUP BY user';
+	$sql='SELECT count(user)  FROM tbl_data '.$datesql.'GROUP BY user';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -457,7 +478,7 @@ ob_end_clean();
 <?php $this->endWidget(); ?>
 </center>
 <?php //Dept PIC
-	$sql='SELECT count(departement_PIC),departement_PIC FROM tbl_data GROUP BY departement_PIC';
+	$sql='SELECT count(departement_PIC),departement_PIC FROM tbl_data'.$datesql.' GROUP BY departement_PIC';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -519,7 +540,7 @@ ob_end_clean();
 <?php $this->endWidget(); ?>
 
 <?php //Test PIC
-	$sql='SELECT count(IT_testing_PIC),IT_testing_PIC FROM tbl_data GROUP BY IT_testing_PIC';
+	$sql='SELECT count(IT_testing_PIC),IT_testing_PIC FROM tbl_data'.$datesql.' GROUP BY IT_testing_PIC';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -581,7 +602,7 @@ ob_end_clean();
 <?php $this->endWidget(); ?>
 
 <?php //Key Achievement
-	$sql='SELECT count(key_achievement),key_achievement  FROM tbl_data GROUP BY key_achievement';
+	$sql='SELECT count(key_achievement),key_achievement  FROM tbl_data'.$datesql.' GROUP BY key_achievement';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -643,7 +664,7 @@ ob_end_clean();
 <?php $this->endWidget(); ?>
 
 <?php //Month of Register
-	$sql='SELECT count(month_of_register),month_of_register  FROM tbl_data GROUP BY month_of_register';
+	$sql='SELECT count(month_of_register),month_of_register  FROM tbl_data'.$datesql.' GROUP BY month_of_register';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
