@@ -117,6 +117,11 @@ foreach($dataProvider->getData() as $i=>$ii)
 }
 ob_start();
 $this->widget('application.extensions.highcharts.HighchartsWidget', array(
+'scripts' => array(
+   'highcharts-more',   // enables supplementary chart types (gauge, arearange, columnrange, etc.)
+   'modules/exporting', // adds Exporting button/menu to chart
+   'themes/grid'        // applies global 'grid' theme to all charts
+),
    'options'=>array(
      'chart'=> array('defaultSeriesType'=>'column',),
       'title' => array('text' => 'By Status'),
