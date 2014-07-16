@@ -136,13 +136,13 @@ class Data extends CActiveRecord
 		);
 		if(!empty($this->from_date) && empty($this->to_date))
         {
-            $criteria->condition = "start_date >= '$this->from_date'";  // date is database date column field
+            $criteria->condition = "end_date >= '$this->from_date'";  // date is database date column field
         }elseif(!empty($this->to_date) && empty($this->from_date))
         {
-            $criteria->condition = "start_date <= '$this->to_date'";
+            $criteria->condition = "start_date < '$this->to_date'";
         }elseif(!empty($this->to_date) && !empty($this->from_date))
         {
-            $criteria->condition = "start_date  >= '$this->from_date' and start_date <= '$this->to_date'";
+            $criteria->condition = "start_date  < '$this->to_date' and end_date >= '$this->from_date'";
         }
 		
 		return new CActiveDataProvider($this, array(
@@ -163,7 +163,7 @@ class Data extends CActiveRecord
 	
 	//fungsi untuk memrubah kode angka menjadi  textdomain
 	
-	function KAchievementText($val){
+	public static function KAchievementText($val){
 		return $val == 1 ? 'Achieved' : 'not Achieved';
 	}
 	
@@ -191,7 +191,7 @@ class Data extends CActiveRecord
 		return $text;
 	}
 		//1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y chaerang','4'=>'Tulus Hamdani'
-	function TestingPICText($val){
+	public static function TestingPICText($val){
 		$text=' ';
 		switch ($val) {
 		  case 1 :
@@ -212,7 +212,7 @@ class Data extends CActiveRecord
 		return $text;
 	}
 	
-	function MORText($val){
+	public static function MORText($val){
 		$text = explode(".",$val);
 		$message = "$val $text[0]";
 		switch ($text[0]) {
@@ -262,7 +262,7 @@ class Data extends CActiveRecord
 	}
 	
 	//////////
-	    public function dateValidator($attribute,$params)
+	public static function dateValidator($attribute,$params)
     {
 		//kamus lokal
 		$d=mktime(0, 0, 0, 0, 00, 0000);

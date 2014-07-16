@@ -130,8 +130,8 @@ class DataController extends Controller
 	//	$model->unsetAttributes();  // clear any default values
 		
 		//////////////////////
-	unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
-	unset(Yii::app()->request->cookies['to_date']);
+	//unset(Yii::app()->request->cookies['Bulan']);  // first unset cookie for dates
+	//unset(Yii::app()->request->cookies['year']);
 	 
 	$model=new Data('search');  // your model
 	$model->unsetAttributes();  // clear any default values
@@ -140,10 +140,15 @@ class DataController extends Controller
 	  {
 		Yii::app()->request->cookies['Bulan'] = new CHttpCookie('Bulan', $_POST['Bulan']);  // define cookie for from_date
 		Yii::app()->request->cookies['year'] = new CHttpCookie('year', $_POST['year']);
+		
 		$from=mktime(0, 0, 0, $_POST['Bulan'],1,$_POST['year']);
 		$to=mktime(0, 0, 0,$_POST['Bulan']+1,1,$_POST['year']);
 		$model->from_date = date("Y-m-d", $from);
 		$model->to_date = date("Y-m-d", $to);
+		
+		Yii::app()->request->cookies['from_date'] = new CHttpCookie('from_date',$model->from_date );  // define cookie for from_date
+		Yii::app()->request->cookies['to_date'] = new CHttpCookie('to_date', $model->to_date);
+		
 		$message = 'from date : '.$model->from_date.'  to_date :  '.$model->to_date;
 		$category = 'tarik data bulanan report';
 		Yii::trace($message, $category);
@@ -162,12 +167,10 @@ class DataController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		//$model=new Data('search');
-	//	$model->unsetAttributes();  // clear any default values
-		
+
 		//////////////////////
-	unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
-	unset(Yii::app()->request->cookies['to_date']);
+	//unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
+	//unset(Yii::app()->request->cookies['to_date']);
 	 
 	$model=new Data('search');  // your model
 	$model->unsetAttributes();  // clear any default values
@@ -194,8 +197,8 @@ class DataController extends Controller
 	//	$model->unsetAttributes();  // clear any default values
 		
 		//////////////////////
-	unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
-	unset(Yii::app()->request->cookies['to_date']);
+	//unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
+	//unset(Yii::app()->request->cookies['to_date']);
 	 
 	$model=new Data('search');  // your model
 	$model->unsetAttributes();  // clear any default values
@@ -262,13 +265,44 @@ class DataController extends Controller
 	
 		public function actionTest()
 	{
-		// Load data
-		$model = Data::model()->findAll();
-	 
-		// Export it
+		//date Range
+		$valueEnd = isset(Yii::app()->request->cookies['to_date'])?Yii::app()->request->cookies['to_date']->value: '9999-00-00';
+		$valueStart =  isset(Yii::app()->request->cookies['from_date'])?Yii::app()->request->cookies['from_date']->value: '0000-00-00';
+		$sqlQuery = "SELECT `tbl_data`.`id` as `id` ,`no_br` , `cr_number` , case `status` when '1' then 'Pre-Register' when '2' then 'In Progress' when '3' then 'Closed-Cancelled' when '4' then 'Closed-Pending' when '5' then 'Closed-Finished' else 'Unon' end 'Status', `reflex` , `application_name`, `b`.nama as `IT_DEV_PIC`, `departement_PIC` as `Departement_PIC`, case `IT_testing_PIC` when '1' then 'I GP Witraguna' when '2' then 'Setiawan' when '3' then 'Sofie Y Chaerang' when '4' then 'Tulus Hamdani' else 'Unon' end 'IT_Testing_PIC', `request_date`, `start_date` , `end_date`, case `key_achievement` when '0' then 'not Achieved' when '1' then 'Achieved' else 'Unon' end 'Key_Achievement', `month_of_register` as `Month_of_Register` from `tbl_data` join `tbl_user` as `b` on `b`.`id` = `tbl_data`.`user` where `start_date` < '$valueEnd' and `end_date` >= '$valueStart'"; 
+		//debugging
+		$dataProvider=new CSqlDataProvider($sqlQuery, array(
+	
+		
+		));
+		$reportname = 'Report '.$valueStart.'-'.$valueEnd;
+		//$author=
+		//Export it
 		$this->toExcel(
-			$model
+		$dataProvider,array(
+		'no_br',
+		'cr_number',
+		'Status',
+		'reflex',
+		'application_name',
+		'IT_DEV_PIC',
+		'Departement_PIC',
+		'IT_Testing_PIC',
+		'request_date',
+		'start_date',
+		'end_date',
+		'Key_Achievement',
+		'Month_of_Register',
+		),
+			$reportname,
+        array(
+            'creator' => 'Zen',
+        )
 		);
+		// $results=$dataProvider->getData();
+		 
+		$message = 'from date : '.$valueStart.' to date : '.$valueEnd;
+		$category ='excel validator';
+		//Yii::trace($results, $category);
 	}
 	
 	
