@@ -136,13 +136,13 @@ class Data extends CActiveRecord
 		);
 		if(!empty($this->from_date) && empty($this->to_date))
         {
-            $criteria->condition = "start_date >= '$this->from_date'";  // date is database date column field
+            $criteria->condition = "end_date >= '$this->from_date'";  // date is database date column field
         }elseif(!empty($this->to_date) && empty($this->from_date))
         {
-            $criteria->condition = "start_date <= '$this->to_date'";
+            $criteria->condition = "start_date < '$this->to_date'";
         }elseif(!empty($this->to_date) && !empty($this->from_date))
         {
-            $criteria->condition = "start_date  >= '$this->from_date' and start_date <= '$this->to_date'";
+            $criteria->condition = "start_date  < '$this->to_date' and end_date >= '$this->from_date'";
         }
 		
 		return new CActiveDataProvider($this, array(
@@ -163,7 +163,7 @@ class Data extends CActiveRecord
 	
 	//fungsi untuk memrubah kode angka menjadi  textdomain
 	
-	function KAchievementText($val){
+	public static function KAchievementText($val){
 		return $val == 1 ? 'Achieved' : 'not Achieved';
 	}
 	
@@ -191,7 +191,7 @@ class Data extends CActiveRecord
 		return $text;
 	}
 		//1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y chaerang','4'=>'Tulus Hamdani'
-	function TestingPICText($val){
+	public static function TestingPICText($val){
 		$text=' ';
 		switch ($val) {
 		  case 1 :
@@ -212,7 +212,7 @@ class Data extends CActiveRecord
 		return $text;
 	}
 	
-	function MORText($val){
+	public static function MORText($val){
 		$text = explode(".",$val);
 		$message = "$val $text[0]";
 		switch ($text[0]) {
@@ -262,7 +262,7 @@ class Data extends CActiveRecord
 	}
 	
 	//////////
-	    public function dateValidator($attribute,$params)
+	public static function dateValidator($attribute,$params)
     {
 		//kamus lokal
 		$d=mktime(0, 0, 0, 0, 00, 0000);
@@ -292,4 +292,84 @@ class Data extends CActiveRecord
 		
 	
 	}
+
+	//fungsi count by date filter and 
+	public function countReport($val){ //type di iisi oleh angka
+		
+		
+		//buat criteria
+		$criteria=new CDbCriteria;
+		//$criteria->with=array('User');
+		
+		//memastikan ada date filter atau engga
+		if(!empty($this->from_date) && empty($this->to_date))
+        {
+            $criteria->condition = "end_date >= '$this->from_date'";  // date is database date column field
+        }elseif(!empty($this->to_date) && empty($this->from_date))
+        {
+            $criteria->condition = "start_date < '$this->to_date'";
+        }elseif(!empty($this->to_date) && !empty($this->from_date))
+        {
+            $criteria->condition = "start_date  < '$this->to_date' and end_date >= '$this->from_date'";
+        }
+		
+		
+		switch ($val) {
+		  case 1://status
+			$criteria->group='t.status';
+			$criteria->select ='count(t.status) as count(status),t.status';
+			break;
+		  case 2://no_br
+			$criteria->group='no_br';
+			$criteria->select ='count(no_br),no_br';
+			break;
+		  case 3://cr_number
+			$criteria->group='cr_number';
+			$criteria->select ='count(cr_number),cr_number';
+			break;
+		  case 4://reflex
+			$criteria->group='reflex';
+			$criteria->select ='count(reflex),reflex';
+			break;
+		  case 5://application_name
+			$criteria->group='application_name';
+			$criteria->select ='count(application_name),application_name';
+			break;
+		  case 6://tbl_user.nama
+			$criteria->with = array(
+				'user0'=>array('select'=>'count(user.nama),user.nama','group'=>'user.nama'),
+			);		  
+			//$criteria->group='user.nama';
+			//$criteria->select ='count(user.nama),user.nama';
+			break;
+		  case 7://departement_PIC
+			$criteria->group='departement_PIC';
+			$criteria->select ='count(departement_PIC),departement_PIC';
+			break;
+		  case 8://IT_testing_PIC
+			$criteria->group='IT_testing_PIC';
+			$criteria->select ='count(IT_testing_PIC),IT_testing_PIC';
+			break;
+		  case 9://key_achievement
+			$criteria->group='key_achievement';
+			$criteria->select ='count(key_achievement),key_achievement';
+			break;
+		  case 10://month_of_register
+			$criteria->group='month_of_register';
+			$criteria->select ='count(month_of_register),month_of_register';
+			break;
+		  default:
+			echo "Your favorite color is neither red, blue, or green!";
+		}
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));	
+	}
+	
+	
+	
+	
+	
+	
 }
