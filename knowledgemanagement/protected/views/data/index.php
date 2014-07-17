@@ -47,10 +47,15 @@ $('.search-form form').submit(function(){
 	$this->endWidget(); 
 ?>
 
-<?php $this->widget('bootstrap.widgets.TbGridView', array(
+<?php 
+$dataProvider = $model->search();
+$pagination =  array('pageSize' => 5,);//set jumlah halaman/page
+$dataProvider->setPagination($pagination);
+
+$this->widget('bootstrap.widgets.TbGridView', array(
 	'type'=>'striped bordered condensed',
 	'id'=>'data-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$dataProvider,
 	'columns'=>array(
 		//'id',
 		'no_br',

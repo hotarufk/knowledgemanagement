@@ -29,11 +29,13 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <?php
+$dataProvider = $model->search();
+$dataProvider->setPagination(false);
 ob_start();
 $this->widget('bootstrap.widgets.TbGridView', array(
 	'type'=>'striped bordered condensed',
 	'id'=>'data-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$dataProvider,
 	'columns'=>array(
 		//'id',
 		'no_br',
@@ -97,6 +99,7 @@ if (!empty($model->to_date) && !empty($model->from_date))
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -164,6 +167,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -227,6 +231,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -289,6 +294,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -351,6 +357,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -412,6 +419,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -487,6 +495,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -549,6 +558,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -611,6 +621,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>
@@ -673,6 +684,7 @@ ob_end_clean();
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
+							'pagination'=>false,
 		));
 		
 ?>

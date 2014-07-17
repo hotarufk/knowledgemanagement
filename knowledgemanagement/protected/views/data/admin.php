@@ -73,9 +73,14 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+$dataProvider = $model->search();
+$pagination =  array('pageSize' => 5,);//set jumlah halaman/page
+$dataProvider->setPagination($pagination);
+
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'data-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$dataProvider,
 	'filter'=>$model,
 	'columns'=>array(
 		//'id',
