@@ -76,7 +76,7 @@ body
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
 	color: #6399cd;
-	background-color:#EFF4FA;
+	
 	text-decoration:none;
 }
 
@@ -155,14 +155,15 @@ div.search-form
 
 .portlet
 {
-
+border-radius:20px;
 }
 
 .portlet-decoration
 {
 	padding: 3px 8px;
-	background: #B7D6E7;
-	border-left: 5px solid #6FACCF;
+	background: #f96e5b;
+	border-left: 5px solid rgba(239, 0, 0, 1);
+	border-radius:20px;
 }
 
 .portlet-title
@@ -171,15 +172,16 @@ div.search-form
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
-	color: #298dcd;
+	color: #ffffff;
 }
 
 .portlet-content
 {
 	font-size:0.9em;
-	margin: 0 0 15px 0;
+	margin: 5px 0 15px 0;
 	padding: 5px 8px;
-	background:#EFFDFF;
+	background:rgba(255, 127, 110, 1);
+	border-radius:10px;
 }
 
 .portlet-content ul
@@ -211,7 +213,7 @@ div.search-form
 .operations li a
 {
 	font: bold 12px Arial;
-	color: #0066A4;
+	color: #ffffff;
 	display: block;
 	padding: 2px 0 2px 8px;
 	line-height: 15px;
@@ -220,12 +222,12 @@ div.search-form
 
 .operations li a:visited
 {
-	color: #0066A4;
+	color: #ffffff;
 }
 
 .operations li a:hover
 {
-	background: #80CFFF;
+	background: rgba(228, 0, 0, 1);
 }
 
 

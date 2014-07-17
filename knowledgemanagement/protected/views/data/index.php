@@ -2,10 +2,7 @@
 /* @var $this DataController */
 /* @var $model Data */
 
-$this->breadcrumbs=array(
-	'Datas'=>array('index'),
-	'Manage',
-);
+
 
 $this->menu=array(
 	array('label'=>'Manage Data', 'url'=>array('admin')),
@@ -27,7 +24,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Datas</h1>
+<br><br><br>
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'page-form',
