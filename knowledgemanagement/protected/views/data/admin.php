@@ -35,7 +35,7 @@ $('.search-form form').submit(function(){
 <?php
 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
     'name'=>'from_date',  // name of post parameter
-   // 'value'=>Yii::app()->request->cookies['from_date']->value,  // value comes from cookie after submittion
+	'value'=>isset(Yii::app()->request->cookies['from_date'])?Yii::app()->request->cookies['from_date']->value: '',  // value comes from cookie after submittion
      'options'=>array(
         'showAnim'=>'fold',
         'dateFormat'=>'yy-mm-dd',
@@ -49,7 +49,7 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 <?php
 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
     'name'=>'to_date',
-   // 'value'=>Yii::app()->request->cookies['to_date']->value,
+    'value'=> isset(Yii::app()->request->cookies['to_date'])?Yii::app()->request->cookies['to_date']->value: '',
      'options'=>array(
         'showAnim'=>'fold',
         'dateFormat'=>'yy-mm-dd',
