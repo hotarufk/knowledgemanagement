@@ -75,7 +75,8 @@ $dataProvider = $model->search();
 $pagination =  array('pageSize' => 5,);//set jumlah halaman/page
 $dataProvider->setPagination($pagination);
 
-$this->widget('zii.widgets.grid.CGridView', array(
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
 	'id'=>'data-grid',
 	'dataProvider'=>$dataProvider,
 	'filter'=>$model,
