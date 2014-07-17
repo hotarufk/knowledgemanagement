@@ -8,6 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'data-form',
+	'stateful'=>true,
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -18,54 +19,6 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'no_br'); ?>
-		<?php echo $form->textField($model,'no_br',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'no_br'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'cr_number'); ?>
-		<?php echo $form->textField($model,'cr_number',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'cr_number'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',array('1'=>'Pre-Register','2'=>'In Progress','3'=>'Closed-Cancelled','4'=>'Closed-Pending','5'=>'Closed-Finished'), array('options' => array('1'=>array('selected'=>true)))); ?>
-		<?php echo $form->error($model,'status'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'reflex'); ?>
-		<?php echo $form->textArea($model,'reflex',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'reflex'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'application_name'); ?>
-		<?php echo $form->textField($model,'application_name',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'application_name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'user'); ?>
-		<?php echo $form->dropDownList($model,'user', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('empty'=>'select Type')); ?>
-		<?php echo $form->error($model,'user'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'departement_PIC'); ?>
-		<?php echo $form->textArea($model,'departement_PIC',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'departement_PIC'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'IT_testing_PIC'); ?>
-		<?php echo $form->dropDownList($model,'IT_testing_PIC',array('1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y Chaerang','4'=>'Tulus Hamdani'), array('options' => array('1'=>array('selected'=>true)))); ?>
-		<?php echo $form->error($model,'IT_testing_PIC'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'request_date'); ?>
@@ -142,12 +95,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'key_achievement'); ?>
-		<?php echo $form->dropDownList($model,'key_achievement',array('0'=>'not Achieved','1'=>'Achieved'), array('options' => array('0'=>array('selected'=>true)))); ?>
-		<?php echo $form->error($model,'key_achievement'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'month_of_register'); ?>
 		<?php 
 		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -170,7 +117,12 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<?php echo CHtml::submitButton('Back', array(
+	'name'=>'page2'
+	)); ?>
+	<?php echo CHtml::submitButton('submit', array(
+	'name'=>'create'
+	)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -48,12 +48,15 @@ class Data extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_br, cr_number, status, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, key_achievement, month_of_register', 'required'),
+			array('no_br, cr_number, status, application_name','required','on'=>'page1'),
+			array('user,departement_PIC, IT_testing_PIC,key_achievement','required','on'=>'page2'),
+			array('month_of_register,request_date,start_date,end_date', 'required','on'=>'page3'),
 			array('status, user, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
 			array('no_br, cr_number', 'length', 'max'=>50),
-			array('application_name, month_of_register', 'length', 'max'=>100),
-			array('reflex, end_date', 'safe'),
-			array('start_date,end_date','dateValidator'),
+			array('no_br, cr_number,application_name,departement_PIC','length','allowEmpty'=>false),
+			array('application_name, month_of_register,reflex', 'length','max'=>100),
+			array('reflex,end_date', 'safe'),
+			array('request_date,start_date,end_date','dateValidator'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, no_br, cr_number, status, reflex, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),

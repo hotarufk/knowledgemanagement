@@ -63,21 +63,77 @@ class DataController extends Controller
 	public function actionCreate()
 	{
 		$model=new Data;
-
+		$view='_page1';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Data']))
+		if(isset($_POST['page1']))
 		{
-			$model->attributes=$_POST['Data'];
+			$model = new Data('page1');
+			$this->checkPageState($model, $_POST['Data']);
+			$view = '_page1';
+			$model->scenario = 'page1';
+		}
+		elseif(isset($_POST['page2']))
+		{
+			$model = new Data('page1');
+			$this->checkPageState($model, $_POST['Data']);
+			if($model->validate())
+			{
+				$view = '_page2';
+				$model->scenario = 'page2';
+			}
+			else
+			{
+				$model->scenario = 'page1';
+				$view = '_page1'; //or page 3 sih
+			}
+		}
+		elseif(isset($_POST['page3']))
+		{
+			$model = new Data('page2');
+			$this->checkPageState($model, $_POST['Data']);
+			if($model->validate())
+			{
+				$view = '_page3';
+				$model->scenario = 'page3';
+			}
+			else
+			{
+				$model->scenario = 'page2';
+				$view = '_page2';
+			}
+		}
+		elseif(isset($_POST['create']))
+		{	
+			$model = new Data('page3');
+			$this->checkPageState($model, $_POST['Data']);
+			//$model->attributes=$_POST['Data'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
+			else
+			{			
+				$model->scenario = 'page3';
+				$view = '_page3';
+			}
 		}
-
-		$this->render('create',array(
+		
+		$this->render($view,array(
 			'model'=>$model,
-		));
+		));		
+
+		// $this->render('create',array(
+			// 'model'=>$model,
+		// ));
 	}
+	
+	///validation function
+	private function checkPageState(&$model, $data)
+	{
+		$model->attributes = $this->getPageState('page',
+		array());
+		$model->attributes = $data;
+		$this->setPageState('page', $model->attributes);
+	}	
 
 	/**
 	 * Updates a particular model.
