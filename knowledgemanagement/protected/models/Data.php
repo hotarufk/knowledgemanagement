@@ -142,7 +142,7 @@ class Data extends CActiveRecord
             $criteria->condition = "start_date < '$this->to_date'";
         }elseif(!empty($this->to_date) && !empty($this->from_date))
         {
-            $criteria->condition = "start_date  < '$this->to_date' and end_date >= '$this->from_date'";
+            $criteria->condition = "(start_date  < '$this->to_date' and end_date >= '$this->from_date') or(start_date!='0000-00-00' and  end_date = '0000-00-00')";
         }
 		
 		return new CActiveDataProvider($this, array(
