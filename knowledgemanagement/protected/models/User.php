@@ -33,6 +33,7 @@ class User extends CActiveRecord
 		return array(
             array('nama,role', 'required','on'=>'create,update'),
             array('username, password', 'required'),
+			array('username,nama','unique','message'=>'This username already exists.'),
             array(
             'username,password',
             'match', 'not' => true, 'pattern' => '/[^a-zA-Z0-9_-]/',
@@ -126,5 +127,24 @@ class User extends CActiveRecord
         if(!preg_match($pattern, $this->$attribute))
           $this->addError($attribute, 'your password is not strong enough!');
     }
+	
+	
+	///
+	public function roleText($val){
+	$text=' ';
+		switch ($val) {
+		  case 0 :
+			$text='Administrator';
+			break;
+		  case 1 :
+			$text='User';
+			break;
+		  default:
+			$text='error data invalid !';
+		}
+		return $text;
+	
+	
+	}
 
 }

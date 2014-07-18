@@ -48,15 +48,15 @@ class Data extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_br, cr_number, status, application_name','required','on'=>'page1'),
-			array('user,departement_PIC, IT_testing_PIC,key_achievement','required','on'=>'page2'),
-			array('month_of_register,request_date,start_date,end_date', 'required','on'=>'page3'),
+			array('no_br, cr_number, status, application_name','required','on'=>'page1'),//rule data di halaman 1 create/update
+			array('user,departement_PIC, IT_testing_PIC,key_achievement','required','on'=>'page2'),//rule data di halaman 2 create/update
+			array('month_of_register,request_date,start_date,end_date', 'required','on'=>'page3'),//rule data di halaman 3 create/update
 			array('status, user, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
 			array('no_br, cr_number', 'length', 'max'=>50),
-			array('no_br, cr_number,application_name,departement_PIC','length','allowEmpty'=>false),
+			array('no_br, cr_number,application_name,departement_PIC','length','allowEmpty'=>false),//rule data gak boleh blank
 			array('application_name, month_of_register,reflex', 'length','max'=>100),
 			array('reflex,end_date', 'safe'),
-			array('request_date,start_date,end_date','dateValidator'),
+			array('request_date,start_date,end_date','dateValidator','on'=>'page3'),//rule data di halaman 3 mengenai penanggalan
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, no_br, cr_number, status, reflex, application_name, user, departement_PIC, IT_testing_PIC, request_date, start_date, end_date, key_achievement, month_of_register', 'safe', 'on'=>'search'),
@@ -265,11 +265,13 @@ class Data extends CActiveRecord
 	}
 	
 	//////////
-	public static function dateValidator($attribute,$params)
+	public function dateValidator($attribute,$params)
     {
 		//kamus lokal
 		$d=mktime(0, 0, 0, 0, 00, 0000);
-	
+		$message ='start date : '.$this->start_date.'  end date : '.$this->end_date;
+		$category = 'date initial in validator cek value';
+		Yii::trace($message, $category);
 		//function
         if (($this->start_date <$this->end_date) OR ($this->end_date === date("Y-m-d", $d))){
 			$message="valid";
@@ -290,7 +292,7 @@ class Data extends CActiveRecord
 				$message="invalid";
 				$category="date debugging";
 				Yii::trace($message, $category);
-			$this->addError('start_date', 'date invalid');
+			$this->addError('request_date', 'date invalid');
 		}
 		
 	

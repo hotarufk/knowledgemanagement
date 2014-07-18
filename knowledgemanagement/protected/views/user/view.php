@@ -25,6 +25,10 @@ $this->menu=array(
 		'username',
 		'password',
 		'nama',
-		'role',
+		array(
+			'header' =>'Role',
+            'name'=>'role',
+            'value'=>$model->roleText($model->role),		
+		),
 	),
 )); ?>
