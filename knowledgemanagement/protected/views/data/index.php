@@ -98,4 +98,5 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 			'template' => '{view}',
 		),
 	),
+	'htmlOptions'=>array('style'=>'width:100%;overflow-x:scroll;'),
 )); ?>

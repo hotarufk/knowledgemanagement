@@ -763,7 +763,7 @@ $this->widget('zii.widgets.jui.CJuiTabs',array(
         'collapsible'=>false,
     ),
     'id'=>'MyTab-Menu',
-	'htmlOptions' => array('style' => 'width: 150%; font-size:1em'),
+	'htmlOptions' => array('style' => 'width: auto; font-size:1em'),
 ));
 ?>
 

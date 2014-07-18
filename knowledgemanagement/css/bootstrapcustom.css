@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 .navbar-inverse .navbar-inner {
 	background-color: #1b1b1b;
   background-image: -moz-linear-gradient(top, #f96e5b, #f96e5b);
@@ -65,4 +66,41 @@ a:hover,
 a:focus {
   color: #ffffff;
   text-decoration: none;
+}
+
+input[type="submit"] {
+height:30px;
+margin-left:10px;
+margin-bottom:10px;
+border-radius:5px;
+border:none;
+background: rgb(249,110,91); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(249,110,91,1) 59%, rgba(216,76,52,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(59%,rgba(249,110,91,1)), color-stop(100%,rgba(216,76,52,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(249,110,91,1) 59%,rgba(216,76,52,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(249,110,91,1) 59%,rgba(216,76,52,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(249,110,91,1) 59%,rgba(216,76,52,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(249,110,91,1) 59%,rgba(216,76,52,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f96e5b', endColorstr='#d84c34',GradientType=0 ); /* IE6-9 */
+
+}
+
+input[type="submit"]:hover {
+background: rgb(252,181,172); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(252,181,172,1) 59%, rgba(235,164,151,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(59%,rgba(252,181,172,1)), color-stop(100%,rgba(235,164,151,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(252,181,172,1) 59%,rgba(235,164,151,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(252,181,172,1) 59%,rgba(235,164,151,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(252,181,172,1) 59%,rgba(235,164,151,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(252,181,172,1) 59%,rgba(235,164,151,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcb5ac', endColorstr='#eba497',GradientType=0 ); /* IE6-9 */
+
+}
+input,
+select {
+font-family: 'Open Sans', sans-serif;
+}
+
+input {
+color: #ffffff;
 }
