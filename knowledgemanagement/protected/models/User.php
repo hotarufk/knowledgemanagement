@@ -33,7 +33,7 @@ class User extends CActiveRecord
 		return array(
             array('nama,role', 'required','on'=>'create,update'),
             array('username, password', 'required'),
-			array('username,nama','unique','message'=>'This username already exists.'),
+			array('username,nama','unique','message'=>'This username already exists.','on'=>'create,update'),
             array(
             'username,password',
             'match', 'not' => true, 'pattern' => '/[^a-zA-Z0-9_-]/',
