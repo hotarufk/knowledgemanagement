@@ -124,4 +124,5 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 			'class'=>'CButtonColumn',
 		),
 	),
+	'htmlOptions'=>array('style'=>'width:100%;overflow-x:scroll;'),
 )); ?>
