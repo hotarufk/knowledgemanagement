@@ -70,9 +70,19 @@ class FileController extends Controller
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			$model->file=CUploadedFile::getInstance($model,'file');
+			$model->file_ba=CUploadedFile::getInstance($model,'file_ba');
+			$model->file_ts=CUploadedFile::getInstance($model,'file_ts');
+			$model->file_testscenario=CUploadedFile::getInstance($model,'file_testscenario');
+			$model->file_brs=CUploadedFile::getInstance($model,'file_brs');
+			$model->file_srs=CUploadedFile::getInstance($model,'file_srs');
+			$model->file_mom=CUploadedFile::getInstance($model,'file_mom');
 			if($model->save())
-				$model->file->saveAs('/knowledgedb/knowledgemanagement/source/');
+				$model->file_ba->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_ba');
+				$model->file_ts->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_ts');
+				$model->file_testscenario->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_testscenario');
+				$model->file_brs->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_brs');
+				$model->file_srs->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_srs');
+				$model->file_mom->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_mom');
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
