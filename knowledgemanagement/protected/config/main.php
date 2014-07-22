@@ -12,7 +12,7 @@ return array(
     'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-	'defaultController' => 'data/index', 
+	'defaultController' => 'site/index', 
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -39,12 +39,14 @@ return array(
 
 	// application components
 	'components'=>array(
+		'logging'=>array('class'=>'Logging'),
 	    'bootstrap'=>array(
         'class'=>'bootstrap.components.Bootstrap',
         ),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			'class' => 'WebUser',
 		),
 		// uncomment the following to enable URLs in path-format
 		/*

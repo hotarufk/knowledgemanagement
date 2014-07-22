@@ -37,7 +37,8 @@ class DataController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete','report'),
-				'users'=>array('@'),//isi admin agar hanya admin yang bisa membukanya
+				'roles'=>array('admin'),
+				//'users'=>array('@'),//isi admin agar hanya admin yang bisa membukanya
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -63,21 +64,81 @@ class DataController extends Controller
 	public function actionCreate()
 	{
 		$model=new Data;
-
+		$view='_page1';
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Data']))
+		$this->performAjaxValidation($model);
+		
+		if(isset($_POST['page1']))
 		{
-			$model->attributes=$_POST['Data'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model = new Data('page1');
+			$this->checkPageState($model, $_POST['Data']);
+			$view = '_page1';
+			$model->scenario = 'page1';
 		}
-
-		$this->render('create',array(
+		elseif(isset($_POST['page2']))
+		{
+			$model = new Data('page1');
+			$this->checkPageState($model, $_POST['Data']);
+			if($model->validate())
+			{
+				$view = '_page2';
+				$model->scenario = 'page2';
+			}
+			else
+			{
+				$model->scenario = 'page1';
+				$view = '_page1'; //or page 3 sih
+			}
+		}
+		elseif(isset($_POST['page3']))
+		{
+			$model = new Data('page2');
+			$this->checkPageState($model, $_POST['Data']);
+			if($model->validate())
+			{
+				$view = '_page3';
+				$model->scenario = 'page3';
+			}
+			else
+			{
+				$model->scenario = 'page2';
+				$view = '_page2';
+			}
+		}
+		elseif(isset($_POST['create']))
+		{	
+			$model = new Data('page3');
+			$this->checkPageState($model, $_POST['Data']);
+			//$model->attributes=$_POST['Data'];
+			if($model->save()){
+				$jenis=1;// 1 == create
+				$text = "Data dengan ID".$sesuatu." telah dibuat" ;
+				$userid=Yii::app()->user->getId();
+		
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
+			//	$this->redirect(array('view','id'=>$model->id));
+				
+				}
+			else
+			{			
+				$model->scenario = 'page3';
+				$view = '_page3';
+			}
+		}
+		
+		$this->render($view,array(
 			'model'=>$model,
-		));
+		));		
 	}
+	
+	///validation function
+	private function checkPageState(&$model, $data)
+	{
+		$model->attributes = $this->getPageState('page',
+		array());
+		$model->attributes = $data;
+		$this->setPageState('page', $model->attributes);
+	}	
 
 	/**
 	 * Updates a particular model.
@@ -87,20 +148,74 @@ class DataController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$view='_page1';
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Data']))
+		$this->performAjaxValidation($model);
+		
+		
+		if(isset($_POST['page1']))
 		{
-			$model->attributes=$_POST['Data'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			//$model = new Data('page1');
+			$this->checkPageState($model, $_POST['Data']);
+			$view = '_page1';
+			$model->scenario = 'page1';
 		}
-
-		$this->render('update',array(
+		elseif(isset($_POST['page2']))
+		{
+			//$model = new Data('page1');
+			$this->checkPageState($model, $_POST['Data']);
+			if($model->validate())
+			{
+				$view = '_page2';
+				$model->scenario = 'page2';
+			}
+			else
+			{
+				$model->scenario = 'page1';
+				$view = '_page1'; //or page 3 sih
+			}
+		}
+		elseif(isset($_POST['page3']))
+		{
+			//$model = new Data('page2');
+			$this->checkPageState($model, $_POST['Data']);
+			if($model->validate())
+			{
+				$view = '_page3';
+				$model->scenario = 'page3';
+			}
+			else
+			{
+				$model->scenario = 'page2';
+				$view = '_page2';
+			}
+		}
+		elseif(isset($_POST['create']))
+		{	
+			$model = new Data('page3');
+			$this->checkPageState($model, $_POST['Data']);
+			//$model->attributes=$_POST['Data'];
+			if($model->save()){
+				
+				$jenis=1;
+				$text = "test ini berhasil ga" ;
+				$userid=Yii::app()->user->getId();;
+				
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
+				
+				//$this->redirect(array('view','id'=>$model->id));
+				
+				}
+			else
+			{			
+				$model->scenario = 'page3';
+				$view = '_page3';
+			}
+		}
+		
+		$this->render($view,array(
 			'model'=>$model,
-		));
+		));	
 	}
 
 	/**
@@ -121,18 +236,7 @@ class DataController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
-		// $dataProvider=new CActiveDataProvider('Data');
-		// $this->render('index',array(
-			// 'dataProvider'=>$dataProvider,
-		// ));
-		//$model=new Data('search');
-	//	$model->unsetAttributes();  // clear any default values
-		
-		//////////////////////
-	//unset(Yii::app()->request->cookies['Bulan']);  // first unset cookie for dates
-	//unset(Yii::app()->request->cookies['year']);
-	 
+	{ 
 	$model=new Data('search');  // your model
 	$model->unsetAttributes();  // clear any default values
 	 
@@ -167,11 +271,6 @@ class DataController extends Controller
 	 */
 	public function actionAdmin()
 	{
-
-		//////////////////////
-	//unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
-	//unset(Yii::app()->request->cookies['to_date']);
-	 
 	$model=new Data('search');  // your model
 	$model->unsetAttributes();  // clear any default values
 	 
@@ -192,14 +291,7 @@ class DataController extends Controller
 	}
 
 	public function actionReport()
-	{
-		//$model=new Data('search');
-	//	$model->unsetAttributes();  // clear any default values
-		
-		//////////////////////
-	//unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
-	//unset(Yii::app()->request->cookies['to_date']);
-	 
+	{ 
 	$model=new Data('search');  // your model
 	$model->unsetAttributes();  // clear any default values
 	 
@@ -257,13 +349,6 @@ class DataController extends Controller
 	}
 	
 	/////////////////////////////////
-	public function dataReport($month,$year){
-	
-	
-	
-	
-	}	
-	
 	 public function behaviors()
     {
         return array(
@@ -317,4 +402,18 @@ class DataController extends Controller
 	
 	
 	//////////////////////////////////
+	protected function afterAction(CAction $action){
+	
+	//check jenis action yang dilakukan
+	$actionid = $action->id;
+	
+	$message="action id : ".$actionid;
+	$category="afteraction test ";
+	Yii::trace($message, $category);
+	//kalo create/update
+
+	return true;
+	
+	
+	}
 }

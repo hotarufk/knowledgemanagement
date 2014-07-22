@@ -30,9 +30,9 @@ class UserIdentity extends CUserIdentity
         {
             $this->_id=$record->id;
 			if($record->role == 1)
-				$this->setState('role','guest');
+				$this->setState('roles','user');
 			else if ($record->role == 0)
-				$this->setState('role','admin');
+				$this->setState('roles','admin');
             $this->errorCode=self::ERROR_NONE;
         }
 		//$message=$record->password;
