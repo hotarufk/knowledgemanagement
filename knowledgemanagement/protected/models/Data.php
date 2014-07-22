@@ -52,10 +52,18 @@ class Data extends CActiveRecord
 			array('user,departement_PIC, IT_testing_PIC,key_achievement','required','on'=>'page2'),//rule data di halaman 2 create/update
 			array('month_of_register,request_date,start_date,end_date', 'required','on'=>'page3'),//rule data di halaman 3 create/update
 			array('status, user, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
-			array('no_br, cr_number', 'length', 'max'=>50),
-			array('no_br, cr_number,application_name,departement_PIC','length','allowEmpty'=>false),//rule data gak boleh blank
-			array('application_name, month_of_register,reflex', 'length','max'=>100),
+			array('no_br, cr_number', 'length', 'max'=>50,'allowEmpty'=>false),
+			//array('no_br, cr_number,application_name','exist','allowEmpty'=>false,'on'=>'page1'),//rule data gak boleh blank
+			array('application_name, month_of_register,reflex', 'length','max'=>100,'allowEmpty'=>false),
 			array('reflex,end_date', 'safe'),
+			//array('request_date,start_date,end_date', 'date', 'format'=>'yyyy-mm-dd','on'=>'page3'),
+			array('month_of_register', 'date', 'format'=>'mm.yyyy'),
+			array(
+            'no_br, cr_number,departement_PIC,application_name',
+            'match', 'not' => true, 'pattern' => '/[^a-zA-Z0-9_-]/',
+			'on'=>'page1,page2,page3',
+            'message' => 'Invalid characters. Only use a-z , A-Z , 0-9 , _ , or -',
+            ),
 			array('request_date,start_date,end_date','dateValidator','on'=>'page3'),//rule data di halaman 3 mengenai penanggalan
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -273,7 +281,7 @@ class Data extends CActiveRecord
 		$category = 'date initial in validator cek value';
 		Yii::trace($message, $category);
 		//function
-        if (($this->start_date <$this->end_date) OR ($this->end_date === date("Y-m-d", $d))){
+        if (($this->start_date <= $this->end_date) OR ($this->end_date === date("Y-m-d", $d))){
 			$message="valid";
 			$category="date debugging";
 			Yii::trace($message, $category);
@@ -281,10 +289,10 @@ class Data extends CActiveRecord
 				$message="invalid";
 				$category="date debugging";
 				Yii::trace($message, $category);
-			$this->addError('start_date', 'date invalid');
+			$this->addError('start_date', 'Start date invalid, must be >= than end Date');
 		}
 		
-		if (($this->start_date >$this->request_date) OR ($this->start_date === date("Y-m-d", $d))){
+		if (($this->start_date >= $this->request_date) OR ($this->start_date === date("Y-m-d", $d))){
 			$message="valid";
 			$category="date debugging";
 			Yii::trace($message, $category);
@@ -292,88 +300,11 @@ class Data extends CActiveRecord
 				$message="invalid";
 				$category="date debugging";
 				Yii::trace($message, $category);
-			$this->addError('request_date', 'date invalid');
+			$this->addError('request_date', 'Request Date invalid, must be <= Start Date');
 		}
 		
 	
 	}
-
-	//fungsi count by date filter and 
-	public function countReport($val){ //type di iisi oleh angka
-		
-		
-		//buat criteria
-		$criteria=new CDbCriteria;
-		//$criteria->with=array('User');
-		
-		//memastikan ada date filter atau engga
-		if(!empty($this->from_date) && empty($this->to_date))
-        {
-            $criteria->condition = "end_date >= '$this->from_date'";  // date is database date column field
-        }elseif(!empty($this->to_date) && empty($this->from_date))
-        {
-            $criteria->condition = "start_date < '$this->to_date'";
-        }elseif(!empty($this->to_date) && !empty($this->from_date))
-        {
-            $criteria->condition = "start_date  < '$this->to_date' and end_date >= '$this->from_date'";
-        }
-		
-		
-		switch ($val) {
-		  case 1://status
-			$criteria->group='t.status';
-			$criteria->select ='count(t.status) as count(status),t.status';
-			break;
-		  case 2://no_br
-			$criteria->group='no_br';
-			$criteria->select ='count(no_br),no_br';
-			break;
-		  case 3://cr_number
-			$criteria->group='cr_number';
-			$criteria->select ='count(cr_number),cr_number';
-			break;
-		  case 4://reflex
-			$criteria->group='reflex';
-			$criteria->select ='count(reflex),reflex';
-			break;
-		  case 5://application_name
-			$criteria->group='application_name';
-			$criteria->select ='count(application_name),application_name';
-			break;
-		  case 6://tbl_user.nama
-			$criteria->with = array(
-				'user0'=>array('select'=>'count(user.nama),user.nama','group'=>'user.nama'),
-			);		  
-			//$criteria->group='user.nama';
-			//$criteria->select ='count(user.nama),user.nama';
-			break;
-		  case 7://departement_PIC
-			$criteria->group='departement_PIC';
-			$criteria->select ='count(departement_PIC),departement_PIC';
-			break;
-		  case 8://IT_testing_PIC
-			$criteria->group='IT_testing_PIC';
-			$criteria->select ='count(IT_testing_PIC),IT_testing_PIC';
-			break;
-		  case 9://key_achievement
-			$criteria->group='key_achievement';
-			$criteria->select ='count(key_achievement),key_achievement';
-			break;
-		  case 10://month_of_register
-			$criteria->group='month_of_register';
-			$criteria->select ='count(month_of_register),month_of_register';
-			break;
-		  default:
-			echo "Your favorite color is neither red, blue, or green!";
-		}
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));	
-	}
-	
-	
-	
 	
 	
 	

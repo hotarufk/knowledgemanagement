@@ -66,7 +66,8 @@ class DataController extends Controller
 		$model=new Data;
 		$view='_page1';
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
+		
 		if(isset($_POST['page1']))
 		{
 			$model = new Data('page1');
@@ -110,12 +111,12 @@ class DataController extends Controller
 			$this->checkPageState($model, $_POST['Data']);
 			//$model->attributes=$_POST['Data'];
 			if($model->save()){
-				// $Log = new Log('create');
-				// $log->user = $model->user;
-				// $log->data = $model->id;
-				// $log->timestamp = time();
-				// $log->save();
-				$this->redirect(array('view','id'=>$model->id));
+				$jenis=1;// 1 == create
+				$text = "Data dengan ID".$sesuatu." telah dibuat" ;
+				$userid=Yii::app()->user->getId();
+		
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
+			//	$this->redirect(array('view','id'=>$model->id));
 				
 				}
 			else
@@ -149,7 +150,7 @@ class DataController extends Controller
 		$model=$this->loadModel($id);
 		$view='_page1';
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 		
 		
 		if(isset($_POST['page1']))
@@ -195,12 +196,14 @@ class DataController extends Controller
 			$this->checkPageState($model, $_POST['Data']);
 			//$model->attributes=$_POST['Data'];
 			if($model->save()){
-				// $Log = new Log('create');
-				// $log->user = $model->user;
-				// $log->data = $model->id;
-				// $log->timestamp = time();
-				// $log->save();
-				$this->redirect(array('view','id'=>$model->id));
+				
+				$jenis=1;
+				$text = "test ini berhasil ga" ;
+				$userid=Yii::app()->user->getId();;
+				
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
+				
+				//$this->redirect(array('view','id'=>$model->id));
 				
 				}
 			else

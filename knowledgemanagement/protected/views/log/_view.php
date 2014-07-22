@@ -13,16 +13,16 @@
 	<?php echo CHtml::encode($data->user); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('data')); ?>:</b>
-	<?php echo CHtml::encode($data->data); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Jenis')); ?>:</b>
+	<?php echo CHtml::encode($data->Jenis); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Keterangan')); ?>:</b>
+	<?php echo CHtml::encode($data->Keterangan); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('timestamp')); ?>:</b>
 	<?php echo CHtml::encode($data->timestamp); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('jenis')); ?>:</b>
-	<?php echo CHtml::encode($data->jenis); ?>
 	<br />
 
 

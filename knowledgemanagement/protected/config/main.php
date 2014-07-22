@@ -39,6 +39,7 @@ return array(
 
 	// application components
 	'components'=>array(
+		'logging'=>array('class'=>'Logging'),
 	    'bootstrap'=>array(
         'class'=>'bootstrap.components.Bootstrap',
         ),

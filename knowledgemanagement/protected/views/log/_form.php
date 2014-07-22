@@ -20,33 +20,27 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-		<?php echo $form->error($model,'id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'user'); ?>
 		<?php echo $form->textField($model,'user'); ?>
 		<?php echo $form->error($model,'user'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'data'); ?>
-		<?php echo $form->textField($model,'data'); ?>
-		<?php echo $form->error($model,'data'); ?>
+		<?php echo $form->labelEx($model,'Jenis'); ?>
+		<?php echo $form->textField($model,'Jenis'); ?>
+		<?php echo $form->error($model,'Jenis'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Keterangan'); ?>
+		<?php echo $form->textArea($model,'Keterangan',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'Keterangan'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'timestamp'); ?>
 		<?php echo $form->textField($model,'timestamp'); ?>
 		<?php echo $form->error($model,'timestamp'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'jenis'); ?>
-		<?php echo $form->textField($model,'jenis'); ?>
-		<?php echo $form->error($model,'jenis'); ?>
 	</div>
 
 	<div class="row buttons">

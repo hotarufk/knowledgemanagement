@@ -23,8 +23,8 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'user',
-		'data',
+		'Jenis',
+		'Keterangan',
 		'timestamp',
-		'jenis',
 	),
 )); ?>

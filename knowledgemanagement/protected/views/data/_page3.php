@@ -27,7 +27,6 @@
 			'model' => $model,
 			'attribute' => 'request_date',
 			'options' => array(
-				'showOn' => 'both',             // also opens with a button
 				'dateFormat' => 'yy-mm-dd',     // format of "2012-12-25"
 				'showOtherMonths' => true,      // show dates in other months
 				'changeYear' => true,           // can change year
@@ -35,7 +34,6 @@
 				'yearRange' => '2000:2099',     // range of year
 				'minDate' => '2000-01-01',      // minimum date
 				'maxDate' => '2099-12-31',      // maximum date
-				'showButtonPanel' => true,      // show button panel
 			),
 			'htmlOptions' => array(
 				'size' => '10',
@@ -100,12 +98,12 @@
 		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
 			'attribute' => 'month_of_register',
-			'themeUrl' => Yii::app()->baseUrl . '/css/jui',
-			'theme' => 'softark',
-			'cssFile' => 'jquery-ui-1.9.2.custom.css',
-			'options' => array(
-				'dateFormat' => 'mm.yy',  
-				'minDate'=>0,
+			'options' => array(  
+				'dateFormat'=>'mm.yy',
+				//'minDate'=>0,
+				'changeYear' => true,           // can change year
+				'changeMonth' => true,
+
 			),
 			'htmlOptions' => array(
 				'size' => '10',
@@ -113,6 +111,7 @@
 			),
 		)); 
 		?>
+		
 		<?php echo $form->error($model,'month_of_register'); ?>
 	</div>
 

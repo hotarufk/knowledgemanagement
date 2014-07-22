@@ -22,18 +22,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'data'); ?>
-		<?php echo $form->textField($model,'data'); ?>
+		<?php echo $form->label($model,'Jenis'); ?>
+		<?php echo $form->textField($model,'Jenis'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'Keterangan'); ?>
+		<?php echo $form->textArea($model,'Keterangan',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'timestamp'); ?>
 		<?php echo $form->textField($model,'timestamp'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'jenis'); ?>
-		<?php echo $form->textField($model,'jenis'); ?>
 	</div>
 
 	<div class="row buttons">

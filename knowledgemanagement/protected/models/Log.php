@@ -6,12 +6,11 @@
  * The followings are the available columns in table 'tbl_log':
  * @property integer $id
  * @property integer $user
- * @property integer $data
+ * @property integer $Jenis
+ * @property string $Keterangan
  * @property string $timestamp
- * @property integer $jenis
  *
  * The followings are the available model relations:
- * @property TblData $data0
  * @property TblUser $user0
  */
 class Log extends CActiveRecord
@@ -32,11 +31,11 @@ class Log extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, user, data, timestamp, jenis', 'required'),
-			array('id, user, data, jenis', 'numerical', 'integerOnly'=>true),
+			//array('user, Jenis, Keterangan, timestamp', 'required'),
+			array('user, Jenis', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, user, data, timestamp, jenis', 'safe', 'on'=>'search'),
+			array('id, user, Jenis, Keterangan, timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,7 +47,6 @@ class Log extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'data0' => array(self::BELONGS_TO, 'TblData', 'data'),
 			'user0' => array(self::BELONGS_TO, 'TblUser', 'user'),
 		);
 	}
@@ -61,9 +59,9 @@ class Log extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'user' => 'User',
-			'data' => 'Data',
+			'Jenis' => 'Jenis',
+			'Keterangan' => 'Keterangan',
 			'timestamp' => 'Timestamp',
-			'jenis' => 'Jenis',
 		);
 	}
 
@@ -87,9 +85,9 @@ class Log extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('user',$this->user);
-		$criteria->compare('data',$this->data);
+		$criteria->compare('Jenis',$this->Jenis);
+		$criteria->compare('Keterangan',$this->Keterangan,true);
 		$criteria->compare('timestamp',$this->timestamp,true);
-		$criteria->compare('jenis',$this->jenis);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
