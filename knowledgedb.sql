@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2014 at 05:56 AM
+-- Generation Time: Jul 22, 2014 at 09:12 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -108,13 +108,17 @@ INSERT INTO `tbl_data` (`id`, `no_br`, `cr_number`, `status`, `reflex`, `applica
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_file` (
-  `file_ba` int(127) NOT NULL,
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `project_id` int(255) NOT NULL,
+  `file_ba` varchar(127) NOT NULL,
   `file_ts` varchar(127) NOT NULL,
   `file_testscenario` varchar(127) NOT NULL,
   `file_brs` varchar(127) NOT NULL,
   `file_srs` varchar(127) NOT NULL,
-  `file_mom` varchar(127) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `file_mom` varchar(127) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `project_id` (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -151,6 +155,12 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `nama`, `role`) VALUES
 --
 ALTER TABLE `tbl_data`
   ADD CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`);
+
+--
+-- Constraints for table `tbl_file`
+--
+ALTER TABLE `tbl_file`
+  ADD CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_data` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -71,12 +71,30 @@ class FileController extends Controller
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			$model->file_ba=CUploadedFile::getInstance($model,'file_ba');
-			$model->file_ts=CUploadedFile::getInstance($model,'file_ts');
-			$model->file_testscenario=CUploadedFile::getInstance($model,'file_testscenario');
-			$model->file_brs=CUploadedFile::getInstance($model,'file_brs');
-			$model->file_srs=CUploadedFile::getInstance($model,'file_srs');
-			$model->file_mom=CUploadedFile::getInstance($model,'file_mom');
+			if ($model->file_ba=CUploadedFile::getInstance($model,'file_ba')){
+				 $model->data=file_get_contents($file_ba->tempName);
+        $model->file_ba->mime=$file_ba->type;
+		};
+			if ($model->file_ts=CUploadedFile::getInstance($model,'file_ts')){
+				 $model->data=file_get_contents($file_ts->tempName);
+        $model->file_ts->mime=$file_ts->type;
+		};
+			if ($model->file_testscenario=CUploadedFile::getInstance($model,'file_testscenario')){
+				 $model->data=file_get_contents($model->file_testscenario->tempName);
+        $model->file_testscenario->mime=$file_testscenario->type;
+		};
+			if ($model->file_brs=CUploadedFile::getInstance($model,'file_brs')){
+				 $model->data=file_get_contents($model->file_brs->tempName);
+        $model->file_brs->mime=$file_brs->type;
+		};
+			if ($model->file_srs=CUploadedFile::getInstance($model,'file_srs')){
+				 $model->data=file_get_contents($model->file_srs->tempName);
+        $model->file_srs->mime=$file_srs->type;
+		};
+			if ($model->file_mom=CUploadedFile::getInstance($model,'file_mom')){
+				 $model->data=file_get_contents($model->file_mom->tempName);
+        $model->file_ba->mime=$file_mom->type;
+		};
 			if($model->validate()){
 				$model->file_ba->saveAs(Yii::app()->baseUrl.'/source/file_ba/'.$model->file_ba); //'localhost/knowledgedb/knowledgemanagement/source/file_ba'
 				$model->file_ts->saveAs(Yii::app()->baseUrl.'/source/file_ts/'.$model->file_ts); //'localhost/knowledgedb/knowledgemanagement/source/file_ts'
