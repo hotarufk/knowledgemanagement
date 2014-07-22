@@ -112,7 +112,8 @@ class DataController extends Controller
 			//$model->attributes=$_POST['Data'];
 			if($model->save()){
 				$jenis=1;// 1 == create
-				$text = "Data dengan ID".$sesuatu." telah dibuat" ;
+				
+				$text = "Data dengan ID".$model->id." telah dibuat" ;
 				$userid=Yii::app()->user->getId();
 		
 				Yii::app()->logging->AutoLog($jenis,$text,$userid);
@@ -197,8 +198,8 @@ class DataController extends Controller
 			//$model->attributes=$_POST['Data'];
 			if($model->save()){
 				
-				$jenis=1;
-				$text = "test ini berhasil ga" ;
+				$jenis=2;//update
+				$text = "data dengan id ".$model->id." telah di update" ;
 				$userid=Yii::app()->user->getId();;
 				
 				Yii::app()->logging->AutoLog($jenis,$text,$userid);
@@ -225,8 +226,14 @@ class DataController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
 
+		//create log for delete
+				$jenis=3;//delete
+				$text = "data dengan id ".$model->id." telah di delete" ;
+				$userid=Yii::app()->user->getId();;
+				
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
+					$this->loadModel($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
