@@ -1,7 +1,7 @@
 <?php
 /* @var $this FileController */
 /* @var $dataProvider CActiveDataProvider */
-
+define ('SITE_ROOT', realpath(dirname(__FILE__)));
 $this->breadcrumbs=array(
 	'Files',
 );

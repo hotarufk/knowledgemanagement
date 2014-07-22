@@ -66,7 +66,8 @@ class FileController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+	// $type = isset($_GET['type']) ?
+	//$_GET['type'] : 'post';
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
@@ -76,14 +77,14 @@ class FileController extends Controller
 			$model->file_brs=CUploadedFile::getInstance($model,'file_brs');
 			$model->file_srs=CUploadedFile::getInstance($model,'file_srs');
 			$model->file_mom=CUploadedFile::getInstance($model,'file_mom');
-			if($model->save())
-				$model->file_ba->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_ba');
-				$model->file_ts->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_ts');
-				$model->file_testscenario->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_testscenario');
-				$model->file_brs->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_brs');
-				$model->file_srs->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_srs');
-				$model->file_mom->saveAs('localhost/knowledgedb/knowledgemanagement/source/file_mom');
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->validate()){
+				$model->file_ba->saveAs(Yii::app()->baseUrl.'/source/file_ba/'.$model->file_ba); //'localhost/knowledgedb/knowledgemanagement/source/file_ba'
+				$model->file_ts->saveAs(Yii::app()->baseUrl.'/source/file_ts/'.$model->file_ts); //'localhost/knowledgedb/knowledgemanagement/source/file_ts'
+				$model->file_testscenario->saveAs(Yii::app()->baseUrl.'/source/file_testscenario/'.$model->file_testscenario); //'localhost/knowledgedb/knowledgemanagement/source/file_testscenario'
+				$model->file_brs->saveAs(Yii::app()->baseUrl.'/source/file_brs/'.$model->file_brs); //'localhost/knowledgedb/knowledgemanagement/source/file_brs'
+				$model->file_srs->saveAs(Yii::app()->baseUrl.'/source/file_srs/'.$model->file_srs); //'localhost/knowledgedb/knowledgemanagement/source/file_srs'
+				$model->file_mom->saveAs(Yii::app()->baseUrl.'/source/file_mom/'.$model->file_mom); //'localhost/knowledgedb/knowledgemanagement/source/file_mom'
+				$this->redirect(array('view','id'=>$model->id));}
 		}
 
 		$this->render('create',array(
