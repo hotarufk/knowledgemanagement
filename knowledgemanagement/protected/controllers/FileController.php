@@ -72,11 +72,11 @@ class FileController extends Controller
 		{
 			$model->attributes=$_POST['File'];
 			if ($model->file_ba=CUploadedFile::getInstance($model,'file_ba')){
-				 $model->data=file_get_contents($file_ba->tempName);
+				 $model->data=file_get_contents($model->file_ba->tempName);
         $model->file_ba->mime=$file_ba->type;
 		};
 			if ($model->file_ts=CUploadedFile::getInstance($model,'file_ts')){
-				 $model->data=file_get_contents($file_ts->tempName);
+				 $model->data=file_get_contents($model->file_ts->tempName);
         $model->file_ts->mime=$file_ts->type;
 		};
 			if ($model->file_testscenario=CUploadedFile::getInstance($model,'file_testscenario')){
