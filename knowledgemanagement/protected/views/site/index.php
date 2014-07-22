@@ -4,23 +4,39 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<?php $this->beginWidget('bootstrap.widgets.TbHeroUnit', array(
-    
+<?php 
+$count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM tbl_user')->queryScalar();
+$sql='SELECT * FROM tbl_user';
+$dataProvider=new CSqlDataProvider($sql, array(
+    'totalItemCount'=>$count,
+    'sort'=>array(
+        'attributes'=>array(
+             'id', 'username', 'password', 'nama',
+        ),
+    ),
+    'pagination'=>array(
+        'pageSize'=>10,
+    ),
+));
+?>
+
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$dataProvider,
+	'filter'=>null,
+    'template'=>"{items}",
+    'columns'=>array(
+        array('name'=>'id', 'header'=>'#'),
+        array('name'=>'username', 'header'=>'Username'),
+        array('name'=>'password', 'header'=>'Password'),
+        array('name'=>'nama', 'header'=>'Nama'),
+        array(
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+			'viewButtonUrl'=>'Yii::app()->createUrl("/user/view", array("id"=>$data["id"]))',
+			'updateButtonUrl'=>'Yii::app()->createUrl("/user/update", array("id"=>$data["id"]))',
+			'deleteButtonUrl'=>null,
+        ),
+    ),
 )); ?>
- 
-    <p>Knowledge Repository ini berfungsi sebagai tracker data dari setiap proyek</p>
-    <p><?php $this->widget('bootstrap.widgets.TbButton', array(
-        'type'=>'primary',
-        'size'=>'large',
-        'label'=>'Lihat Data',
-		'url'=>array('/data/index')
-    )); ?>
-	<?php $this->widget('bootstrap.widgets.TbButton', array(
-        'type'=>'primary',
-        'size'=>'large',
-        'label'=>'Lihat Laporan',
-		'url'=>array('/data/report')
-    )); ?></p>
- 
-<?php $this->endWidget(); ?>
 

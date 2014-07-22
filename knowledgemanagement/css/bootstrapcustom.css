@@ -146,3 +146,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f96e5b', end
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
+
+.img-navbar {
+  height:28px;
