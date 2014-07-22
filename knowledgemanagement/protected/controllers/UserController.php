@@ -71,8 +71,18 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
-			if($model->save())
+			if($model->save()){
+				//create log
+				$jenis=4;//create user
+				$role='user';
+				if($model->role ==0)
+					$role = 'admin';
+				$text = "user dengan id ".$model->id." telah di buat , dengan role sebagai ".$role ;
+				$userid=Yii::app()->user->getId();
+				
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(
@@ -95,8 +105,17 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
-			if($model->save())
+			if($model->save()){
+				//create log
+				$jenis=5;//update user
+				$role='user';
+				if($model->role ==0)
+					$role = 'admin';
+				$text = "user dengan id ".$model->id." telah di update , dengan role sebagai ".$role ;
+				$userid=Yii::app()->user->getId();
+				
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('update',array(
@@ -111,8 +130,15 @@ class UserController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
+		//$this->loadModel($id)->delete();
+				//create log
+				$jenis=6;//delete user
+				$role='user';
+				if($model->role ==0)
+					$role = 'admin';
+				$text = "user dengan id ".$model->id." telah di delete , dengan role sebagai ".$role ;
+				$userid=Yii::app()->user->getId();
+		$this->loadModel($id)->delete();		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
