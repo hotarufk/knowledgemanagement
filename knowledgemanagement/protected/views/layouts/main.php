@@ -17,20 +17,24 @@
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	   <?php Yii::app()->bootstrap->registerAllCss(); ?>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main-customboot.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrapcustom.css" />
 </head>
 
 <body>
 
 <div class="container" id="page">
 
-	<div id="header">
+	<!--<div id="header">
 		<div id="logo"><br><br><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+	</div><!-- header --> -->
+	<br><br><br>
 
 	<div id="mainmenu">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
     'type'=>'inverse', // null or 'inverse'
-    'brand'=>'Knowledge Management',
+    'brand'=>'<img src ="' . Yii::app()->request->baseUrl . '/images/logo.png" />',
+
     'brandUrl'=>'index.php',
     'collapse'=>true, // requires bootstrap-responsive.css
     'items'=>array(
@@ -39,12 +43,13 @@
             'items'=>array(
                 array('label'=>'Report', 'url'=>array('/data/report'),'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Data', 'url'=>array('data/index'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Manage Users', 'url'=>array('user/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 				
                 )),
             
-        '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+        
         
             )
 			)

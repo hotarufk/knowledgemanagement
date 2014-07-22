@@ -2,10 +2,7 @@
 /* @var $this DataController */
 /* @var $model Data */
 
-$this->breadcrumbs=array(
-	'Datas'=>array('index'),
-	'Manage',
-);
+
 
 $this->menu=array(
 	array('label'=>'List Data', 'url'=>array('index')),
@@ -73,9 +70,15 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+$dataProvider = $model->search();
+$pagination =  array('pageSize' => 5,);//set jumlah halaman/page
+$dataProvider->setPagination($pagination);
+
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
 	'id'=>'data-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$dataProvider,
 	'filter'=>$model,
 	'columns'=>array(
 		//'id',
@@ -121,4 +124,5 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'class'=>'CButtonColumn',
 		),
 	),
+	'htmlOptions'=>array('style'=>'width:100%;overflow-x:scroll;'),
 )); ?>

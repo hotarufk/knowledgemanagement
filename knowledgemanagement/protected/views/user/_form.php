@@ -39,7 +39,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'role'); ?>
-		<?php echo $form->textField($model,'role'); ?>
+		<?php echo $form->dropDownList($model,'role',array('0'=>'Admin','1'=>'User'), array('options' => array('1'=>array('selected'=>true)))); ?>
 		<?php echo $form->error($model,'role'); ?>
 	</div>
 

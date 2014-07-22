@@ -22,7 +22,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('role')); ?>:</b>
-	<?php echo CHtml::encode($data->role); ?>
+	<?php echo CHtml::encode($data->roleText($data->role)); ?>
 	<br />
 
 
