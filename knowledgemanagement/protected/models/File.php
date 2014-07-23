@@ -45,6 +45,7 @@ class File extends CActiveRecord
 			array('project_id', 'required'),
 			array('file_ba, file_ts, file_testscenario, file_brs, file_srs, file_mom','required','on'=>'validate'),
 			array('project_id', 'numerical', 'integerOnly'=>true),
+			array('project_id','unique','message'=>'This id already exists.','on'=>'create,update'),
 			array('file_ba, file_ts, file_brs, file_srs, file_mom', 'file', 'types'=>'doc, docx', 'minSize'=>100, 'maxSize'=>10000000 , 'allowEmpty'=>true, 'safe'=>true),
 			array('file_test', 'file', 'types'=>'xls, xlsx, doc, docx, zip, rar', 'allowEmpty'=>true, 'safe'=>true),
 			// The following rule is used by search().
@@ -61,7 +62,7 @@ class File extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'project' => array(self::BELONGS_TO, 'TblData', 'project_id'),
+			 'project' => array(self::BELONGS_TO, 'TblData', 'project_id')
 		);
 	}
 

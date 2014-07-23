@@ -28,7 +28,7 @@ class FileController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','index','view'),
+				'actions'=>array('create','update','index','view','download'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -72,36 +72,37 @@ class FileController extends Controller
 			
 			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
-			$model->file_testscenario = Yii::app()->basePath.'/../document/file_testscenario'.$model->file_test;
+			$extension = strtolower($model->file_test->extensionName);
+			$model->file_testscenario = $path.'/file_testscenario-'.$model->project_id.'.'.$extension;
 			
-			$model->ba= CUploadedFile::getInstance($model,'ba'); //ba
-			$path = realpath(Yii::app()->basePath.'/../document/file_ba');
-			$model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
+			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
+			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');
+			// $model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
 			
-			$model->ts= CUploadedFile::getInstance($model,'ts'); //ts
-			$path = realpath(Yii::app()->basePath.'/../document/file_ts');
-			$model->file_ts = Yii::app()->basePath.'/../document/file_ts'.$model->ts;
+			// $model->ts= CUploadedFile::getInstance($model,'ts'); //ts
+			// $path = realpath(Yii::app()->basePath.'/../document/file_ts');
+			// $model->file_ts = Yii::app()->basePath.'/../document/file_ts'.$model->ts;
 			
-			$model->brs= CUploadedFile::getInstance($model,'brs'); //brs
-			$path = realpath(Yii::app()->basePath.'/../document/file_brs');
-			$model->file_brs = Yii::app()->basePath.'/../document/file_brs'.$model->brs;
+			// $model->brs= CUploadedFile::getInstance($model,'brs'); //brs
+			// $path = realpath(Yii::app()->basePath.'/../document/file_brs');
+			// $model->file_brs = Yii::app()->basePath.'/../document/file_brs'.$model->brs;
 			
-			$model->srs= CUploadedFile::getInstance($model,'srs'); //srs
-			$path = realpath(Yii::app()->basePath.'/../document/file_srs');
-			$model->file_srs = Yii::app()->basePath.'/../document/file_srs'.$model->srs;
+			// $model->srs= CUploadedFile::getInstance($model,'srs'); //srs
+			// $path = realpath(Yii::app()->basePath.'/../document/file_srs');
+			// $model->file_srs = Yii::app()->basePath.'/../document/file_srs'.$model->srs;
 			
-			$model->mom= CUploadedFile::getInstance($model,'mom'); //mom
-			$path = realpath(Yii::app()->basePath.'/../document/file_mom');
-			$model->file_mom = Yii::app()->basePath.'/../document/file_mom'.$model->mom;
+			// $model->mom= CUploadedFile::getInstance($model,'mom'); //mom
+			// $path = realpath(Yii::app()->basePath.'/../document/file_mom');
+			// $model->file_mom = Yii::app()->basePath.'/../document/file_mom'.$model->mom;
 			
 			Yii::trace('ini path nya : '.$path,"path");
 			if($model->save()){
-                $model->file_test->saveAs($path. '/' . $model->id);	
-				$model->ba->saveAs($path. '/' . $model->id);
-				$model->ts->saveAs($path. '/' . $model->id);	
-				$model->brs->saveAs($path. '/' . $model->id);	
-				$model->srs->saveAs($path. '/' . $model->id);	
-				$model->mom->saveAs($path. '/' . $model->id);					
+                $model->file_test->saveAs($model->file_testscenario);	
+				// $model->ba->saveAs($path. '/' . $model->id);
+				// $model->ts->saveAs($path. '/' . $model->id);	
+				// $model->brs->saveAs($path. '/' . $model->id);	
+				// $model->srs->saveAs($path. '/' . $model->id);	
+				// $model->mom->saveAs($path. '/' . $model->id);					
 				$this->redirect(array('view','id'=>$model->id));
 			}			
 		}
@@ -119,17 +120,48 @@ class FileController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			if($model->save())
+			
+			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
+			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
+			$extension = strtolower($model->file_test->extensionName);
+			$model->file_testscenario = $path.'/file_testscenario-'.$model->project_id.'.'.$extension;
+			
+			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
+			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');
+			// $model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
+			
+			// $model->ts= CUploadedFile::getInstance($model,'ts'); //ts
+			// $path = realpath(Yii::app()->basePath.'/../document/file_ts');
+			// $model->file_ts = Yii::app()->basePath.'/../document/file_ts'.$model->ts;
+			
+			// $model->brs= CUploadedFile::getInstance($model,'brs'); //brs
+			// $path = realpath(Yii::app()->basePath.'/../document/file_brs');
+			// $model->file_brs = Yii::app()->basePath.'/../document/file_brs'.$model->brs;
+			
+			// $model->srs= CUploadedFile::getInstance($model,'srs'); //srs
+			// $path = realpath(Yii::app()->basePath.'/../document/file_srs');
+			// $model->file_srs = Yii::app()->basePath.'/../document/file_srs'.$model->srs;
+			
+			// $model->mom= CUploadedFile::getInstance($model,'mom'); //mom
+			// $path = realpath(Yii::app()->basePath.'/../document/file_mom');
+			// $model->file_mom = Yii::app()->basePath.'/../document/file_mom'.$model->mom;
+			
+			Yii::trace('ini path nya : '.$path,"path");
+			if($model->save()){
+                $model->file_test->saveAs($model->file_testscenario);	
+				// $model->ba->saveAs($path. '/' . $model->id);
+				// $model->ts->saveAs($path. '/' . $model->id);	
+				// $model->brs->saveAs($path. '/' . $model->id);	
+				// $model->srs->saveAs($path. '/' . $model->id);	
+				// $model->mom->saveAs($path. '/' . $model->id);					
 				$this->redirect(array('view','id'=>$model->id));
+			}			
 		}
-
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -201,5 +233,23 @@ class FileController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public function actionDownload($id){
+	$model=File::model()->findByPk($id);
+	$text = explode("/",$model->file_testscenario);
+	$name = $text[1];
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+
+	if( file_exists( $model->file_testscenario ) ){
+	//extension harus ada di nama
+	Yii::app()->getRequest()->sendFile( $name , file_get_contents( $model->file_testscenario ) );
+	}
+	else{
+	$this->render('download404');
+	} 
+	
+	
 	}
 }

@@ -80,6 +80,7 @@ class Data extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'user0' => array(self::BELONGS_TO, 'User', 'user'),
+			'tblFiles' => array(self::HAS_MANY, 'TblFile', 'project_id'),
 		);
 	}
 
