@@ -40,6 +40,7 @@ return array(
 	// application components
 	'components'=>array(
 		'logging'=>array('class'=>'Logging'),
+		'fileTrigger'=>array('class'=>'FileTrigger'),
 	    'bootstrap'=>array(
         'class'=>'bootstrap.components.Bootstrap',
         ),

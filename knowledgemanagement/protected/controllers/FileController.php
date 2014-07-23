@@ -28,7 +28,7 @@ class FileController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','index','view','download'),
+				'actions'=>array('update','index','view','download'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -61,6 +61,15 @@ class FileController extends Controller
 	{
 		$model=new File;
 		$data;
+		
+		if(isset($_GET['id'])){
+				$id = $_GET['id'];
+				$data = array(
+				"id"=>$id,
+				);
+			$model->setAttributes($data,false);
+		}
+		
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 	// $type = isset($_GET['type']) ?
@@ -68,8 +77,8 @@ class FileController extends Controller
 		$document_name='';
 		if(isset($_POST['File']))
 		{
+			$id;
 			$model->attributes=$_POST['File'];
-			
 			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
 			$extension = strtolower($model->file_test->extensionName);
@@ -237,10 +246,12 @@ class FileController extends Controller
 	
 	public function actionDownload($id){
 	$model=File::model()->findByPk($id);
+	if($model===null){
+		//redirect to create file model
+		$this->redirect(array('create','id'=>$id));
+	}
 	$text = explode("/",$model->file_testscenario);
 	$name = $text[1];
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
 
 	if( file_exists( $model->file_testscenario ) ){
 	//extension harus ada di nama
