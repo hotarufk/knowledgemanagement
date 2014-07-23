@@ -73,7 +73,7 @@ class FileController extends Controller
 			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
 			$extension = strtolower($model->file_test->extensionName);
-			$model->file_testscenario = $path.'/file_testscenario-'.$model->project_id.'.'.$extension;
+			$model->file_testscenario = $path.'/file_testscenario-'.$model->id.'.'.$extension;
 			
 			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
 			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');
@@ -129,7 +129,7 @@ class FileController extends Controller
 			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
 			$extension = strtolower($model->file_test->extensionName);
-			$model->file_testscenario = $path.'/file_testscenario-'.$model->project_id.'.'.$extension;
+			$model->file_testscenario = $path.'/file_testscenario-'.$model->id.'.'.$extension;
 			
 			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
 			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');

@@ -17,11 +17,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'project_id'); ?>
-		<?php echo $form->textField($model,'project_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'file_ba'); ?>
 		<?php echo $form->textField($model,'file_ba',array('size'=>60,'maxlength'=>127)); ?>
 	</div>

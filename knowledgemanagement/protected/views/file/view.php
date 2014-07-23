@@ -23,7 +23,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'project_id',
 		'file_ba',
 		'file_ts',
 		'file_testscenario',

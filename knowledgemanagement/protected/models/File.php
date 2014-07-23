@@ -42,15 +42,15 @@ class File extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('project_id', 'required'),
+			array('id', 'required'),
 			array('file_ba, file_ts, file_testscenario, file_brs, file_srs, file_mom','required','on'=>'validate'),
-			array('project_id', 'numerical', 'integerOnly'=>true),
-			array('project_id','unique','message'=>'This id already exists.','on'=>'create,update'),
+			array('id', 'numerical', 'integerOnly'=>true),
+			array('id','unique','message'=>'This id already exists.','on'=>'create,update'),
 			array('file_ba, file_ts, file_brs, file_srs, file_mom', 'file', 'types'=>'doc, docx', 'minSize'=>100, 'maxSize'=>10000000 , 'allowEmpty'=>true, 'safe'=>true),
 			array('file_test', 'file', 'types'=>'xls, xlsx, doc, docx, zip, rar', 'allowEmpty'=>true, 'safe'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, project_id, file_ba, file_ts, file_testscenario, file_brs, file_srs, file_mom', 'safe', 'on'=>'search'),
+			array('id, file_ba, file_ts, file_testscenario, file_brs, file_srs, file_mom', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,7 +62,7 @@ class File extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			 'project' => array(self::BELONGS_TO, 'TblData', 'project_id')
+			 'project' => array(self::BELONGS_TO, 'TblData', 'id')
 		);
 	}
 
@@ -73,7 +73,6 @@ class File extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'project_id' => 'Project',
 			'file_ba' => 'File Ba',
 			'file_ts' => 'File Ts',
 			'file_testscenario' => 'File Testscenario',
@@ -102,7 +101,6 @@ class File extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('project_id',$this->project_id);
 		$criteria->compare('file_ba',$this->file_ba,true);
 		$criteria->compare('file_ts',$this->file_ts,true);
 		$criteria->compare('file_testscenario',$this->file_testscenario,true);
