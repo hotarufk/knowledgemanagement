@@ -1856,3 +1856,262 @@ Stack trace:
 REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
 HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
 ---
+2014/07/23 08:20:27 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:20:27 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:20:27 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:20:27 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:20:27 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:20:27 [error] [php] move_uploaded_file(): Filename cannot be empty (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): FileController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): FileController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): FileController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): FileController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): FileController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (99)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:22:19 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:22:19 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:22:19 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:22:19 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:22:19 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:22:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8' for key 'project_id_2'. The SQL statement executed was: INSERT INTO `tbl_file` (`project_id`, `file_testscenario`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (98)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:22:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8' for key 'project_id_2'. The SQL statement executed was: INSERT INTO `tbl_file` (`project_id`, `file_testscenario`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php(98): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): FileController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
+---
+2014/07/23 08:23:15 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:23:15 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:23:15 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:23:15 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:23:15 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:23:16 [error] [php] move_uploaded_file(C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\document\file_testscenarioLEMBAR PENGESAHAN.docx.application/vnd.openxmlformats-officedocument.wordprocessingml.document): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): FileController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): FileController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): FileController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): FileController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): FileController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (99)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:38 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:38 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:38 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:38 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:38 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'project_id_2'. The SQL statement executed was: INSERT INTO `tbl_file` (`project_id`, `file_testscenario`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (98)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6' for key 'project_id_2'. The SQL statement executed was: INSERT INTO `tbl_file` (`project_id`, `file_testscenario`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php(98): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): FileController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=file/create
+---
+2014/07/23 08:24:51 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:51 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:51 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:51 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:24:51 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:35:00 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:35:00 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:35:00 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:35:00 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:35:00 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (71)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:32 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:32 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:32 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:32 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:32 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:50 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:50 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:50 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:50 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:40:50 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:50:30 [warning] [application] Failed to set unsafe attribute "ba" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:50:30 [warning] [application] Failed to set unsafe attribute "ts" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:50:30 [warning] [application] Failed to set unsafe attribute "brs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:50:30 [warning] [application] Failed to set unsafe attribute "srs" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:50:30 [warning] [application] Failed to set unsafe attribute "mom" of "File".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (127)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/07/23 08:50:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "downloadtest".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('downloadtest')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('downloadtest')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/downloadte...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/downloadtest
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=file/view&id=28
+---
+2014/07/23 08:52:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "downloadtest".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('downloadtest')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('downloadtest')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/downloadte...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/downloadtest
+HTTP_REFERER=http://localhost/KnowledgeManagement/knowledgemanagement/index.php?r=file/view&id=28
+---
+2014/07/23 08:57:44 [error] [php] Undefined index: File (C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php:241)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): FileController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): FileController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): FileController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): FileController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/knowledgemanagement/index.php?r=file/download
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\FileController.php (241)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)

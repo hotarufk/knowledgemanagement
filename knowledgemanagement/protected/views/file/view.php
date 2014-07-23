@@ -13,6 +13,7 @@ $this->menu=array(
 	array('label'=>'Update File', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete File', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage File', 'url'=>array('admin')),
+	array('label'=>'Download Test', 'url'=>array('download','id'=>$model->id)),
 );
 ?>
 

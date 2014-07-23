@@ -409,18 +409,6 @@ class DataController extends Controller
 	
 	
 	//////////////////////////////////
-	protected function afterAction(CAction $action){
-	
-	//check jenis action yang dilakukan
-	$actionid = $action->id;
-	
-	$message="action id : ".$actionid;
-	$category="afteraction test ";
-	Yii::trace($message, $category);
-	//kalo create/update
-
-	return true;
 	
 	
-	}
 }
