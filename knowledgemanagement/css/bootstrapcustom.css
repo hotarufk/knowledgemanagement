@@ -69,6 +69,7 @@ a:focus {
 }
 
 input[type="submit"] {
+color: #ffffff;
 height:30px;
 margin-left:10px;
 margin-bottom:10px;
@@ -101,10 +102,11 @@ select {
 font-family: 'Open Sans', sans-serif;
 }
 
-input {
-color: #ffffff;
-}
 
+
+.input-file {
+color: #000000;
+}
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
