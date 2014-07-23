@@ -57,6 +57,7 @@ class User extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'tblDatas' => array(self::HAS_MANY, 'Data', 'project_id'),
+			'tblLogs' => array(self::HAS_MANY, 'TblLog', 'user'),
 		);
 	}
 

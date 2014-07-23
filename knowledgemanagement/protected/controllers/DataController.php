@@ -113,11 +113,12 @@ class DataController extends Controller
 			if($model->save()){
 				$jenis=1;// 1 == create
 				
-				$text = "Data dengan ID".$model->id." telah dibuat" ;
+				$text = "Data dengan ID ".$model->id." telah dibuat" ;
 				$userid=Yii::app()->user->getId();
 		
 				Yii::app()->logging->AutoLog($jenis,$text,$userid);
-			//	$this->redirect(array('view','id'=>$model->id));
+				Yii::app()->fileTrigger->AutoFile($model->id);
+				$this->redirect(array('view','id'=>$model->id));
 				
 				}
 			else
