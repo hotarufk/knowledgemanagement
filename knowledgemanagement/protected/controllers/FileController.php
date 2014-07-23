@@ -69,13 +69,39 @@ class FileController extends Controller
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			$model->file_test= CUploadedFile::getInstance($model,'file_test');
+			
+			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
 			$model->file_testscenario = Yii::app()->basePath.'/../document/file_testscenario'.$model->file_test;
 			
+			$model->ba= CUploadedFile::getInstance($model,'ba'); //ba
+			$path = realpath(Yii::app()->basePath.'/../document/file_ba');
+			$model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
+			
+			$model->ts= CUploadedFile::getInstance($model,'ts'); //ts
+			$path = realpath(Yii::app()->basePath.'/../document/file_ts');
+			$model->file_ts = Yii::app()->basePath.'/../document/file_ts'.$model->ts;
+			
+			$model->brs= CUploadedFile::getInstance($model,'brs'); //brs
+			$path = realpath(Yii::app()->basePath.'/../document/file_brs');
+			$model->file_brs = Yii::app()->basePath.'/../document/file_brs'.$model->brs;
+			
+			$model->srs= CUploadedFile::getInstance($model,'srs'); //srs
+			$path = realpath(Yii::app()->basePath.'/../document/file_srs');
+			$model->file_srs = Yii::app()->basePath.'/../document/file_srs'.$model->srs;
+			
+			$model->mom= CUploadedFile::getInstance($model,'mom'); //mom
+			$path = realpath(Yii::app()->basePath.'/../document/file_mom');
+			$model->file_mom = Yii::app()->basePath.'/../document/file_mom'.$model->mom;
+			
 			Yii::trace('ini path nya : '.$path,"path");
 			if($model->save()){
-                $model->file_test->saveAs($path. '/' . $model->id);		
+                $model->file_test->saveAs($path. '/' . $model->id);	
+				$model->ba->saveAs($path. '/' . $model->id);
+				$model->ts->saveAs($path. '/' . $model->id);	
+				$model->brs->saveAs($path. '/' . $model->id);	
+				$model->srs->saveAs($path. '/' . $model->id);	
+				$model->mom->saveAs($path. '/' . $model->id);					
 				$this->redirect(array('view','id'=>$model->id));
 			}			
 		}

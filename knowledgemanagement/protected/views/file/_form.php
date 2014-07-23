@@ -28,14 +28,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_ba'); ?>
-		<?php echo $form->fileField($model,'file_ba'); ?>
-		<?php echo $form->error($model,'file_ba'); ?>
+		<?php echo $form->fileField($model,'ba'); ?>
+		<?php //echo $form->error($model,'file_ba'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_ts'); ?>
-		<?php echo $form->fileField($model,'file_ts',array('size'=>60,'maxlength'=>127)); ?>
-		<?php echo $form->error($model,'file_ts'); ?>
+		<?php echo $form->fileField($model,'ts'); ?>
+		<?php //echo $form->error($model,'file_ts'); ?>
 	</div>
 
 	<div class="row">
@@ -46,20 +46,20 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_brs'); ?>
-		<?php echo $form->fileField($model,'file_brs',array('size'=>60,'maxlength'=>127)); ?>
-		<?php echo $form->error($model,'file_brs'); ?>
+		<?php echo $form->fileField($model,'brs'); ?>
+		<?php //echo $form->error($model,'file_brs'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_srs'); ?>
-		<?php echo $form->fileField($model,'file_srs',array('size'=>60,'maxlength'=>127)); ?>
-		<?php echo $form->error($model,'file_srs'); ?>
+		<?php echo $form->fileField($model,'srs'); ?>
+		<?php //echo $form->error($model,'file_srs'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_mom'); ?>
-		<?php echo $form->fileField($model,'file_mom',array('size'=>60,'maxlength'=>127)); ?>
-		<?php echo $form->error($model,'file_mom'); ?>
+		<?php echo $form->fileField($model,'mom'); ?>
+		<?php //echo $form->error($model,'file_mom'); ?>
 	</div>
 
 	<div class="row buttons">
