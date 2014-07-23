@@ -28,7 +28,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_ba'); ?>
-		<?php echo $form->fileField($model,'file_ba',array('size'=>60,'maxlength'=>127)); ?>
+		<?php echo $form->fileField($model,'file_ba'); ?>
 		<?php echo $form->error($model,'file_ba'); ?>
 	</div>
 
@@ -40,8 +40,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_testscenario'); ?>
-		<?php echo $form->fileField($model,'file_testscenario',array('size'=>60,'maxlength'=>127)); ?>
-		<?php echo $form->error($model,'file_testscenario'); ?>
+		<?php echo $form->fileField($model,'file_test'); ?>
+		<?php //echo $form->error($model,'file_testscenario'); ?>
 	</div>
 
 	<div class="row">

@@ -18,12 +18,6 @@
  */
 class File extends CActiveRecord
 {
-	public $file_ba;
-	public $file_ts;
-	public $file_testscenario;
-	public $file_brs;
-	public $file_srs;
-	public $file_mom;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -35,6 +29,8 @@ class File extends CActiveRecord
 	/**
 	 * @return array validation rules for model attributes.
 	 */
+	 
+	public $file_test;
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
@@ -44,7 +40,7 @@ class File extends CActiveRecord
 			array('file_ba, file_ts, file_testscenario, file_brs, file_srs, file_mom','required','on'=>'validate'),
 			array('project_id', 'numerical', 'integerOnly'=>true),
 			array('file_ba, file_ts, file_brs, file_srs, file_mom', 'file', 'types'=>'doc, docx', 'minSize'=>100, 'maxSize'=>10000000 , 'allowEmpty'=>true, 'safe'=>true),
-			array('file_testscenario', 'file', 'types'=>'xls, xlsx, doc, docx, zip, rar', 'minSize'=>100, 'maxSize'=>10000000 , 'allowEmpty'=>true, 'safe'=>true),
+			array('file_test', 'file', 'types'=>'xls, xlsx, doc, docx, zip, rar', 'allowEmpty'=>true, 'safe'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, project_id, file_ba, file_ts, file_testscenario, file_brs, file_srs, file_mom', 'safe', 'on'=>'search'),
