@@ -75,29 +75,39 @@ class FileController extends Controller
 			$extension = strtolower($model->file_test->extensionName);
 			$model->file_testscenario = $path.'/file_testscenario-'.$model->id.'.'.$extension;
 			
-			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
-			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');
-			// $model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
+			$model->ba= CUploadedFile::getInstance($model,'ba'); //ba
+			$path = realpath(Yii::app()->basePath.'/../document/file_ba');
+			$extension = strtolower($model->ba->extensionName);
+			$model->file_ba = $path.'/file_ba-'.$model->id.'.'.$extension;
 			
-			// $model->ts= CUploadedFile::getInstance($model,'ts'); //ts
-			// $path = realpath(Yii::app()->basePath.'/../document/file_ts');
-			// $model->file_ts = Yii::app()->basePath.'/../document/file_ts'.$model->ts;
+			$model->ts= CUploadedFile::getInstance($model,'ts'); //ts
+			$path = realpath(Yii::app()->basePath.'/../document/file_ts');
+			$extension = strtolower($model->ts->extensionName);
+			$model->file_ts = $path.'/file_ts-'.$model->id.'.'.$extension;
 			
-			// $model->brs= CUploadedFile::getInstance($model,'brs'); //brs
-			// $path = realpath(Yii::app()->basePath.'/../document/file_brs');
-			// $model->file_brs = Yii::app()->basePath.'/../document/file_brs'.$model->brs;
+			$model->brs= CUploadedFile::getInstance($model,'brs'); //brs
+			$path = realpath(Yii::app()->basePath.'/../document/file_brs');
+			$extension = strtolower($model->brs->extensionName);
+			$model->file_brs = $path.'/file_brs-'.$model->id.'.'.$extension;
 			
-			// $model->srs= CUploadedFile::getInstance($model,'srs'); //srs
-			// $path = realpath(Yii::app()->basePath.'/../document/file_srs');
-			// $model->file_srs = Yii::app()->basePath.'/../document/file_srs'.$model->srs;
+			$model->srs= CUploadedFile::getInstance($model,'srs'); //srs
+			$path = realpath(Yii::app()->basePath.'/../document/file_srs');
+			$extension = strtolower($model->srs->extensionName);
+			$model->file_srs = $path.'/file_srs-'.$model->id.'.'.$extension;
 			
-			// $model->mom= CUploadedFile::getInstance($model,'mom'); //mom
-			// $path = realpath(Yii::app()->basePath.'/../document/file_mom');
-			// $model->file_mom = Yii::app()->basePath.'/../document/file_mom'.$model->mom;
+			$model->mom= CUploadedFile::getInstance($model,'mom'); //mom
+			$path = realpath(Yii::app()->basePath.'/../document/file_mom');
+			$extension = strtolower($model->mom->extensionName);
+			$model->file_mom = $path.'/file_mom-'.$model->id.'.'.$extension;
 			
 			Yii::trace('ini path nya : '.$path,"path");
 			if($model->save()){
-                $model->file_test->saveAs($model->file_testscenario);	
+                $model->file_test->saveAs($model->file_testscenario);
+				$model->ba->saveAs($model->file_ba);	
+				$model->ts->saveAs($model->file_ts);	
+				$model->brs->saveAs($model->file_brs);	
+				$model->srs->saveAs($model->file_srs);	
+				$model->mom->saveAs($model->file_mom);	
 				// $model->ba->saveAs($path. '/' . $model->id);
 				// $model->ts->saveAs($path. '/' . $model->id);	
 				// $model->brs->saveAs($path. '/' . $model->id);	
@@ -131,29 +141,39 @@ class FileController extends Controller
 			$extension = strtolower($model->file_test->extensionName);
 			$model->file_testscenario = $path.'/file_testscenario-'.$model->id.'.'.$extension;
 			
-			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
-			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');
-			// $model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
+			$model->ba= CUploadedFile::getInstance($model,'ba'); //ba
+			$path = realpath(Yii::app()->basePath.'/../document/file_ba');
+			$extension = strtolower($model->ba->extensionName);
+			$model->file_ba = $path.'/file_ba-'.$model->id.'.'.$extension;
 			
-			// $model->ts= CUploadedFile::getInstance($model,'ts'); //ts
-			// $path = realpath(Yii::app()->basePath.'/../document/file_ts');
-			// $model->file_ts = Yii::app()->basePath.'/../document/file_ts'.$model->ts;
+			$model->ts= CUploadedFile::getInstance($model,'ts'); //ts
+			$path = realpath(Yii::app()->basePath.'/../document/file_ts');
+			$extension = strtolower($model->ts->extensionName);
+			$model->file_ts = $path.'/file_ts-'.$model->id.'.'.$extension;
 			
-			// $model->brs= CUploadedFile::getInstance($model,'brs'); //brs
-			// $path = realpath(Yii::app()->basePath.'/../document/file_brs');
-			// $model->file_brs = Yii::app()->basePath.'/../document/file_brs'.$model->brs;
+			$model->brs= CUploadedFile::getInstance($model,'brs'); //brs
+			$path = realpath(Yii::app()->basePath.'/../document/file_brs');
+			$extension = strtolower($model->brs->extensionName);
+			$model->file_brs = $path.'/file_brs-'.$model->id.'.'.$extension;
 			
-			// $model->srs= CUploadedFile::getInstance($model,'srs'); //srs
-			// $path = realpath(Yii::app()->basePath.'/../document/file_srs');
-			// $model->file_srs = Yii::app()->basePath.'/../document/file_srs'.$model->srs;
+			$model->srs= CUploadedFile::getInstance($model,'srs'); //srs
+			$path = realpath(Yii::app()->basePath.'/../document/file_srs');
+			$extension = strtolower($model->srs->extensionName);
+			$model->file_srs = $path.'/file_srs-'.$model->id.'.'.$extension;
 			
-			// $model->mom= CUploadedFile::getInstance($model,'mom'); //mom
-			// $path = realpath(Yii::app()->basePath.'/../document/file_mom');
-			// $model->file_mom = Yii::app()->basePath.'/../document/file_mom'.$model->mom;
+			$model->mom= CUploadedFile::getInstance($model,'mom'); //mom
+			$path = realpath(Yii::app()->basePath.'/../document/file_mom');
+			$extension = strtolower($model->mom->extensionName);
+			$model->file_mom = $path.'/file_mom-'.$model->id.'.'.$extension;
 			
 			Yii::trace('ini path nya : '.$path,"path");
 			if($model->save()){
                 $model->file_test->saveAs($model->file_testscenario);	
+				$model->ba->saveAs($model->file_ba);	
+				$model->ts->saveAs($model->file_ts);	
+				$model->brs->saveAs($model->file_brs);	
+				$model->srs->saveAs($model->file_srs);	
+				$model->mom->saveAs($model->file_mom);
 				// $model->ba->saveAs($path. '/' . $model->id);
 				// $model->ts->saveAs($path. '/' . $model->id);	
 				// $model->brs->saveAs($path. '/' . $model->id);	
