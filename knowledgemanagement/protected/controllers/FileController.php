@@ -79,11 +79,15 @@ class FileController extends Controller
 		{
 			$id;
 			$model->attributes=$_POST['File'];
+		$path;
+		$extension;
+			//// Pastikan File di upload
+			if(isset($model['file_test'])){
 			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
 			$extension = strtolower($model->file_test->extensionName);
 			$model->file_testscenario = $path.'/file_testscenario-'.$model->id.'.'.$extension;
-			
+			}
 			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
 			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');
 			// $model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
@@ -134,12 +138,13 @@ class FileController extends Controller
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			
+			$path;$extension;
+			if(isset($model['file_test'])){
 			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
 			$extension = strtolower($model->file_test->extensionName);
 			$model->file_testscenario = $path.'/file_testscenario-'.$model->id.'.'.$extension;
-			
+			}			
 			// $model->ba= CUploadedFile::getInstance($model,'ba'); //ba
 			// $path = realpath(Yii::app()->basePath.'/../document/file_ba');
 			// $model->file_ba = Yii::app()->basePath.'/../document/file_ba'.$model->ba;
@@ -160,9 +165,10 @@ class FileController extends Controller
 			// $path = realpath(Yii::app()->basePath.'/../document/file_mom');
 			// $model->file_mom = Yii::app()->basePath.'/../document/file_mom'.$model->mom;
 			
-			Yii::trace('ini path nya : '.$path,"path");
+			//Yii::trace('ini path nya : '.$path,"path");
 			if($model->save()){
-                $model->file_test->saveAs($model->file_testscenario);	
+				if(isset($model['file_test'])) 
+					$model->file_test->saveAs($model->file_testscenario);	
 				// $model->ba->saveAs($path. '/' . $model->id);
 				// $model->ts->saveAs($path. '/' . $model->id);	
 				// $model->brs->saveAs($path. '/' . $model->id);	
