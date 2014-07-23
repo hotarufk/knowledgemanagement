@@ -120,6 +120,26 @@ $this->widget('bootstrap.widgets.TbGridView', array(
             'name'=>'month_of_register',
             'value'=>'$data-> MORText($data->month_of_register)',
         ),
+		'link'=>array(
+								'header'=>'Test Scenario',
+								'type'=>'raw',
+								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id"))."\'"))',
+						),
+		array(
+			'header' => 'Download',
+			'class' => 'CButtonColumn',
+			'template' => 'download',
+			'buttons'=>array(
+				'download' => array(
+					'label'=>'download', // text label of the button
+					'imageUrl'=>'C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\images\logo.png',
+					//'url'=>"index",
+					'options' => array('class'=>'copy'), // HTML options for the button
+				),
+			),
+		),
+	
+		
 		array(
 			'class'=>'CButtonColumn',
 		),
