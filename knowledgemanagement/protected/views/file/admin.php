@@ -40,7 +40,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
 	'id'=>'file-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -54,7 +55,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'file_srs',
 		'file_mom',
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template'=>'{view}{update}{delete}',
 		),
 	),
 )); ?>
