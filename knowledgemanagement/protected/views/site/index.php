@@ -3,15 +3,19 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
-
+<head>
+<h2>Proyek yang Sedang Berjalan</h2>
 <?php 
-$count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM tbl_user')->queryScalar();
-$sql='SELECT * FROM tbl_user';
+$count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM tbl_data')->queryScalar();
+$dt = date('Y-m-d');
+$datesql=" WHERE(tbl_data.user = tbl_user.id and start_date  <= '".$dt."' and (end_date >= '".$dt."' or (start_date !='0000-00-00' and end_date='0000-00-00')))";
+
+	$sql='SELECT tbl_data.*,tbl_user.nama as pid FROM tbl_data,tbl_user  '.$datesql;
 $dataProvider=new CSqlDataProvider($sql, array(
     'totalItemCount'=>$count,
     'sort'=>array(
         'attributes'=>array(
-             'id', 'username', 'password', 'nama',
+             'no_br','pid',
         ),
     ),
     'pagination'=>array(
@@ -20,23 +24,30 @@ $dataProvider=new CSqlDataProvider($sql, array(
 ));
 ?>
 
-<?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'type'=>'striped bordered condensed',
-    'dataProvider'=>$dataProvider,
-	'filter'=>null,
-    'template'=>"{items}",
-    'columns'=>array(
-        array('name'=>'id', 'header'=>'#'),
-        array('name'=>'username', 'header'=>'Username'),
-        array('name'=>'password', 'header'=>'Password'),
-        array('name'=>'nama', 'header'=>'Nama'),
-        array(
-            'class'=>'bootstrap.widgets.TbButtonColumn',
-            'htmlOptions'=>array('style'=>'width: 50px'),
-			'viewButtonUrl'=>'Yii::app()->createUrl("/user/view", array("id"=>$data["id"]))',
-			'updateButtonUrl'=>'Yii::app()->createUrl("/user/update", array("id"=>$data["id"]))',
-			'deleteButtonUrl'=>null,
-        ),
-    ),
-)); ?>
+<?php
+
+$dataProvider->setPagination(false);
+
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
+	//'id'=>'data-grid',
+	'dataProvider'=>$dataProvider,
+	'columns'=>array(
+		//'id',
+		array('name'=>'no_br', 'header'=>'No BR'),
+		array('name'=>'pid', 'header'=>'IT Dev PIC'),
+		/*array(
+		'header' => 'IT Dev PIC',
+        'name' => 'user',
+        'value' => '$data->user0->nama',   //where name is Client model attribute 
+		'filter'=>CHtml::listData(User::model()->findAll(), 'id', 'nama'), */
+
+		//),
+		
+	),
+	
+));
+
+?>
+</center>
 
