@@ -43,6 +43,7 @@
             'items'=>array(
                 array('label'=>'Report', 'url'=>array('/data/report'),'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Data', 'url'=>array('data/index'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'File Eksternal', 'url'=>array('file/index'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Manage Users', 'url'=>array('user/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
