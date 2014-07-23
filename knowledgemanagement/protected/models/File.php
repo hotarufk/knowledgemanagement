@@ -31,6 +31,12 @@ class File extends CActiveRecord
 	 */
 	 
 	public $file_test;
+	public $ba;
+	public $ts;
+	public $brs;
+	public $srs;
+	public $mom;
+	
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
