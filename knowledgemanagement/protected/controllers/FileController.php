@@ -160,7 +160,8 @@ class FileController extends Controller
 		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			$path;$extension;
+			$path;
+			$extension;
 			$message = 'isi file test : '.$model->file_test;
 			$category="upload file";
 			Yii::trace($message,$category);
@@ -204,19 +205,19 @@ class FileController extends Controller
 			}
 			//Yii::trace('ini path nya : '.$path,"path");
 			if($model->save()){
-				if(isset($model['file_test'])) 
+				if(isset($path)) 
 					$model->file_test->saveAs($model->file_testscenario);
-				if(isset($model['ba'])) 	
+				if(isset($path_ba)) 	
 					$model->ba->saveAs($model->file_ba);
-				if(isset($model['ts'])) 
+				if(isset($path_ts))
 					$model->ts->saveAs($model->file_ts);
-				if(isset($model['brs'])) 
+				if(isset($path_brs)) 
 					$model->brs->saveAs($model->file_brs);
-				if(isset($model['srs'])) 
+				if(isset($path_srs)) 
 					$model->srs->saveAs($model->file_srs);
-				if(isset($model['mom'])) 
+				if(isset($path_mom)) 
 					$model->mom->saveAs($model->file_mom);					
-			//	$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->id));
 			}			
 		}
 		$this->render('update',array(
@@ -326,7 +327,7 @@ class FileController extends Controller
 		  default:
 			$file='error data invalid !';
 	}
-	if(isset($model[$file])){
+	if($model[$file] != null){
 		$text = explode("/",$model[$file]);
 		$name = $text[1];
 		if( file_exists( $model[$file] ) ){
