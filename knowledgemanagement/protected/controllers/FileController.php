@@ -161,37 +161,42 @@ class FileController extends Controller
 		{
 			$model->attributes=$_POST['File'];
 			$path;$extension;
-			if(isset($model['file_test'])){
+			$message = 'isi file test : '.$model->file_test;
+			$category="upload file";
+			Yii::trace($message,$category);
+			
+			if(CUploadedFile::getInstance($model,'file_test')!==null){
 			$model->file_test= CUploadedFile::getInstance($model,'file_test'); //testscenario
 			$path = realpath(Yii::app()->basePath.'/../document/file_testscenario');
 			$extension = strtolower($model->file_test->extensionName);
 			$model->file_testscenario = $path.'/file_testscenario-'.$model->id.'.'.$extension;
 			}
-			if(isset($model['ba'])){					
+			
+			if(CUploadedFile::getInstance($model,'ba')!==null){					
 			$model->ba= CUploadedFile::getInstance($model,'ba'); //ba
 			$path_ba = realpath(Yii::app()->basePath.'/../document/file_ba');
 			$extension = strtolower($model->ba->extensionName);
 			$model->file_ba = $path_ba.'/file_ba-'.$model->id.'.'.$extension;
 			}
-			if(isset($model['ts'])){
+			if(CUploadedFile::getInstance($model,'ts')!==null){
 			$model->ts= CUploadedFile::getInstance($model,'ts'); //ts
 			$path_ts = realpath(Yii::app()->basePath.'/../document/file_ts');
 			$extension = strtolower($model->ts->extensionName);
 			$model->file_ts = $path_ts.'/file_ts-'.$model->id.'.'.$extension;
 			}
-			if(isset($model['brs'])){
+			if(CUploadedFile::getInstance($model,'brs')!==null){
 			$model->brs= CUploadedFile::getInstance($model,'brs'); //brs
 			$path_brs = realpath(Yii::app()->basePath.'/../document/file_brs');
 			$extension = strtolower($model->brs->extensionName);
 			$model->file_brs = $path_brs.'/file_brs-'.$model->id.'.'.$extension;
 			}
-			if(isset($model['srs'])){
+			if(CUploadedFile::getInstance($model,'srs')!==null){
 			$model->srs= CUploadedFile::getInstance($model,'srs'); //srs
 			$path_srs = realpath(Yii::app()->basePath.'/../document/file_srs');
 			$extension = strtolower($model->srs->extensionName);
 			$model->file_srs = $path_srs.'/file_srs-'.$model->id.'.'.$extension;
 			}
-			if(isset($model['mom'])){
+			if(CUploadedFile::getInstance($model,'mom')!==null){
 			$model->mom= CUploadedFile::getInstance($model,'mom'); //mom
 			$path_mom = realpath(Yii::app()->basePath.'/../document/file_mom');
 			$extension = strtolower($model->mom->extensionName);
@@ -211,7 +216,7 @@ class FileController extends Controller
 					$model->srs->saveAs($model->file_srs);
 				if(isset($model['mom'])) 
 					$model->mom->saveAs($model->file_mom);					
-				$this->redirect(array('view','id'=>$model->id));
+			//	$this->redirect(array('view','id'=>$model->id));
 			}			
 		}
 		$this->render('update',array(
