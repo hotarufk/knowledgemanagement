@@ -18,7 +18,7 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php //echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id'); ?>
@@ -29,37 +29,37 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_ba'); ?>
 		<?php echo $form->fileField($model,'ba'); ?>
-		<?php //echo $form->error($model,'file_ba'); ?>
+		<?php echo $form->error($model,'file_ba'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_ts'); ?>
 		<?php echo $form->fileField($model,'ts'); ?>
-		<?php //echo $form->error($model,'file_ts'); ?>
+		<?php echo $form->error($model,'file_ts'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_testscenario'); ?>
 		<?php echo $form->fileField($model,'file_test'); ?>
-		<?php //echo $form->error($model,'file_testscenario'); ?>
+		<?php echo $form->error($model,'file_testscenario'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_brs'); ?>
 		<?php echo $form->fileField($model,'brs'); ?>
-		<?php //echo $form->error($model,'file_brs'); ?>
+		<?php echo $form->error($model,'file_brs'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_srs'); ?>
 		<?php echo $form->fileField($model,'srs'); ?>
-		<?php //echo $form->error($model,'file_srs'); ?>
+		<?php echo $form->error($model,'file_srs'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'file_mom'); ?>
 		<?php echo $form->fileField($model,'mom'); ?>
-		<?php //echo $form->error($model,'file_mom'); ?>
+		<?php echo $form->error($model,'file_mom'); ?>
 	</div>
 
 	<div class="row buttons">
