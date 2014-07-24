@@ -46,7 +46,7 @@ class File extends CActiveRecord
 			array('file_ba, file_ts, file_testscenario, file_brs, file_srs, file_mom','required','on'=>'validate'),
 			array('id', 'numerical', 'integerOnly'=>true),
 			array('id','unique','message'=>'This id already exists.','on'=>'create,update'),
-			array('ba, ts, brs, srs, mom', 'file', 'types'=>'doc, docx', 'minSize'=>100, 'maxSize'=>10000000 , 'allowEmpty'=>true, 'safe'=>true),
+			array('ba, ts, brs, srs, mom', 'file', 'types'=>'doc, docx', 'allowEmpty'=>true, 'safe'=>true),
 			array('file_test', 'file', 'types'=>'xls, xlsx, doc, docx, zip, rar', 'allowEmpty'=>true, 'safe'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
