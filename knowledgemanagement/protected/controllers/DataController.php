@@ -118,7 +118,8 @@ class DataController extends Controller
 		
 				Yii::app()->logging->AutoLog($jenis,$text,$userid);
 				Yii::app()->fileTrigger->AutoFile($model->id);
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('file/update','id'=>$model->id));
+				//$this->redirect(array('view','id'=>$model->id));
 				
 				}
 			else
@@ -233,7 +234,7 @@ class DataController extends Controller
 				$text = "data dengan id ".$model->id." telah di delete" ;
 				$userid=Yii::app()->user->getId();;
 				
-				Yii::app()->logging->AutoLog($jenis,$text,$userid);
+					Yii::app()->logging->AutoLog($jenis,$text,$userid);
 					$this->loadModel($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
