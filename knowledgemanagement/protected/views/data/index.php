@@ -72,6 +72,36 @@ $this->widget('bootstrap.widgets.TbGridView', array(
             'value'=>'$data->KAchievementText($data->key_achievement)',
 			'filter'=>array("0" =>"not Achieved", "1" => "Achieved"),
         ),
+		'link'=>array(
+								'header'=>'BA',
+								'type'=>'raw',
+								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>1))."\'"))',
+						),		
+		'link2'=>array(
+								'header'=>'TS',
+								'type'=>'raw',
+								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>2))."\'"))',
+						),		
+		'link3'=>array(
+								'header'=>'Test Scenario',
+								'type'=>'raw',
+								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>3))."\'"))',
+						),
+		'link4'=>array(
+								'header'=>'BRS',
+								'type'=>'raw',
+								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>4))."\'"))',
+						),	
+		'link5'=>array(
+								'header'=>'SRS',
+								'type'=>'raw',
+								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>5))."\'"))',
+						),
+		'link6'=>array(
+								'header'=>'MOM',
+								'type'=>'raw',
+								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>6))."\'"))',
+						),						
 		array(
 			'class'=>'CButtonColumn',
 			'template' => '{view}',

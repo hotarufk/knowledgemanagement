@@ -250,23 +250,54 @@ class FileController extends Controller
 		}
 	}
 	
-	public function actionDownload($id){
+	public function actionDownload($id,$jenis){
 	$model=File::model()->findByPk($id);
+	$name;
+	$text;
+	$file;
 	if($model===null){
 		//redirect to create file model
-		$this->redirect(array('create','id'=>$id));
+		Yii::app()->fileTrigger->AutoFile($id);
+		$model=File::model()->findByPk($id);
+		//$this->redirect(array('create','id'=>$id));
 	}
-	$text = explode("/",$model->file_testscenario);
-	$name = $text[1];
-
-	if( file_exists( $model->file_testscenario ) ){
-	//extension harus ada di nama
-	Yii::app()->getRequest()->sendFile( $name , file_get_contents( $model->file_testscenario ) );
+	
+	switch ($jenis) {
+		  case 1 :
+			$file='file_ba';
+			break;
+		  case 2 :
+			$file='file_ts';
+			break;
+		  case 3 :
+			$file='file_testscenario';
+			break;
+		  case 4 :
+			$file='file_brs';
+			break;
+		  case 5 :
+			$file='file_srs';
+			break;
+		  case 6 :
+			$file='file_mom';			
+			break;
+		  default:
+			$file='error data invalid !';
+	}
+	if(isset($model[$file])){
+		$text = explode("/",$model[$file]);
+		$name = $text[1];
+		if( file_exists( $model[$file] ) ){
+			//extension harus ada di nama
+			Yii::app()->getRequest()->sendFile( $name , file_get_contents( $model[$file]) );
+		}
+		else
+			Yii::app()->user->setFlash('error', "Data not found, plese upload corresponding file !");
 	}
 	else{
-	$this->render('download404');
-	} 
-	
-	
+		Yii::app()->user->setFlash('error', "Data not found, plese upload corresponding file !");
+		//$this->render('download404');
+		}
 	}
+	
 }
