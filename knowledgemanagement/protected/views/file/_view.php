@@ -28,12 +28,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('file_srs')); ?>:</b>
 	<?php echo CHtml::encode($data->file_srs); ?>
 	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('file_mom')); ?>:</b>
+ 
+	<b> <?php echo CHtml::encode($data->getAttributeLabel('file_mom')); ?>:</b>
 	<?php echo CHtml::encode($data->file_mom); ?>
 	<br />
 
-	*/ ?>
 
 </div>

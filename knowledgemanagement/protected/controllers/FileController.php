@@ -28,11 +28,11 @@ class FileController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update','index','view','download'),
+				'actions'=>array('update','download'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','index','view'),
 				//'users'=>array('admin'),
 				'roles'=>array('admin'),
 			),
@@ -174,7 +174,8 @@ class FileController extends Controller
 				// $model->brs->saveAs($path. '/' . $model->id);	
 				// $model->srs->saveAs($path. '/' . $model->id);	
 				// $model->mom->saveAs($path. '/' . $model->id);					
-				$this->redirect(array('view','id'=>$model->id));
+				//$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('data/view','id'=>$model->id));
 			}			
 		}
 		$this->render('update',array(

@@ -205,7 +205,7 @@ class DataController extends Controller
 				
 				Yii::app()->logging->AutoLog($jenis,$text,$userid);
 				
-				//$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->id));
 				
 				}
 			else
