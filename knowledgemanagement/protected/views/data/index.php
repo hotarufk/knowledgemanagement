@@ -25,7 +25,11 @@ $('.search-form form').submit(function(){
 ?>
 
 <br><br><br>
-
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
+?>
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'page-form',
     'enableAjaxValidation'=>true,
@@ -111,9 +115,4 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 )); 
 
 
-?>
-<?php
-    foreach(Yii::app()->user->getFlashes() as $key => $message) {
-        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
-    }
 ?>
