@@ -135,9 +135,9 @@ class UserController extends Controller
 				//create log
 				$jenis=6;//delete user
 				$role='user';
-				if($model->role ==0)
+				if($this->loadModel($id)->role ==0)
 					$role = 'admin';
-				$text = "user dengan id ".$model->id." telah di delete , dengan role sebagai ".$role ;
+				$text = "user dengan id ".$id." telah di delete , dengan role sebagai ".$role ;
 				$userid=Yii::app()->user->getId();
 		$this->loadModel($id)->delete();		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
