@@ -47,4 +47,57 @@ class FileTrigger extends CApplicationComponent
 			Yii::trace("File gagal :v !","do File");
 		
 		}
+		
+	public function Download($id,$jenis){
+		$this->_model=File::model()->findByPk($id);
+		$name;
+		$text;
+		$file;
+		$success= false;
+		if($this->_model===null){
+			//redirect to create file model
+			AutoFile($id);
+			$this->_model=File::model()->findByPk($id);
+			//$this->redirect(array('create','id'=>$id));
+		}
+					Yii::trace("try download !","do File");
+		echo "<script>alert('download test');</script>";
+		switch ($jenis) {
+			  case 1 :
+				$file='file_ba';
+				break;
+			  case 2 :
+				$file='file_ts';
+				break;
+			  case 3 :
+				$file='file_testscenario';
+				break;
+			  case 4 :
+				$file='file_brs';
+				break;
+			  case 5 :
+				$file='file_srs';
+				break;
+			  case 6 :
+				$file='file_mom';			
+				break;
+			  default:
+				$file='error data invalid !';
+		}
+		if($model[$file] != null){
+			$text = explode("/",$this->_model[$file]);
+			$name = $text[1];
+			if( file_exists( $this->_model[$file] ) ){
+				//extension harus ada di nama
+				Yii::app()->getRequest()->sendFile( $name , file_get_contents($this->_model[$file]) );
+				$success = true;
+			}
+		}
+		else{
+			Yii::app()->user->setFlash('error', "Data not found, plese upload corresponding file !");
+			//$this->render('download404');
+		}
+	
+		//return $success;
+	}
 }

@@ -108,4 +108,12 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 		),
 	),
 	'htmlOptions'=>array('style'=>'width:100%;overflow-x:scroll;'),
-)); ?>
+)); 
+
+
+?>
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
+?>

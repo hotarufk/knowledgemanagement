@@ -334,11 +334,14 @@ class FileController extends Controller
 			//extension harus ada di nama
 			Yii::app()->getRequest()->sendFile( $name , file_get_contents( $model[$file]) );
 		}
-		else
+		else{
 			Yii::app()->user->setFlash('error', "Data not found, plese upload corresponding file !");
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('data/index'));
+		}
 	}
 	else{
-		Yii::app()->user->setFlash('error', "Data not found, plese upload corresponding file !");
+		Yii::app()->user->setFlash('error', "Data not found, please upload corresponding file !");
+		$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('data/index'));
 		//$this->render('download404');
 		}
 	}
