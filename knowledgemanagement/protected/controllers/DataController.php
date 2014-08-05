@@ -378,7 +378,7 @@ class DataController extends Controller
 	
 		
 		));
-		$reportname = 'Report '.$valueStart.'-'.$valueEnd;
+		$reportname = 'Report  '.$valueStart.'  To '.$valueEnd;
 		//$author=
 		//Export it
 		$this->toExcel(
