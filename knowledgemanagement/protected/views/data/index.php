@@ -5,7 +5,7 @@
 
 
 $this->menu=array(
-	array('label'=>'Manage Data', 'url'=>array('admin')),
+	array('label'=>'Manage Data', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 	array('label'=>'Create Data', 'url'=>array('create')),
 	array('label'=>'Report Data', 'url'=>array('test')),
 );
@@ -107,7 +107,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>6))."\'"))',
 						),						
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template' => '{view}',
 		),
 	),

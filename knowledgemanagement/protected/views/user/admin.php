@@ -40,7 +40,8 @@ $dataProvider = $model->search();
 $pagination =  array('pageSize' => 5,);//set jumlah halaman/page
 $dataProvider->setPagination($pagination);
 
-$this->widget('zii.widgets.grid.CGridView', array(
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
 	'id'=>'user-grid',
 	'dataProvider'=>$dataProvider,
 	'filter'=>$model,
@@ -56,7 +57,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'filter'=>array("0" =>"Admin", "1" => "User"),		
 		),
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
 )); ?>

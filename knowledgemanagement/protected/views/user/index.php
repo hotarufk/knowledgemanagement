@@ -13,8 +13,30 @@ $this->menu=array(
 ?>
 
 <h1>Users</h1>
+<?php
+$dataProvider = $model->search();
+$pagination =  array('pageSize' => 5,);//set jumlah halaman/page
+$dataProvider->setPagination($pagination);
 
-<?php $this->widget('zii.widgets.CListView', array(
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
+	'id'=>'data-grid',
 	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+	'columns'=>array(
+		//'id'
+		'username',
+		'password', 
+		'nama', 
+		array(
+			'header' =>'Role',
+            'name'=>'role',
+            'value'=>'$data->roleText($data->role)',
+			'filter'=>array("0" =>"Admin", "1" => "User"),		
+		),
+		
+	),
+	'htmlOptions'=>array('style'=>'width:100%;'),
+)); 
+
+?>
+

@@ -60,7 +60,7 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
     ),
 ));
 ?>
-<?php echo CHtml::submitButton('Go'); ?> // submit button
+<?php echo CHtml::submitButton('Go'); ?> 
 <?php $this->endWidget(); ?>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
@@ -151,7 +151,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 								'value'=> 'CHtml::button("download",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("file/download",array("id"=>"$data->id","jenis"=>6))."\'"))',
 						),						
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
 	'htmlOptions'=>array('style'=>'width:100%;overflow-x:scroll;'),
