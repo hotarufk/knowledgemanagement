@@ -26,6 +26,7 @@ $dataProvider=new CSqlDataProvider($sql, array(
 ?>
 <div style="width:30%; margin-left:10%; float:left;">
 <?php
+//echo("<h2 style=\"font-family: 'Open Sans', sans-serif;\">".$dt."</h2>");
 echo("<center><p style=\"font-family: 'Open Sans', sans-serif;\">Proyek yang Sedang Berjalan</p></center>");
 $dataProvider->setPagination(false);
 
@@ -55,7 +56,7 @@ $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM tbl_user')->queryScal
 $dt = date('Y-m-d');
 $datesql=" WHERE(tbl_data.user = tbl_user.id and start_date  <= '".$dt."' and (end_date >= '".$dt."' or (start_date !='0000-00-00' and end_date='0000-00-00')))";
 
-	$sql='SELECT  distinct tbl_user.nama as pid, tbl_data.*  FROM tbl_data,tbl_user  '.$datesql;
+	$sql='SELECT  distinct tbl_user.nama as pid, tbl_data.*  FROM tbl_data,tbl_user  '.$datesql.'GROUP BY pid';
 $dataProvider=new CSqlDataProvider($sql, array(
     'totalItemCount'=>$count,
     'sort'=>array(
@@ -70,7 +71,7 @@ $dataProvider=new CSqlDataProvider($sql, array(
 ?>
 
 <?php
-echo("<center><p style=\"font-family: 'Open Sans', sans-serif;\">Proyek yang Sedang Berjalan</p></center>");
+echo("<center><p style=\"font-family: 'Open Sans', sans-serif;\">IT Dev PIC Hari Ini</p></center>");
 $dataProvider->setPagination(false);
 
 $this->widget('bootstrap.widgets.TbGridView', array(

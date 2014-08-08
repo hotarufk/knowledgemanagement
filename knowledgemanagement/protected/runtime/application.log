@@ -3933,3 +3933,19 @@ REQUEST_URI=/newknowledge/index.php?r=user/index
 in C:\xampp\htdocs\newknowledge\protected\views\user\index.php (17)
 in C:\xampp\htdocs\newknowledge\protected\controllers\UserController.php (162)
 in C:\xampp\htdocs\newknowledge\index.php (13)
+2014/08/08 04:18:37 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\newknowledge\index.php (13)
+2014/08/08 04:18:37 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\newknowledge\index.php (13)
+2014/08/08 04:18:37 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\newknowledge\index.php (13)
+2014/08/08 04:18:51 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\newknowledge\protected\controllers\DataController.php (111)
+in C:\xampp\htdocs\newknowledge\index.php (13)

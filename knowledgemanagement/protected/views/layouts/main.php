@@ -29,7 +29,9 @@
 		<div id="logo"><br><br><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header --> -->
 	<br><br><br>
-
+	<?php
+	$dt = date('Y-m-d');
+	?>
 	<div id="mainmenu">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
     'type'=>'inverse', // null or 'inverse'
@@ -41,9 +43,10 @@
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
+                array('label'=>$dt, 'url'=>array('#')),
                 array('label'=>'Report', 'url'=>array('/data/report'),'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Data', 'url'=>array('data/index'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'File Eksternal', 'url'=>array('file/index'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+                //array('label'=>'File Eksternal', 'url'=>array('file/index'), 'visible'=>Yii::app()->user->checkAccess('admin')),
                 array('label'=>'Manage Users', 'url'=>array('user/index'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
