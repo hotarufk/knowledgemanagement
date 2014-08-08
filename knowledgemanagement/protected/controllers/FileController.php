@@ -217,7 +217,7 @@ class FileController extends Controller
 					$model->srs->saveAs($model->file_srs);
 				if(isset($path_mom)) 
 					$model->mom->saveAs($model->file_mom);					
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('data/view','id'=>$model->id));
 			}			
 		}
 		$this->render('update',array(
