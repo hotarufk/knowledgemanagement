@@ -231,11 +231,13 @@ class DataController extends Controller
 
 		//create log for delete
 				$jenis=3;//delete
-				$text = "data dengan id ".$model->id." telah di delete" ;
+				
 				$userid=Yii::app()->user->getId();;
 				
-					Yii::app()->logging->AutoLog($jenis,$text,$userid);
+					
 					$this->loadModel($id)->delete();
+				$text = "data dengan id ".$id." telah di delete oleh user dengan id ".$userid;
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));

@@ -4017,3 +4017,338 @@ Stack trace:
 REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=file/view&id=4
 HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=file/update&id=4
 ---
+2014/08/08 06:14:46 [error] [php] mktime() expects parameter 6 to be long, string given (C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php:257)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DataController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterAccessControl()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): DataController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DataController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=data/index
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (257)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:28:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3.
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php (142)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:28:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('3')
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php(142): CActiveRecord->delete()
+#3 [internal function]: UserController->actionDelete('3')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?ajax=user-grid&id=3&r=user%2Fdelete
+HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=user/admin
+---
+2014/08/08 11:28:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3.
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php (142)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:28:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('3')
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php(142): CActiveRecord->delete()
+#3 [internal function]: UserController->actionDelete('3')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?ajax=user-grid&id=3&r=user%2Fdelete
+HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=user/admin
+---
+2014/08/08 11:29:35 [error] [php] Undefined variable: model (C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php:234)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DataController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterPostOnly()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DataController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DataController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?ajax=data-grid&id=8&r=data%2Fdelete
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (234)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:09 [error] [php] Undefined variable: model (C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php:234)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DataController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterPostOnly()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DataController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DataController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?ajax=data-grid&id=8&r=data%2Fdelete
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (234)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:20 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (184)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:20 [warning] [application] Failed to set unsafe attribute "departement_PIC" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (184)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:20 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (184)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:20 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (184)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:20 [warning] [application] Failed to set unsafe attribute "departement_PIC" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (142)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (184)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:22 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (199)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:30:26 [error] [php] Undefined variable: model (C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php:234)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DataController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterPostOnly()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DataController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DataController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=data/delete&id=62
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (234)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:32:45 [error] [php] Undefined variable: text (C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php:237)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DataController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterPostOnly()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DataController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DataController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DataController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CWebApplication->run()
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=data/delete&id=62
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (237)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:34:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3.
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php (142)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:34:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('3')
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php(142): CActiveRecord->delete()
+#3 [internal function]: UserController->actionDelete('3')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?ajax=user-grid&id=3&r=user%2Fdelete
+HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=user/admin
+---
+2014/08/08 11:34:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3.
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php (142)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:34:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_data`, CONSTRAINT `user.id` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`)). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`id`=3' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('3')
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\UserController.php(142): CActiveRecord->delete()
+#3 [internal function]: UserController->actionDelete('3')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=user/delete&id=3
+HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=user/view&id=3
+---
+2014/08/08 11:34:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_file`, CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_data` (`id`)). The SQL statement executed was: DELETE FROM `tbl_data` WHERE `tbl_data`.`id`=8.
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (238)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:34:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_file`, CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_data` (`id`)). The SQL statement executed was: DELETE FROM `tbl_data` WHERE `tbl_data`.`id`=8' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('8')
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php(238): CActiveRecord->delete()
+#3 [internal function]: DataController->actionDelete('8')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DataController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DataController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('data/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?ajax=data-grid&id=8&r=data%2Fdelete
+HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=data/admin
+---
+2014/08/08 11:34:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_file`, CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_data` (`id`)). The SQL statement executed was: DELETE FROM `tbl_data` WHERE `tbl_data`.`id`=8.
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (238)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:34:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_file`, CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_data` (`id`)). The SQL statement executed was: DELETE FROM `tbl_data` WHERE `tbl_data`.`id`=8' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('8')
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php(238): CActiveRecord->delete()
+#3 [internal function]: DataController->actionDelete('8')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DataController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DataController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('data/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=data/delete&id=8
+HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=data/view&id=8
+---
+2014/08/08 11:37:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_file`, CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_data` (`id`)). The SQL statement executed was: DELETE FROM `tbl_data` WHERE `tbl_data`.`id`=4.
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (238)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/08 11:37:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`knowledgedb`.`tbl_file`, CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_data` (`id`)). The SQL statement executed was: DELETE FROM `tbl_data` WHERE `tbl_data`.`id`=4' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('4')
+#2 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php(238): CActiveRecord->delete()
+#3 [internal function]: DataController->actionDelete('4')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DataController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DataController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('data/delete')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=data/delete&id=4
+HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=data/view&id=4
+---
