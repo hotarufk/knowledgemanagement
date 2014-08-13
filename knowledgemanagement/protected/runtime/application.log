@@ -4352,3 +4352,31 @@ Stack trace:
 REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=data/delete&id=4
 HTTP_REFERER=http://localhost/KnowledgeManagement/KnowledgeManagement/index.php?r=data/view&id=4
 ---
+2014/08/12 10:16:12 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\index.php (13)
+2014/08/12 10:16:12 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\index.php (13)
+2014/08/12 10:16:12 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\index.php (13)
+2014/08/12 10:16:39 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\index.php (13)
+2014/08/12 10:16:39 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\index.php (13)
+2014/08/12 10:16:39 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\index.php (13)
+2014/08/12 10:17:06 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\protected\controllers\DataController.php (111)
+in C:\xampp\htdocs\knowledgedb\knowledgemanagement\index.php (13)
