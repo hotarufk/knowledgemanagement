@@ -5,16 +5,18 @@ body
 	padding: 0;
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	background: white;
 	size:100%;
 }
 
 #page
 {
+	width:auto;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	background: white;
-	border: 1px solid #C9E0ED;
+	border: none;
+	
 }
 
 #header
