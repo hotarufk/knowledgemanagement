@@ -264,6 +264,11 @@ foreach($dataProvider->getData() as $i=>$ii)
 }
 
 $this->widget('application.extensions.highcharts.HighchartsWidget', array(
+'scripts' => array(
+   'highcharts-more',   // enables supplementary chart types (gauge, arearange, columnrange, etc.)
+   'modules/exporting', // adds Exporting button/menu to chart
+   'themes/grid'        // applies global 'grid' theme to all charts
+),
    'options'=>array(
      'chart'=> array('defaultSeriesType'=>'column',),
       'title' => array('text' => 'By No BR'),
@@ -853,6 +858,97 @@ $this->widget('application.extensions.highcharts.HighchartsWidget', array(
 
 ?>
 
+<?php //app sql
+	//$datesql=" WHERE( start_date  < '$model->to_date' and (end_date >= '$model->from_date' or (start_date !='0000-00-00' and end_date='0000-00-00')))";
+	$sql='SELECT id,count(key_achievement),key_achievement, case `key_achievement` when \'1\' then \'Achieved\' when \'0\' then \'Not Achieved\'  else \'Unon\' end \'key_achievement\' FROM tbl_data WHERE((month_of_register ='.$dt.')) GROUP BY key_achievement';
+		
+		$dataProvider=new CSqlDataProvider($sql,array(
+                            'keyField' => 'id',
+							'pagination'=>false,
+							'sort'=>array(
+								'attributes'=>array(
+								'key_achievement',
+								'count(key_achievement)'
+        ),
+    ),
+		));
+		
+?>
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'tinstrument-form',
+	'enableAjaxValidation'=>false,
+)); ?>
+
+<?php $this->endWidget(); ?>
+
+<?php //tabel app
+//echo("<center><p style=\"font-family: 'Open Sans', sans-serif;\">CONTOH</p></center>");
+$dataProvider->setPagination(false);
+
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
+	//'id'=>'data-grid',
+	'dataProvider'=>$dataProvider,
+	'template'=>"{items}\n{pager}",
+
+	'columns'=>array(
+		//'id',
+		array('name'=>'key_achievement', 'header'=>'Key Achievement'),
+		array('name'=>'count(key_achievement)', 'header'=>'Jumlah'),
+		
+		
+	),
+	'htmlOptions'=>array('style'=>'width:30%;margin-left:30px;'),
+));
+
+?>
+
+
+<?php //app chart
+$label=array();
+$nilai=array();
+
+foreach($dataProvider->getData() as $i=>$ii)
+{
+    $label[$i]=$ii['key_achievement'];
+    $nilai[$i]=(int)$ii['count(key_achievement)'];
+}
+
+$this->widget('application.extensions.highcharts.HighchartsWidget', array(
+   'options'=>array(
+     'chart'=> array('defaultSeriesType'=>'column',),
+      'title' => array('text' => 'By Key Achievement'),
+      'legend'=>array('enabled'=>false),
+      'xAxis'=>array('categories'=>$label,
+			'title'=>array('text'=>''),),
+      'yAxis'=> array(
+            'min'=> 0,
+            'title'=> array(
+            'text'=>'Jumlah'
+            ),
+        ),
+      'series' => array(
+         array('data' => $nilai)
+      ),
+      'tooltip' => array('formatter' => 'js:function(){ return "<b>"+this.point.name+"</b> :"+this.y; }'),
+      'tooltip' => array(
+		'formatter' => 'js:function() {return "<b>"+ this.x +"</b><br/>"+"Jumlah : "+ this.y; }'
+      ),
+      'plotOptions'=>array('pie'=>(array(
+                    'allowPointSelect'=>true,
+                    'showInLegend'=>true,
+                    'cursor'=>'pointer',
+					
+					
+                )
+            )                       
+        ),
+      'credits'=>array('enabled'=>false),
+	  
+   )
+));
+
+?>
 </div>
 
 
