@@ -27,8 +27,8 @@ $dataProvider=new CSqlDataProvider($sql, array(
 
 <body>
 
-<div style="width:200%;">
-<div style="display:inline; width:50%; float:left;overflow-y:scroll;">
+<div style="width:100%;">
+<div style="display:inline; width:48%; float:left;overflow-y:scroll;">
 
 
 <?php //attribute utama
@@ -109,7 +109,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 
 ?>
 </div>
-<div style="display:inline; width:20%; height:100%; float:left; margin-left:10px;">
+<div style="display:inline; width:40%; height:100%; float:left; margin-left:40px;">
 
 <?php //Carry sql
 	//$datesql=" WHERE( start_date  < '$model->to_date' and (end_date >= '$model->from_date' or (start_date !='0000-00-00' and end_date='0000-00-00')))";
