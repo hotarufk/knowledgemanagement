@@ -21,27 +21,27 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'IT_testing_PIC'); ?>
-		<?php echo $form->dropDownList($model,'user', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('empty'=>'select Type')); ?>
+		<?php echo $form->labelEx($model,'IT_Dev_PIC'); ?>
+		<?php echo $form->dropDownList($model,'user', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('empty'=>'Select PIC')); ?>
 		<?php echo $form->error($model,'user'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'departement_PIC'); ?>
+		<?php echo $form->labelEx($model,'Departement_PIC'); ?>
 		<?php echo $form->textArea($model,'departement_PIC',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'departement_PIC'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'IT_testing_PIC'); ?>
-		<?php echo $form->dropDownList($model,'IT_testing_PIC',array('1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y Chaerang','4'=>'Tulus Hamdani'), array('options' => array('1'=>array('selected'=>true)))); ?>
+		<?php echo $form->dropDownList($model,'IT_testing_PIC',array('1'=>'I GP Witraguna','2'=>'Setiawan','3'=>'Sofie Y Chaerang','4'=>'Tulus Hamdani'), array('empty'=>'Select PIC')); ?>
 		<?php echo $form->error($model,'IT_testing_PIC'); ?>
 	</div>
 
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'key_achievement'); ?>
-		<?php echo $form->dropDownList($model,'key_achievement',array('0'=>'not Achieved','1'=>'Achieved'), array('options' => array('0'=>array('selected'=>true)))); ?>
+		<?php echo $form->dropDownList($model,'key_achievement',array('0'=>'not Achieved','1'=>'Achieved'),array('empty'=>'Select KA Status')); ?>
 		<?php echo $form->error($model,'key_achievement'); ?>
 	</div>
 

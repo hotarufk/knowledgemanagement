@@ -28,7 +28,7 @@ class LogController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','update','admin'),
+				'actions'=>array('view','update','index','delete','create'),
 				//'users'=>array('*'),
 				'roles'=>array('admin'),
 			),
@@ -111,20 +111,9 @@ class LogController extends Controller
 	}
 
 	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('Log');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionIndex()
 	{
 		$model=new Log('search');
 		$model->unsetAttributes();  // clear any default values

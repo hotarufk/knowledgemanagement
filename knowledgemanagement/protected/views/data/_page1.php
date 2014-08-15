@@ -34,7 +34,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',array('1'=>'Pre-Register','2'=>'In Progress','3'=>'Closed-Cancelled','4'=>'Closed-Pending','5'=>'Closed-Finished'), array('options' => array('1'=>array('selected'=>true)))); ?>
+		<?php echo $form->dropDownList($model,'status',array('1'=>'Pre-Register','2'=>'In Progress','3'=>'Closed-Cancelled','4'=>'Closed-Pending','5'=>'Closed-Finished'), array('empty'=>'Select Status')); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 

@@ -9,7 +9,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Log', 'url'=>array('index')),
 	array('label'=>'Create Log', 'url'=>array('create')),
 	array('label'=>'View Log', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Log', 'url'=>array('admin')),
