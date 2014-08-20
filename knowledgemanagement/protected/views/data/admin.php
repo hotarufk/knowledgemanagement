@@ -96,7 +96,6 @@ $this->widget('bootstrap.widgets.TbGridView', array(
         'name' => 'user',
         'value' => '$data->user0->nama',   //where name is Client model attribute 
 		'filter'=>CHtml::listData(User::model()->findAll(), 'id', 'nama'),
-
 		),
 		'departement_PIC',
 		array(
