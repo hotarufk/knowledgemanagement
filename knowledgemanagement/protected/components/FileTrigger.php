@@ -131,7 +131,8 @@ class FileTrigger extends CApplicationComponent
 		}
 			
 			if(!empty($this->_model[$file])){
-					unlink($this->_model[$file]);
+					if( file_exists( $this->_model[$file] ) )
+						unlink($this->_model[$file]);
 			}
 		}
 		$this->_model->delete();
