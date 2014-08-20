@@ -33,4 +33,6 @@ General Rule: Successes are enclosed by '()' mark. Success with note are marked 
 -Manage Data; Download Item that has not been uploaded: Data not found, please upload corresponding file! (Success)
 -Manage Logs; Search ID: (Success)
 -Manage Logs; Search User: (Success)
+
+-Create Data, Index; Carried over noted from Start Date and End Date: Carryover from Month of Register instead of Start Date and End Date !Error.
 -Manage Logs; Delete Log: (Success)
