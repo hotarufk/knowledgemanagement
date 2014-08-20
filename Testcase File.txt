@@ -21,8 +21,8 @@ General Rule:
 -Create Data; No It Testing Pic: It Testing Pic cannot be blank. (Success)
 -Create Data; No Key Achievement: Key Achievement cannot be blank. (Success)
 -Create Data; No Request Date: Request Date cannot be blank. (Success)
--Create Data; No Start Date: Start Date cannot be blank. Request Date invalid, must be <= Start Date;repeated three times. *Success with note
--Create Data; No End Date: End Date cannot be blank. Start date invalid, must be >= than end Date;repeated three times. *Success with note
+-Create Data; No Start Date: Start Date can be blank. #Fixed
+-Create Data; No End Date: End Date can be blank. #Fixed
 -Create Data; No Month Of Register: Month Of Register cannot be blank. (Success)
 -Create Data; Start Date = Request Date: (Success)
 -Create Data; End Date = Start Date: (Success)
