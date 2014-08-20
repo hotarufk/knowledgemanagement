@@ -50,7 +50,7 @@ class Data extends CActiveRecord
 		return array(
 			array('no_br, cr_number, status, application_name','required','on'=>'page1'),//rule data di halaman 1 create/update
 			array('user,departement_PIC, IT_testing_PIC,key_achievement','required','on'=>'page2'),//rule data di halaman 2 create/update
-			array('month_of_register,request_date,start_date,end_date', 'required','on'=>'page3'),//rule data di halaman 3 create/update
+			array('month_of_register,request_date', 'required','on'=>'page3'),//rule data di halaman 3 create/update
 			array('status, user, IT_testing_PIC, key_achievement', 'numerical', 'integerOnly'=>true),
 			array('no_br, cr_number', 'length', 'max'=>50,'allowEmpty'=>false),
 			//array('no_br, cr_number,application_name','exist','allowEmpty'=>false,'on'=>'page1'),//rule data gak boleh blank
@@ -282,7 +282,7 @@ class Data extends CActiveRecord
 		$category = 'date initial in validator cek value';
 		Yii::trace($message, $category);
 		//function
-        if (($this->start_date <= $this->end_date) OR ($this->end_date === date("Y-m-d", $d))){
+        if (($this->start_date <= $this->end_date) OR ($this->end_date === "")){
 			$message="valid";
 			$category="date debugging";
 			Yii::trace($message, $category);
@@ -293,12 +293,12 @@ class Data extends CActiveRecord
 			$this->addError('start_date', 'Start date invalid, must be >= than end Date');
 		}
 		
-		if (($this->start_date >= $this->request_date) OR ($this->start_date === date("Y-m-d", $d))){
+		if (($this->start_date >= $this->request_date) OR ($this->start_date ==="")){
 			$message="valid";
 			$category="date debugging";
 			Yii::trace($message, $category);
 		}else{
-				$message="invalid";
+				$message="invalid , start date : ".$this->start_date."   request Date : ".$this->request_date;
 				$category="date debugging";
 				Yii::trace($message, $category);
 			$this->addError('request_date', 'Request Date invalid, must be <= Start Date');
