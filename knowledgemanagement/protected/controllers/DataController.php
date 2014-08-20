@@ -63,21 +63,21 @@ class DataController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Data;
+		$model=new Data('_page1');
 		$view='_page1';
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 		
 		if(isset($_POST['page1']))
 		{
-			$model = new Data('page1');
+			//$model = new Data('page1');
 			$this->checkPageState($model, $_POST['Data']);
 			$view = '_page1';
 			$model->scenario = 'page1';
 		}
 		elseif(isset($_POST['page2']))
 		{
-			$model = new Data('page1');
+			//$model = new Data('page1');
 			$this->checkPageState($model, $_POST['Data']);
 			if($model->validate())
 			{
@@ -92,7 +92,7 @@ class DataController extends Controller
 		}
 		elseif(isset($_POST['page3']))
 		{
-			$model = new Data('page2');
+			//$model = new Data('page2');
 			$this->checkPageState($model, $_POST['Data']);
 			if($model->validate())
 			{
@@ -107,7 +107,7 @@ class DataController extends Controller
 		}
 		elseif(isset($_POST['create']))
 		{	
-			$model = new Data('page3');
+			//$model = new Data('page3');
 			$this->checkPageState($model, $_POST['Data']);
 			//$model->attributes=$_POST['Data'];
 			if($model->save()){
