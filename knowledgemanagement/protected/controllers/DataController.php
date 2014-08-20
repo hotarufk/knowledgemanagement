@@ -233,8 +233,8 @@ class DataController extends Controller
 				$jenis=3;//delete
 				
 				$userid=Yii::app()->user->getId();;
-				
-					
+					Yii::app()->fileTrigger->delete($id);
+					/// terlebih dahulu delete file yg terhubung dengan data ini
 					$this->loadModel($id)->delete();
 				$text = "data dengan id ".$id." telah di delete oleh user dengan id ".$userid;
 				Yii::app()->logging->AutoLog($jenis,$text,$userid);
