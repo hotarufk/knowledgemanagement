@@ -34,7 +34,10 @@ $dataProvider=new CSqlDataProvider($sql, array(
 <?php //attribute utama
 $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM tbl_user')->queryScalar();
 $dt = date('m.Y');
-$dt2 = date('yyyy-mm-dd');
+$dt2 = date('Y-m-1');
+$dt3 = date('Y-m-1', strtotime('+1 month'));
+//$dt3 = date('yyyy-mm');
+
 $datesql=" WHERE(tbl_data.user = tbl_user.id and month_of_register =".$dt."  )";
 
 	$sql='SELECT  distinct tbl_user.nama as pid, tbl_data.*, case `status` when \'1\' then \'Pre-Register\' when \'2\' then \'In Progress\' when \'3\' then \'Closed-Cancelled\' when \'4\' then \'Closed-Pending\' when \'5\' then \'Closed-Finished\' else \'Unon\' end \'status\',case `key_achievement` when \'1\' then \'Achieved\' when \'0\' then \'Not Achieved\' else \'Unon\' end \'key_achievement\', case `IT_Testing_PIC` when \'1\' then \'I GP Witraguna\' when \'2\' then \'Setiawan\' when \'3\' then \'Sofie Y Chaerang\' when \'4\' then \'Tulus Hamdani\' else \'Unon\' end \'IT_Testing_PIC\'  FROM tbl_data,tbl_user  '.$datesql.'';
@@ -112,9 +115,10 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 <div style="display:inline; width:40%; height:100%; float:left; margin-left:40px;">
 
 <?php //Carry sql
+	
 	//$datesql=" WHERE( start_date  < '$model->to_date' and (end_date >= '$model->from_date' or (start_date !='0000-00-00' and end_date='0000-00-00')))";
 	//$sql='SELECT (SELECT id FROM tbl_data) AS pid, (SELECT count(month_of_register) FROM tbl_data WHERE(month_of_register ='.$dt.')) AS curr, (SELECT id,count(month_of_register) FROM tbl_data WHERE(month_of_register <'.$dt.')) AS carr ';
-	$sql='SELECT id, case `status` when \'1\' then \'Pre-Register\' when \'2\' then \'In Progress\' when \'3\' then \'Closed-Cancelled\' when \'4\' then \'Closed-Pending\' when \'5\' then \'Closed-Finished\' else \'Unon\' end \'status\',COUNT(CASE when`month_of_register` ='.$dt.' and `end_date` >='.$dt2.' THEN `id` ELSE NULL END) AS this_month, COUNT(CASE when`month_of_register` <'.$dt.' and `end_date` >='.$dt2.' THEN `id` ELSE NULL END) AS overmonth FROM tbl_data group by `status`';
+	$sql='SELECT id, case `status` when \'1\' then \'Pre-Register\' when \'2\' then \'In Progress\' when \'3\' then \'Closed-Cancelled\' when \'4\' then \'Closed-Pending\' when \'5\' then \'Closed-Finished\' else \'Unon\' end \'status\',COUNT(CASE when`month_of_register` =\''.$dt.'\' and `start_date` > \''.$dt2.'\' and `start_date`  < \''.$dt3.'\'  THEN `id` ELSE NULL END) AS this_month, COUNT(CASE when`month_of_register` = \''.$dt.'\' and `start_date` < \''.$dt2.'\' THEN `id` ELSE NULL END) AS overmonth FROM tbl_data group by `status`';
 		
 		$dataProvider=new CSqlDataProvider($sql,array(
                             'keyField' => 'id',
@@ -149,7 +153,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 	'columns'=>array(
 		//'id',
 		array('name'=>'status', 'header'=>'Status'),
-		array('name'=>'this_month', 'header'=>'Registered This Month'),
+		array('name'=>'this_month', 'header'=>'Started This Month'),
 		array('name'=>'overmonth', 'header'=>'Carried Over'),
 		//array('name'=>'carr', 'header'=>'Carried Over'),
 		
