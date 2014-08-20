@@ -100,4 +100,40 @@ class FileTrigger extends CApplicationComponent
 	
 		//return $success;
 	}
+	public function delete($id){
+		$this->setModel($id);
+		
+		//loop delete file fisik nya
+		$jenis;
+		$file;
+		for ($jenis=1; $jenis<=6; $jenis++) {
+			switch ($jenis) {
+			  case 1 :
+				$file='file_ba';
+				break;
+			  case 2 :
+				$file='file_ts';
+				break;
+			  case 3 :
+				$file='file_testscenario';
+				break;
+			  case 4 :
+				$file='file_brs';
+				break;
+			  case 5 :
+				$file='file_srs';
+				break;
+			  case 6 :
+				$file='file_mom';			
+				break;
+			  default:
+				$file='error data invalid !';
+		}
+			
+			if(!empty($this->_model[$file])){
+					unlink($this->_model[$file]);
+			}
+		}
+		$this->_model->delete();
+	}
 }
