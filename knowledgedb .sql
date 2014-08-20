@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2014 at 02:34 PM
+-- Generation Time: Aug 20, 2014 at 12:17 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -37,20 +37,19 @@ CREATE TABLE IF NOT EXISTS `tbl_data` (
   `departement_PIC` text NOT NULL,
   `IT_testing_PIC` int(100) NOT NULL,
   `request_date` date NOT NULL,
-  `start_date` date NOT NULL,
+  `start_date` date DEFAULT NULL,
   `end_date` date DEFAULT NULL,
   `key_achievement` int(11) NOT NULL,
   `month_of_register` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
 
 --
 -- Dumping data for table `tbl_data`
 --
 
 INSERT INTO `tbl_data` (`id`, `no_br`, `cr_number`, `status`, `reflex`, `application_name`, `user`, `departement_PIC`, `IT_testing_PIC`, `request_date`, `start_date`, `end_date`, `key_achievement`, `month_of_register`) VALUES
-(4, 'de', 'ded', 3, 'eded', 'eded', 1, 'wsw', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '09.2014'),
 (5, '12', '232', 1, 'wwdwd', 'dwdwdw', 1, 'sdsds', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '06.2015'),
 (6, 'wda', 'wdw', 1, 'dwad', 'wdwd', 1, 'sdsdadas', 1, '2014-07-14', '2014-07-17', '2014-07-04', 1, '07.2014'),
 (7, '3434', 'rfrf', 1, 'frfrfrf', 'test', 2, 'rfrfr', 1, '2014-07-04', '2014-07-04', '2014-07-01', 1, '10.2014'),
@@ -98,7 +97,17 @@ INSERT INTO `tbl_data` (`id`, `no_br`, `cr_number`, `status`, `reflex`, `applica
 (50, 'de', 'ded', 3, 'eded', 'eded', 1, 'wsw', 2, '0000-00-01', '2014-07-01', '2014-07-01', 1, '09.2014'),
 (51, 'de', 'ded', 3, 'eded', 'eded', 1, 'wsw', 2, '0000-00-00', '0000-00-00', '2014-07-01', 1, '09.2014'),
 (52, 'de', 'ded', 3, 'eded', 'eded', 1, 'wsw', 2, '0000-00-00', '0000-00-00', '2014-07-01', 1, '09.2014'),
-(53, 'de', 'ded', 3, 'eded', 'eded', 1, 'wsw', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '09.2014');
+(53, 'de', 'ded', 3, 'eded', 'eded', 1, 'wsw', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '09.2014'),
+(54, '123w', 'qwdqw23', 1, 'sxqecfeww', 'eefewf', 2, 'wefwefwe', 1, '2014-07-01', '2014-07-01', '2014-07-01', 0, '07.2014'),
+(55, '123w', 'qwdqw23', 1, 'sxqecfeww', 'eefewf', 2, 'wefwefwe', 1, '2014-07-01', '2014-07-01', '2014-07-01', 0, '07.2014'),
+(56, '123w', 'qwdqw23', 1, 'sxqecfeww', 'eefewf', 2, 'wefwefwe', 1, '2014-07-01', '2014-07-01', '2014-07-01', 0, '07.2014'),
+(57, '123', '31deee', 1, '13zwszws', 'wdx2dx23', 2, '2exdwx', 1, '2014-07-01', '2014-07-01', '2014-07-01', 0, '07.2014'),
+(58, '123', '31deee', 1, '13zwszws', 'wdx2dx23', 2, '2exdwx', 1, '2014-07-01', '2014-07-01', '2014-07-01', 0, '07.2014'),
+(59, '123', '31deee', 1, '13zwszws', 'wdx2dx23', 2, '2exdwx', 1, '2014-07-01', '2014-07-01', '2014-07-01', 0, '07.2014'),
+(60, '133s', '2s2xzs', 1, '2wzs2wz2', '2z2wz2z2sz', 2, '2wz2', 1, '2014-07-01', '2014-07-01', '2014-07-02', 0, '06.2014'),
+(61, '133s', '2s2xzs', 1, '2wzs2wz2', '2z2wz2z2sz', 2, '2wz2', 1, '2014-07-01', '2014-07-01', '2014-07-02', 0, '06.2014'),
+(62, 'weffef', 'dc', 1, 'wfewf', 'wefwwf', 3, 'wefefw', 2, '2014-08-01', '0000-00-00', '0000-00-00', 0, '08.2014'),
+(63, '12', '232', 1, 'wwdwd', 'dwdwdw', 1, 'sdsds', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '06.2015');
 
 -- --------------------------------------------------------
 
@@ -124,10 +133,16 @@ CREATE TABLE IF NOT EXISTS `tbl_file` (
 --
 
 INSERT INTO `tbl_file` (`id`, `file_ba`, `file_ts`, `file_testscenario`, `file_brs`, `file_srs`, `file_mom`) VALUES
+(5, 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_ba/file_ba-5.docx', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_testscenario/file_testscenario-5.docx', '', '', ''),
 (6, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\protected/../document/file_testscenarioLEMBAR PENGESAHAN.docx.applicati', '', '', ''),
+(7, '', '', '', '', '', ''),
 (8, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\protected/../document/file_testscenarioLEMBAR PENGESAHAN.docx.applicati', '', '', ''),
 (10, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\protected/../document/file_testscenarioLEMBAR PENGESAHAN.docx.applicati', '', '', ''),
-(14, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_testscenario/file_testscenario-14.docx', '', '', '');
+(13, '', '', '', '', '', ''),
+(14, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_testscenario/file_testscenario-14.docx', '', '', ''),
+(51, '', '', '', '', '', ''),
+(52, '', '', '', '', '', ''),
+(62, '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -143,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `tbl_log` (
   `timestamp` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `tbl_log`
@@ -151,7 +166,20 @@ CREATE TABLE IF NOT EXISTS `tbl_log` (
 
 INSERT INTO `tbl_log` (`id`, `user`, `Jenis`, `Keterangan`, `timestamp`) VALUES
 (1, 1, 1, 'test ini berhasil ga', '0000-00-00'),
-(2, 1, 1, 'test ini berhasil ga', '2014-07-22');
+(2, 1, 1, 'test ini berhasil ga', '2014-07-22'),
+(3, 1, 1, 'Data dengan ID55 telah dibuat', '2014-07-23'),
+(4, 1, 1, 'Data dengan ID56 telah dibuat', '2014-07-23'),
+(5, 1, 1, 'Data dengan ID57 telah dibuat', '2014-07-23'),
+(6, 1, 1, 'Data dengan ID58 telah dibuat', '2014-07-23'),
+(7, 1, 1, 'Data dengan ID59 telah dibuat', '2014-07-23'),
+(8, 1, 1, 'Data dengan ID 60 telah dibuat', '2014-07-23'),
+(9, 1, 1, 'Data dengan ID 61 telah dibuat', '2014-07-23'),
+(10, 1, 2, 'data dengan id 62 telah di update', '2014-08-08'),
+(11, 1, 3, 'data dengan id 62 telah di delete oleh user dengan id 1', '2014-08-08'),
+(12, 1, 1, 'Data dengan ID 62 telah dibuat', '2014-08-20'),
+(13, 1, 3, 'data dengan id 4 telah di delete oleh user dengan id 1', '2014-08-20'),
+(14, 1, 2, 'data dengan id 63 telah di update', '2014-08-20'),
+(15, 1, 2, 'data dengan id 9 telah di update', '2014-08-20');
 
 -- --------------------------------------------------------
 
@@ -168,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`username`),
   UNIQUE KEY `nama` (`nama`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tbl_user`
@@ -177,8 +205,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 INSERT INTO `tbl_user` (`id`, `username`, `password`, `nama`, `role`) VALUES
 (1, 'emon', 'ganteng', 'andri', 0),
 (2, 'bobo', 'bobo', 'bobo', 1),
-(3, 'test1', 'test1', 'test1', 1),
-(4, 'test', 'sesuatu', 'andrifrf', 3);
+(3, 'test1', 'test1', 'test1', 1);
 
 --
 -- Constraints for dumped tables
