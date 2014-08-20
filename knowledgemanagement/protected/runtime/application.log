@@ -4759,3 +4759,297 @@ in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
 in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (142)
 in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (199)
 in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:08:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create\".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('create\')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create\')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('data/create\')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/KnowledgeManagement/KnowledgeManagement/index.php?r=data/create\
+---
+2014/08/20 12:08:51 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:08:51 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:08:51 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:03 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:03 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:03 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:05 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:05 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:05 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:14 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:14 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:14 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:21 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:21 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:21 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:25 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:25 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:25 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:26 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:26 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:26 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:30 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:30 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:09:30 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:27 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:27 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:27 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:28 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:28 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:28 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:32 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:32 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:10:32 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:42 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:42 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:42 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:44 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:44 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:44 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:51 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:51 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:51 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:54 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:54 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:54 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:55 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:55 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:55 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:55 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (142)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:55 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (142)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:58 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:58 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:13:58 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:03 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:03 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:03 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:08 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:08 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:08 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:13 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:13 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:13 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (96)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:15 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:15 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:15 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (74)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:20 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:14:20 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:15:02 [warning] [application] Failed to set unsafe attribute "id" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:15:02 [warning] [application] Failed to set unsafe attribute "request_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
+2014/08/20 12:15:02 [warning] [application] Failed to set unsafe attribute "start_date" of "Data".
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (140)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\protected\controllers\DataController.php (81)
+in C:\xampp\htdocs\KnowledgeManagement\knowledgemanagement\index.php (13)
