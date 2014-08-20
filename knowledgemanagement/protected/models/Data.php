@@ -282,7 +282,7 @@ class Data extends CActiveRecord
 		$category = 'date initial in validator cek value';
 		Yii::trace($message, $category);
 		//function
-        if (($this->start_date <= $this->end_date) OR ($this->end_date === "")){
+        if (($this->start_date <= $this->end_date) OR ($this->end_date === date("Y-m-d", $d))OR ($this->end_date === "")){
 			$message="valid";
 			$category="date debugging";
 			Yii::trace($message, $category);
@@ -293,7 +293,7 @@ class Data extends CActiveRecord
 			$this->addError('start_date', 'Start date invalid, must be >= than end Date');
 		}
 		
-		if (($this->start_date >= $this->request_date) OR ($this->start_date ==="")){
+		if (($this->start_date >= $this->request_date) OR ($this->start_date === date("Y-m-d", $d)) OR ($this->start_date === "")){
 			$message="valid";
 			$category="date debugging";
 			Yii::trace($message, $category);
