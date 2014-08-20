@@ -29,6 +29,7 @@ General Rule:
 -Create Data; Request Date = Start Date = End Date: (Success)
 -Create Data; Request Date > Start Date: Request Date invalid, must be <= Start Date (Success)
 -Create Data; Start Date > End Date: Start Date invalid, must be >= than end Date (Success)
+-Create Data; Enter field value, click Next, then click Back, then empty field value: Success. !ERROR: Should be fail.
 -Create File; Not uploading any file: (Success)
 -Manage Data; search No BR: (Success)
 -Manage Data; search Cr Number and No Br at the same time: (Success)
@@ -51,3 +52,5 @@ General Rule:
 -Update Data: Change Application Name: (Success)
 -Update Data: Empty Required Field: Success. !ERROR: Field should not be empty.
 -Update Data: Upload File for Updated Data: Error 404. !ERROR: Should be able to upload file for updated data.
+-Update Data: ID Check: ID does not increase (Success)
+
