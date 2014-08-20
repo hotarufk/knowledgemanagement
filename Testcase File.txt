@@ -1,0 +1,31 @@
+Knowledge Management Test:
+
+General Rule: Successes are enclosed by '()' mark. Success with note are marked with '*' mark. Error are marked with '!' mark.
+
+-Login:Done. Dashboard Empty no results found. Empty Char. (Success)
+-Report:Done. Empty. (Success)
+-Data: Done. Empty. (Success)
+-Manage Data: Done. Empty. (Success)
+-Create Data; Perfect Entry: NOTE: ID can be changed. If changed, error will follow. Done. *Success with note
+-Create Data; No No. BR: No. BR cannot be blank (Success)
+-Create Data; No Cr Number: CR Number cannot be blank. (Success)
+-Create Data; No Status: Status cannot be blank. (Success)
+-Create Data; No Reflex: (Success)
+-Create Data; No Application Name: Application Name cannot be blank. (Success)
+-Create Data; No It Dev Pic: User cannot be blank .Please note that Required mark does not exist on It Dev Pic. *Success with note
+-Create Data; No Department Pic: Department Pic cannot be blank. Please note that Required mark does not exist on Department Pic *Success with note
+-Create Data; No It Testing Pic: It Testing Pic cannot be blank. (Success)
+-Create Data; No Key Achievement: Key Achievement cannot be blank. (Success)
+-Create Data; No Request Date: Request Date cannot be blank. (Success)
+-Create Data; No Start Date: Start Date cannot be blank. Request Date invalid, must be <= Start Date;repeated three times. *Success with note
+-Create Data; No End Date: End Date cannot be blank. Start date invalid, must be >= than end Date;repeated three times. *Success with note
+-Create Data; No Month Of Register: Month Of Register cannot be blank. (Success)
+-Create Data; Start Date = Request Date: (Success)
+-Create Data; End Date = Start Date: (Success)
+-Create Data; Request Date = Start Date = End Date: (Success)
+-Create Data; Request Date > Start Date: Request Date invalid, must be <= Start Date (Success)
+-Create Data; Start Date > End Date: Start Date invalid, must be >= than end Date (Success)
+-Create File; Not uploading any file: (Success)
+-Manage Data; search No BR: (Success)
+-Manage Data; search Cr Number and No Br at the same time: (Success)
+-Manage Data; Delete Item: Error 500: CDbException, Integrity constraint violation: 1451. !Error
