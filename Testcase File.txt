@@ -1,6 +1,10 @@
 Knowledge Management Test:
 
-General Rule: Successes are enclosed by '()' mark. Success with note are marked with '*' mark. Error are marked with '!' mark.
+General Rule: 
+-Successes are enclosed by '()' mark. 
+-Success with note are marked with '*' mark. 
+-Error are marked with '!' mark.
+-Fixed are marked with '#' mark.
 
 -Login:Done. Dashboard Empty no results found. Empty Char. (Success)
 -Report:Done. Empty. (Success)
@@ -34,5 +38,5 @@ General Rule: Successes are enclosed by '()' mark. Success with note are marked 
 -Manage Logs; Search ID: (Success)
 -Manage Logs; Search User: (Success)
 
--Create Data, Index; Carried over noted from Start Date and End Date: Carryover from Month of Register instead of Start Date and End Date !Error.
+-Create Data, Index; Carried over noted from Start Date and End Date: Carryover taken from Start Date and End Date. #Fixed
 -Manage Logs; Delete Log: (Success)
