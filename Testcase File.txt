@@ -32,7 +32,7 @@ General Rule:
 -Create File; Not uploading any file: (Success)
 -Manage Data; search No BR: (Success)
 -Manage Data; search Cr Number and No Br at the same time: (Success)
--Manage Data; Delete Item: Error 500: CDbException, Integrity constraint violation: 1451. !Error
+-Manage Data; Delete Item: Success without any notifications. *Success with note
 -Manage Data; Download Item: Downloaded, document name converted to the document name in database. *Success with Note
 -Manage Data; Download Item that has not been uploaded: Data not found, please upload corresponding file! (Success)
 -Manage Logs; Search ID: (Success)
