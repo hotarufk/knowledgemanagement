@@ -195,7 +195,7 @@ class DataController extends Controller
 		}
 		elseif(isset($_POST['create']))
 		{	
-			$model = new Data('page3');
+			//$model = new Data('page3');
 			$this->checkPageState($model, $_POST['Data']);
 			//$model->attributes=$_POST['Data'];
 			if($model->save()){
