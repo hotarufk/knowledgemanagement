@@ -20,20 +20,21 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		 'ext.EExcelView.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		
-		'gii'=>array(
-			'generatorPaths'=>array(
-                'bootstrap.gii',
-            ),
-			'class'=>'system.gii.GiiModule',
-			'password'=>'admin',
-			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
-		),
+		// 'gii'=>array(
+			// 'generatorPaths'=>array(
+                // 'bootstrap.gii',
+            // ),
+			// 'class'=>'system.gii.GiiModule',
+			// 'password'=>'admin',
+			// // If removed, Gii defaults to localhost only. Edit carefully to taste.
+			// 'ipFilters'=>array('127.0.0.1','::1'),
+		// ),
 		
 	),
 

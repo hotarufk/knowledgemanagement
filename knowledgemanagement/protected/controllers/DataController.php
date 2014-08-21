@@ -360,14 +360,14 @@ class DataController extends Controller
 	}
 	
 	/////////////////////////////////
-	 public function behaviors()
-    {
-        return array(
-            'eexcelview'=>array(
-                'class'=>'ext.eexcelview.EExcelBehavior',
-            ),
-        );
-    }
+	 // public function behaviors()
+    // {
+        // return array(
+            // 'eexcelview'=>array(
+                // 'class'=>'ext.eexcelview.EExcelBehavior',
+            // ),
+        // );
+    // }
 	
 		public function actionTest()
 	{
@@ -383,27 +383,47 @@ class DataController extends Controller
 		$reportname = 'Report  '.$valueStart.'  To '.$valueEnd;
 		//$author=
 		//Export it
-		$this->toExcel(
-		$dataProvider,array(
-		'no_br',
-		'cr_number',
-		'Status',
-		'reflex',
-		'application_name',
-		'IT_DEV_PIC',
-		'Departement_PIC',
-		'IT_Testing_PIC',
-		'request_date',
-		'start_date',
-		'end_date',
-		'Key_Achievement',
-		'Month_of_Register',
-		),
-			$reportname,
-        array(
-            'creator' => 'Zen',
-        )
-		);
+		$this->widget('EExcelView', array(
+     'dataProvider'=> $dataProvider,
+     'title'=>$reportname,
+     'autoWidth'=>false,
+     'columns'=>array(
+	 'no_br',
+	'cr_number',
+	'Status',
+	'reflex',
+	'application_name',
+	'IT_DEV_PIC',
+	'Departement_PIC',
+	'IT_Testing_PIC',
+	'request_date',
+	'start_date',
+	'end_date',
+	'Key_Achievement',
+	'Month_of_Register',
+	 ),
+	));
+		// $this->toExcel(
+		// $dataProvider,array(
+		// 'no_br',
+		// 'cr_number',
+		// 'Status',
+		// 'reflex',
+		// 'application_name',
+		// 'IT_DEV_PIC',
+		// 'Departement_PIC',
+		// 'IT_Testing_PIC',
+		// 'request_date',
+		// 'start_date',
+		// 'end_date',
+		// 'Key_Achievement',
+		// 'Month_of_Register',
+		// ),
+			// $reportname,
+        // array(
+            // 'creator' => 'Zen',
+        // )
+		// );
 		// $results=$dataProvider->getData();
 		 
 		$message = 'from date : '.$valueStart.' to date : '.$valueEnd;
