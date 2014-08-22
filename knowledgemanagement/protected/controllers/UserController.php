@@ -52,7 +52,7 @@ class UserController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{	Yii::app()->user->setReturnUrl('index.php?r=user/view&id='.$id);
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -131,18 +131,25 @@ class UserController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		//$this->loadModel($id)->delete();
-				//create log
+		$datarelated = Data::model()->findAllByAttributes(array('user'=>$id);
+		if(count($datarelated) > 0) {
+			Yii::app()->user->setFlash('deletemessage','Sorry, but there are still related Data !');
+			$this->redirect(Yii::app()->user->returnUrl);
+			//echo "Sorry, but there are still related Log!";
+		}
+		else { 
+		//sebelum delete data , delete terlebih dahulu semua log yang berhubungan degan data tersebut
+		//create log
 				$jenis=6;//delete user
 				$role='user';
 				if($this->loadModel($id)->role ==0)
 					$role = 'admin';
 				$text = "user dengan id ".$id." telah di delete , dengan role sebagai ".$role ;
 				$userid=Yii::app()->user->getId();
-		$this->loadModel($id)->delete();		
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		$this->loadModel($id)->delete();
+			if(!isset($_GET['ajax']))
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+		}
 	}
 
 	/**
@@ -150,6 +157,7 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
+		//	Yii::app()->user->setReturnUrl('index.php?r=data/index');
 		$dataProvider=new CActiveDataProvider('User');
 		$model=new User('search');
 		$model->unsetAttributes();  // clear any default values
@@ -167,6 +175,7 @@ class UserController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		
 		$model=new User('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['User']))
