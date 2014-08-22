@@ -131,7 +131,7 @@ class UserController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$datarelated = Data::model()->findAllByAttributes(array('user'=>$id);
+		$datarelated = Data::model()->findAllByAttributes(array('user'=>$id));
 		if(count($datarelated) > 0) {
 			Yii::app()->user->setFlash('deletemessage','Sorry, but there are still related Data !');
 			$this->redirect(Yii::app()->user->returnUrl);

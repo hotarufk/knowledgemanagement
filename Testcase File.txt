@@ -6,6 +6,9 @@ General Rule:
 -Error are marked with '!' mark.
 -Fixed are marked with '#' mark.
 
+System Rule:
+-Logged in as user
+
 -Login:Done. Dashboard Empty no results found. Empty Char. (Success)
 -Report:Done. Empty. (Success)
 -Data: Done. Empty. (Success)
@@ -50,7 +53,7 @@ General Rule:
 -Update Data: Change Status: (Success)
 -Update Data: Change Reflex: (Success)
 -Update Data: Change Application Name: (Success)
--Update Data: Empty Required Field: Success. !ERROR: Field should not be empty.
--Update Data: Upload File for Updated Data: Error 404. !ERROR: Should be able to upload file for updated data.
+-Update Data: Empty Required Field: Success. #Fixed: If update, can be emptied.
+-Update Data: Upload File for Updated Data: Error 404. #Fixed: File Upload worked.
 -Update Data: ID Check: ID does not increase (Success)
 
