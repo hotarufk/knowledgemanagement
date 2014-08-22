@@ -8,3 +8,9 @@
 
 	>'username' -> username yang digunakan untuk membuka database yang digunakan
 	>'password' ->  password yang digunakn untuk membuka database yang diinginkan
+5.Didalam folder ini juga terdapat dump sql dari database yang dapat digunakan untuk membuat database yang diperlukan dengan nama knowledgdb.sql
+6.secara default id dan password dari website ini untuk admin adalah 
+
+		id : admin
+		password : admin
+ Mohon agar segera di rubah demi keamanan
