@@ -146,6 +146,7 @@ class UserController extends Controller
 					$role = 'admin';
 				$text = "user dengan id ".$id." telah di delete , dengan role sebagai ".$role ;
 				$userid=Yii::app()->user->getId();
+				Yii::app()->logging->AutoLog($jenis,$text,$userid);
 		$this->loadModel($id)->delete();
 			if(!isset($_GET['ajax']))
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
