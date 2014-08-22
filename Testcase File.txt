@@ -29,13 +29,13 @@ General Rule:
 -Create Data; Request Date = Start Date = End Date: (Success)
 -Create Data; Request Date > Start Date: Request Date invalid, must be <= Start Date (Success)
 -Create Data; Start Date > End Date: Start Date invalid, must be >= than end Date (Success)
--Create Data; Enter field value, click Next, then click Back, then empty field value: Success. !ERROR: Should be fail.
+-Create Data; Enter field value, click Next, then click Back, then empty field value: Error: No Br cannot be blank. #Fixed
 -Create File; Not uploading any file: (Success)
 -Manage Data; search No BR: (Success)
 -Manage Data; search Cr Number and No Br at the same time: (Success)
 -Manage Data; Delete Item: Success without any notifications. *Success with note
 -Manage Data; Download Item: Downloaded, document name converted to the document name in database. *Success with Note
--Manage Data; Download Item that has not been uploaded: Data not found, please upload corresponding file! (Success)
+-Manage Data; Download Item that has not been uploaded: Data not found, please upload corresponding file (Success)
 -Manage Logs; Search ID: (Success)
 -Manage Logs; Search User: (Success)
 -Create Log; Normal Entry: User must be a number, Jenis must be a number.
