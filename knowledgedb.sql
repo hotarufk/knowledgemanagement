@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2014 at 12:17 PM
--- Server version: 5.6.16
--- PHP Version: 5.5.9
+-- Generation Time: Aug 22, 2014 at 04:35 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `knowledgedb`
 --
+CREATE DATABASE IF NOT EXISTS `knowledgedb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `knowledgedb`;
 
 -- --------------------------------------------------------
 
@@ -43,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `tbl_data` (
   `month_of_register` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=67 ;
 
 --
 -- Dumping data for table `tbl_data`
@@ -107,7 +109,10 @@ INSERT INTO `tbl_data` (`id`, `no_br`, `cr_number`, `status`, `reflex`, `applica
 (60, '133s', '2s2xzs', 1, '2wzs2wz2', '2z2wz2z2sz', 2, '2wz2', 1, '2014-07-01', '2014-07-01', '2014-07-02', 0, '06.2014'),
 (61, '133s', '2s2xzs', 1, '2wzs2wz2', '2z2wz2z2sz', 2, '2wz2', 1, '2014-07-01', '2014-07-01', '2014-07-02', 0, '06.2014'),
 (62, 'weffef', 'dc', 1, 'wfewf', 'wefwwf', 3, 'wefefw', 2, '2014-08-01', '0000-00-00', '0000-00-00', 0, '08.2014'),
-(63, '12', '232', 1, 'wwdwd', 'dwdwdw', 1, 'sdsds', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '06.2015');
+(63, '12', '232', 1, 'wwdwd', 'dwdwdw', 1, 'sdsds', 2, '0000-00-00', '0000-00-00', '0000-00-00', 1, '06.2015'),
+(64, '00', '00', 1, '00', '00', 2, 'bobobob', 4, '2014-08-04', '2014-08-11', '2014-08-18', 1, '07.2014'),
+(65, '00', '00', 1, '00', '00', 2, 'bobobob', 4, '2014-08-04', '2014-08-11', '2014-08-18', 1, '07.2014'),
+(66, '00', '00', 1, '00', '00', 2, 'bobobob', 4, '2014-08-04', '2014-08-11', '2014-08-18', 1, '07.2014');
 
 -- --------------------------------------------------------
 
@@ -133,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `tbl_file` (
 --
 
 INSERT INTO `tbl_file` (`id`, `file_ba`, `file_ts`, `file_testscenario`, `file_brs`, `file_srs`, `file_mom`) VALUES
-(5, 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_ba/file_ba-5.docx', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_testscenario/file_testscenario-5.docx', '', '', ''),
+(5, 'C:\\xampp\\htdocs\\knowledgedb\\knowledgemanagement\\document\\file_ba/file_ba-5.docx', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_testscenario/file_testscenario-5.docx', '', '', ''),
 (6, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\protected/../document/file_testscenarioLEMBAR PENGESAHAN.docx.applicati', '', '', ''),
 (7, '', '', '', '', '', ''),
 (8, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\protected/../document/file_testscenarioLEMBAR PENGESAHAN.docx.applicati', '', '', ''),
@@ -142,7 +147,10 @@ INSERT INTO `tbl_file` (`id`, `file_ba`, `file_ts`, `file_testscenario`, `file_b
 (14, '', '', 'C:\\xampp\\htdocs\\KnowledgeManagement\\knowledgemanagement\\document\\file_testscenario/file_testscenario-14.docx', '', '', ''),
 (51, '', '', '', '', '', ''),
 (52, '', '', '', '', '', ''),
-(62, '', '', '', '', '', '');
+(62, '', '', '', '', '', ''),
+(64, 'C:\\xampp\\htdocs\\knowledgedb\\knowledgemanagement\\document\\file_ba/file_ba-64.docx', '', '', '', 'C:\\xampp\\htdocs\\knowledgedb\\knowledgemanagement\\document\\file_srs/file_srs-64.docx', ''),
+(65, '', '', '', '', '', ''),
+(66, '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -158,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `tbl_log` (
   `timestamp` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `tbl_log`
@@ -179,7 +187,11 @@ INSERT INTO `tbl_log` (`id`, `user`, `Jenis`, `Keterangan`, `timestamp`) VALUES
 (12, 1, 1, 'Data dengan ID 62 telah dibuat', '2014-08-20'),
 (13, 1, 3, 'data dengan id 4 telah di delete oleh user dengan id 1', '2014-08-20'),
 (14, 1, 2, 'data dengan id 63 telah di update', '2014-08-20'),
-(15, 1, 2, 'data dengan id 9 telah di update', '2014-08-20');
+(15, 1, 2, 'data dengan id 9 telah di update', '2014-08-20'),
+(16, 2, 2, 'data dengan id 5 telah di update', '2014-08-22'),
+(17, 2, 1, 'Data dengan ID 64 telah dibuat', '2014-08-22'),
+(18, 2, 1, 'Data dengan ID 65 telah dibuat', '2014-08-22'),
+(19, 2, 1, 'Data dengan ID 66 telah dibuat', '2014-08-22');
 
 -- --------------------------------------------------------
 
@@ -222,12 +234,6 @@ ALTER TABLE `tbl_data`
 --
 ALTER TABLE `tbl_file`
   ADD CONSTRAINT `tbl_file_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_data` (`id`);
-
---
--- Constraints for table `tbl_log`
---
-ALTER TABLE `tbl_log`
-  ADD CONSTRAINT `tbl_log_ibfk_1` FOREIGN KEY (`user`) REFERENCES `tbl_user` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
