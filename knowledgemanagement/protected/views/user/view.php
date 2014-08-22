@@ -22,6 +22,7 @@ $this->menu=array(
 <div class="flash-success">
     <?php echo Yii::app()->user->getFlash('deletemessage'); ?>
 </div>
+	<?php endif;  ?>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
