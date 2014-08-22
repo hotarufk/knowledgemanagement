@@ -1,0 +1,8 @@
+1. buka folder knowledgemanagement->knowledgemanagement
+2. buka file index.php menggunakan file editor seperti notepad++ atau notepad
+3. akan terdapat konfigurasi sebagai berikut :
+		$yii='path to yii.php';
+		$yii adalah path dari framework yii yang diperlukan untuk membuka website ini, apabila folder yii disimpan dalam satu direktori dengan sourcecode, maka 
+		dapat dituliskan seperti berikut :
+			$yii=dirname(__FILE__).'path to yii.php';
+		
